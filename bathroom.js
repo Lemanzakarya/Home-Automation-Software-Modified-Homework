@@ -344,27 +344,26 @@ lightSlider.addEventListener('change', function() {
 
 
 saveButton.onclick = function() {
-  const minTemp = parseInt(document.getElementById("min").value);
-  const maxTemp = parseInt(document.getElementById("max").value);
-  if (isNaN(minTemp) || isNaN(maxTemp)) {
-    alert("Please enter valid numbers for both min and max temperature!");
+  let userInput = parseInt(input.value);
+  if (isNaN(userInput)) {
+    alert("Please enter valid temperature!");
+    sendButton.disabled = true;
     return;
   }
   sendButton.disabled = false;
 };
+
 sendButton.onclick = function() {
-  let minTemp = document.getElementById("min").value;
-  let maxTemp = document.getElementById("max").value;
   let userInput = parseInt(input.value);
-  if (userInput < minTemp || userInput > maxTemp) {
-    alert("Please enter a value between " + minTemp + " and " + maxTemp);
+  if (userInput < 18 || userInput > 30) {
+    alert("Please enter a value between " + "18" + " and " + "30");
+
     return;
   }
   sendButton.disabled = true;
   alert("User input: " + userInput);
   localStorage.setItem("b-temperature",userInput);
 };
-
 function openPopup() {
  
   event.preventDefault();

@@ -911,7 +911,15 @@ cursor: pointer; }
     cursor: pointer;
  }
 
- 
+ #min::placeholder {
+  color: rgb(65, 65, 65);
+  font-weight: bold;
+}
+
+#max::placeholder {
+  color: rgb(65, 65, 65);
+  font-weight: bold;
+}
  
 
 

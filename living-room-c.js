@@ -73,8 +73,8 @@ if(lightOn == "true")
 lightOn = "ON";
 else
 lightOn = "OFF";
-if(lightOn == "OFF")
-bright = 0;
+
+
 
 if(wifiOn == "ON"){
   wifiString = " - ";
@@ -85,7 +85,7 @@ wifiOn == "OFF" ? wifiRoot.innerHTML +=  '<h4 style="color: red; font-size:20px;
 wifiRoot.innerHTML +=  '<h3 style="color: #8b1c1c; font-size:22px ; margin-top: 16px ; ">' + wifiOn + '</h3>';
 humRoot.innerHTML += '<h3 style="color: red; font-size:25px; margin-top: 12px ; ">' + "% " +  humidity + '</h3>';
 co2Root.innerHTML += '<h3 style="color: red; font-size:25px; margin-top: 12px ; ">' + "% " + co2 + '</h3>';
-lightOn == "OFF" ?  brightRoot.innerHTML += '<h3 style="color: red; font-size:20px; margin-top:12px; ">' + "Brightness is % " +  bright + '</h3>': 0 ;
+brightRoot.innerHTML += '<h3 style="color: red; font-size:20px; margin-top:12px; ">' + "Brightness is % " +  bright + '</h3>';
 brightRoot.innerHTML += '<h3 style="color: #8b1c1c;  margin-top: 16px ; font-size:22px; ">' + lightOn + '</h3>';
 doorOn == "OFF" ? doorRoot.innerHTML += '<h4 style="color: red; font-size:20px ;margin-top:16px;">'   + " Open Between : " + doorString + '</h4>' : 0;
 doorRoot.innerHTML += '<h3 style="color: #8b1c1c; margin-top: 16px ; font-size:22px ">' + doorOn + '</h3>'

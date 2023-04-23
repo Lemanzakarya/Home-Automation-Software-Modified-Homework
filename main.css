@@ -19,7 +19,7 @@
     text-align: center;
     text-emphasis: none;
     margin-top: 4rem;
-    font-size:40px;
+    font-size:42px;
     justify-content: center;
    letter-spacing: 1.4px;
    
@@ -31,10 +31,10 @@
     padding: 10px;
     position:absolute;
     flex-direction: row;
-    font-size:32px;
+    font-size:35px;
     flex-wrap: wrap;
     text-emphasis: none;
-    margin-left: 8%;
+    margin-left: 9%;
     margin-top: 6rem;
     font-weight: 600;
     letter-spacing: 1.3px;

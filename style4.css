@@ -858,40 +858,31 @@
   #speaker-popup  .input-container {
     margin-top: 1rem;
   }
-
+ 
 
   
   #speaker-send-button {
-    background-color: #1f5cab;
-    color: #ffffff;
-    border-radius: 5px;
-    width:5rem;
-    height: 70%;
-    font-size: 16px;
     border: none;
-    cursor: pointer;
-    border: none;
-    display: flex;
-    text-align: center;
-    padding-left: 12%;
-  }
-  #speaker-save-button {
-    background-color:#3c903f;
-    width:5rem;
-    height: 70%;
-    border: none;
-    display: flex;
-    text-align: center;
-    padding-left: 12%;
-    position: relative;
-    bottom: 1rem;
+    background-color: #4c66c3;
     color: #fff;
-    margin-right: 1rem;
-   margin-top: 1rem;
+    padding: 10px 12px;
     border-radius: 5px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+   
+  }
+  #speaker-save-button {
+    background-color:#3c903f;
+    border: none;
+    color: #fff;
+    padding: 10px 10px;
+   margin-right: 1rem;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+     
   }
    #speaker-save-button:disabled {
     background-color: #bbbbbb;
@@ -920,11 +911,12 @@
   }
   
   #color-input {
-    width: 120px;
+    width: 100px;
     height: 50px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
     border:none;
     border-radius: 2px;
+    margin-bottom: 1rem;
     overflow: hidden;
     cursor: pointer;
  }
