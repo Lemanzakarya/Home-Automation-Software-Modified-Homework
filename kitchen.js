@@ -232,7 +232,7 @@ wifiSaveButton.onclick = function() {
       wifiSendButton.disabled = false;
     }, remainingSeconds * 1000); }
  
-    // Set timer for turning on wifi
+    
     const onTime = new Date();
     onTime.setHours(parseInt(wifiOnTime));
     onTime.setMinutes(0);
@@ -297,13 +297,13 @@ doorSaveButton.onclick = function() {
 
 
 wifiSendButton.onclick = function() {
-  // Send wifi status to server
+
   wifiPopup.style.display = "none";
   localStorage.setItem("k-wifiTime", wifiOnTimeInput.value + " - " + wifiOffTimeInput.value);
 }
 
 doorSendButton.onclick = function() {
-  // Send wifi status to server
+
   localStorage.setItem("k-doorTime", doorOnTime.value + " - " + doorOffTime.value);
   doorPopup.style.display = "none";
 }

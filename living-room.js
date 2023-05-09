@@ -254,7 +254,7 @@ wifiSaveButton.onclick = function() {
       wifiSendButton.disabled = false;
     }, remainingSeconds * 1000); }
  
-    // Set timer for turning on wifi
+  
     const onTime = new Date();
     onTime.setHours(parseInt(wifiOnTime));
     onTime.setMinutes(0);
