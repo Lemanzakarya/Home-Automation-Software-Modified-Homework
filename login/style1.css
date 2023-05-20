@@ -15,9 +15,9 @@
     padding: 50px;
     padding-bottom: 60px;
     font-family: 'Ubuntu', sans-serif;
-    background: #000000;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #5d5d5d, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to left, #434343, #000000);
+    background: #000000;  
+    background: -webkit-linear-gradient(to right, #9f9d9d, #000000);  
+    background: linear-gradient(to right, #7e787e, #201251); 
 }
 .form-container form{
     padding: 30px;
@@ -86,10 +86,9 @@
     padding: 50px;
     padding-bottom: 60px;
     font-family: 'Ubuntu', sans-serif;
-    background: #000000;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #5d5d5d, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to left, #434343, #000000);
-}
+    background: #000000;  
+    background: -webkit-linear-gradient(to right, #9f9d9d, #000000);  
+    background: linear-gradient(to right, #7e787e, #201251); }
 
 .form-producer form{
     padding: 30px;
@@ -161,6 +160,7 @@
     background-color: #090909;
     color: #ffffff;
     padding: 10px 20px;
+    margin-bottom: 20px;
     text-align: center;
     text-decoration: none;
     font-size: 20px;
