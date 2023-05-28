@@ -13,7 +13,7 @@ if(isset($_POST['submit'])){
     $result = mysqli_query($conn, $select);
 
     if(mysqli_num_rows($result) > 0){
-     header('location: consumer.html');
+     header('location: ..\consumer\consumer.html');
     }else{
         $error[] = 'incorrect email or password!';
     }

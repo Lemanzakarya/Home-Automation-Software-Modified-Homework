@@ -5,40 +5,14 @@
   }
   
   body{
-      font-family: 'Ubuntu', sans-serif;
-      background: #000000;  
-      background: -webkit-linear-gradient(to right, #9f9d9d, #000000);  
-      background: linear-gradient(to right, #7e787e, #201251); 
-      margin: 0;
-      padding: 0;
-      padding-bottom: 3rem;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #19191a, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #1c1d1e, #1d1f20); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 3rem;
   }
-
- h1{
-    color: white;
-    text-align: center;
-    text-emphasis: none;
-    margin-top: 4rem;
-    font-size:42px;
-    justify-content: center;
-   letter-spacing: 1.4px;
-   
-       
-  } 
-   
-  .title{
-    color: white;
-    padding: 10px;
-    position:absolute;
-    flex-direction: row;
-    font-size:35px;
-    flex-wrap: wrap;
-    text-emphasis: none;
-    margin-left: 9%;
-    margin-top: 6rem;
-    font-weight: 600;
-    letter-spacing: 1.3px;
-   }
 
    .rooms {
     display: flex;
@@ -47,112 +21,121 @@
     margin-top: 180px;
   
   }
-  .fa-solid {
-   margin-right: 0.6rem;
-   font-weight: 1000;
-  }
+ 
 
   img{
     display: block;
     margin: 0;
     padding: 0;
   }
-  .room {
-    line-height: 0;
-    margin: 25px;
-    background-color: #f2f2f2;
-    border-radius: 16px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.3);
-    width: 300px;
-  height: 300px;
-  border: 0.5px solid rgb(224, 224, 224);
-  opacity: 90%;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.684);
-  overflow: hidden;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-  
 
-.room:hover {
-    transform: scale(1.2);
-    box-shadow:  0 0 50px #ffffffb2 ;
-    margin: 30px;
-    opacity: 95%;
-   
-
-}
 
 .room h2{
-    text-align: center;
     margin-top: 22px;
     font-weight: 600;
-
-   
    
 }
 
-.room a {
-    display: block;
-    text-align: center;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-}
-
-.title2{
-  color: #ffffff;
- }
- 
- 
-
-
-.card-btns {
+.rooms {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 23px; 
 }
 
-.card-btns button {
-  background-color: #ffffff;
-  color: #1e272e;
-  border: 1px solid #1e272e;
-  padding: 8px 15px;
-  border-radius: 5px;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+
+.room {
+  margin-bottom: -5px;
+  text-align: center;
 }
 
-.card-btns button:hover {
-  background-color: #1e272e;
+.room-title {
   color: #ffffff;
+  right: 27%;
+  position: relative;
+  top: -62px; 
 }
+
+
+.room img{
+  width: 400px;
+  height: 55px;
+}
+ 
 
 
 .logout-container {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .logout-btn {
-  display: inline-block;
-  background-color: #090909;
-  color: #ffffff;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.9s;
+  width: 300px;
+  height: 55px;
+  margin-left: 23px;
 }
 
-.logout-btn:hover {
-  background-color: #ffffff;
-  color: #000000;
+.logout-text {
+    color: #9fe0f8;
+    position: absolute;
+    top: 78%;
+    left: 4%;
+    font-size: 23px;
+
+}
+
+.producer-image {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 580px;
+  height: 502px;
+}
+
+@media (max-width: 768px) {
+  .producer-image {
+    top: 39%;
+    left: 74%;
+    width: 90%;
+    height: auto;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.producer-logo{
+  position: absolute;
+  top: 6%;
+  left: 3%;
+  width: 270px;
+  height: 77px;
+}
+
+.column1 {
+  position: absolute;
+  right: 5%;
+  top: 24%;
+}
+
+.column2{
+  position: absolute;
+  right: 18%;
+  top: 16%;
+}
+
+.logo {
+  width: 150px;
+  height: 130px;
+  margin-bottom: 50px;
+}
+
+
+.container {
+  position: absolute;
+  top: 0; 
+  right: 0; 
+  left: 0;
+  bottom: 0;
+  border: medium solid  rgb(116, 116, 116);;
+  margin: 20px;
 }
