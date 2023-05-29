@@ -15,58 +15,60 @@
   <header>
  
 </header>
- <img src = "mainphoto.png" alt = "Producer" class="producer-image">
+ <div class="container"></div>
+ <img src = "Producer.png" alt = "Producer" class="producer-image">
  <img src = "producerlogo.png" alt = "Producer" class="producer-logo">
-
- <div class="rooms">
+ <div class="rooms">        
   <div class="room" id="living-room">
-    <a href="../livingroom/living-room.html">
-      <img src="OX.png" alt="Living room" class="living-room">
-    </a>
-    <h2 class="room-title">Living Room</h2>
+    <button onclick="location.href='../livingroom/living-room.html'">Living Room</button>
   </div>
-
+  
   <div class="room" id="kitchen">
-    <a href="../kitchen/kitchen.html">
-      <img src="OX.png" alt="Kitchen" class="kitchen">
-    </a>
-    <h2 class="room-title">Kitchen</h2>
+    <button onclick="location.href='../kitchen/kitchen.html'">Kitchen</button>
   </div>
 
   <div class="room" id="bedroom">
-    <a href="../bedroom/bedroom.html">
-      <img src="OX.png" alt="Bedroom" class="bedroom">
-    </a>
-    <h2 class="room-title">Bedroom</h2>
+    <button onclick="location.href='../bedroom/bedroom.html'">Bedroom</button>
   </div>
-
-  <div class="room" id="bathroom">
-    <a href="../bathroom/bathroom.html">
-      <img src="OX.png" alt="Bathroom" class="bathroom">
-    </a>
-    <h2 class="room-title">Bathroom</h2>
-  </div>
-</div>
-
-<div class="logout-container">
-  <form action="logout.php" method="post">
-    <input type="image" src="OX.png" alt="Logout" name="submit" class="logout-btn">
-  </form>
- <h3 class="logout-text">Logout</h3>
-</div>
     
-  <div class="column1">
-    <img src="alarm.png" alt="Producer" class="logo">
-    <img src="water.png" alt="Producer" class="logo">
-     <img src="lock.png" alt="Producer" class="logo">
+  <div class="room" id="bathroom">
+    <button onclick="location.href='../bathroom/bathroom.html'">Bathroom</button>
   </div>
-  <div class="column2">
-    <img src="garage.png" alt="Producer" class="logo">
-    <img src="elek.png" alt="Producer" class="logo">
-    <img src="wifi.png" alt="Producer" class="logo">
+</div>
+<div class="logout-container">
+  <form action="..\login\logout.php" method="post">
+    <input type="submit" name="submit" value="Logout" class="logout-btn">
+  </form>
+</div>
+<!-- Circular buttons -->
+<div class="circular-buttons">
+  <div class="left-column">
+    <div class="circular-button">
+      <img src="elec.png" alt="Electricity" class="button-icon">
+    </div>
+    <div class="circular-button">
+      <img src="water.png" alt="Water" class="button-icon">
+    </div>
+    <div class="circular-button">
+      <img src="alarm.png" alt="Alarm" class="button-icon">
+    </div>
   </div>
+  <div class="right-column">
+    <div class="circular-button">
+      <img src="lock.png" alt="Lock" class="button-icon">
+    </div>
+    <div class="circular-button">
+      <img src="garage.png" alt="Garage" class="button-icon">
+    </div>
+    <div class="circular-button">
+      <img src="wifi.png" alt="Wi-Fi" class="button-icon">
+    </div>
+  </div>
+</div>
+<div id="datetime">
+  <span id="date"></span><span id="time"></span>
+</div>
 
-  <div class="container"></div>
-
+   <script src="Time.js"></script>
 </body>
 </html>
