@@ -9,9 +9,9 @@ html, body {
 }
 
 body {
-  background-color: #6a93cb;
-  background-color: #2884b8;
-  background-image: linear-gradient(45deg, #7dacde 0%, #646e93, #926db8 74%, #8142b9d8, #739ecc);
+  background: rgb(125,172,222);
+  background: -webkit-linear-gradient(45deg, rgba(125,172,222,1) 0%, rgba(100,110,147,1) 37%, rgba(146,109,184,1) 74%, rgba(129,66,185,1) 86%, rgba(115,158,204,1) 100%);
+  background: linear-gradient(45deg, rgba(125,172,222,1) 0%, rgba(100,110,147,1) 37%, rgba(146,109,184,1) 74%, rgba(129,66,185,1) 86%, rgba(115,158,204,1) 100%);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Ubuntu', sans-serif;
@@ -33,21 +33,13 @@ body {
   box-sizing: border-box;
 }
 
-
 .producer-logo {
-  position: absolute;
-  top: 6%;
+  position: fixed;
+  top: 5%;
   left: 3%;
   width: 270px;
   height: 77px;
   max-width: 100%;
-}
-
-@media only screen and (max-width: 767px) {
-  .producer-logo {
-    width: 200px;
-    height: 57px;
-  }
 }
 
 .container {
@@ -68,8 +60,8 @@ body {
 
 .room {
   margin-bottom: 30px;
-  display: flex; 
-  justify-content: center; 
+  display: flex;
+  justify-content: center;
 }
 
 .room button {
@@ -134,6 +126,7 @@ body {
 }
 
 
+
 /* Circular buttons */
 .right-column {
   position: absolute;
@@ -176,12 +169,15 @@ body {
   height: 50px;
 }
 
+
+/* Time */
+
 #datetime {
   background-color: rgba(255, 255, 255, 0.5);
   width: 300px;
   padding: 10px;
-  position: absolute;
-  top: 35px;
+  position: fixed;
+  top: 60px; 
   right: 100px;
   color: #fff;
   font-size: 25px;
@@ -199,4 +195,118 @@ body {
 
 #datetime span:last-child {
   margin-right: 0;
+}
+
+/* Mobile friendly */
+
+@media only screen and (max-width: 767px) {
+  .producer-image {
+    width: -webkit-fill-available;
+    height: max-content;
+    top: 53%;
+}
+
+  .producer-logo {
+    width: auto;
+    max-width: 100%;
+    margin: 50px;
+  }
+
+  .container {
+    margin: auto;
+  }
+
+  .rooms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    top: 78%;
+    gap: 10px;
+  }
+
+  .room {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .room button {
+    width: auto;
+    max-width: 400px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    position: inherit;
+  }
+
+  .room#bathroom button {
+    border-radius: 50px;
+  }
+  
+  .room#kitchen button,
+  .room#bedroom button {
+    border-radius: 50px;
+  }
+
+  .logout-container,
+  .login-container {
+    margin-top: 20px;
+    margin-bottom: 120px;
+    position: absolute;
+    top: 89%;
+    left: 9%;
+  }
+  
+  .logout-btn,
+  .login-btn {
+    border-radius: 50px;
+    width: auto;
+    font: -webkit-small-control;
+  }
+  
+  .right-column {
+    display: -webkit-inline-box;
+    position: absolute;
+    top: 36%;
+    left: 17%;
+  }
+  .left-column {
+    display: -webkit-inline-box;
+    position: absolute;
+    top: 27%;
+    left: 17%;
+  }
+
+  .circular-button {
+    width: 60px;
+    height: 60px;
+  }
+
+  .button-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  #datetime {
+    position: static;
+    border-radius: 30px;
+    margin: 30px;
+    text-align: center;
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: initial;
+    font-size: inherit;
+    margin-bottom: auto;
+    width: auto;
+    background: bottom;
+  }
+
+  #datetime span {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
 }

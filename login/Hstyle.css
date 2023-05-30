@@ -1,20 +1,20 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-   
-    font-family: 'Ubuntu', sans-serif;
-    background: #000000;  
-    background: -webkit-linear-gradient(to right, #9f9d9d, #000000);  
-    background: linear-gradient(to right, #7e787e, #201251); 
-    margin: 0;
-      padding: 0;
-      padding-bottom: 3rem;
-    
+
+body {
+  background: rgb(125,172,222);
+  background: -webkit-linear-gradient(45deg, rgba(125,172,222,1) 0%, rgba(100,110,147,1) 37%, rgba(146,109,184,1) 74%, rgba(129,66,185,1) 86%, rgba(115,158,204,1) 100%);
+  background: linear-gradient(45deg, rgba(125,172,222,1) 0%, rgba(100,110,147,1) 37%, rgba(146,109,184,1) 74%, rgba(129,66,185,1) 86%, rgba(115,158,204,1) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Ubuntu', sans-serif;
+  position: relative; 
+  margin: 0;
+  padding: 0;
 }
 
 nav {
@@ -133,6 +133,10 @@ nav {
   3px 3px 0px rgba(88, 87, 87, 0.19),
   4px 4px 2px #0000000b;
 }
+.column2 img{
+  position: relative;
+  top: -50px;
+}
 
 @media screen and (max-width: 980px) {
   .row {
@@ -191,17 +195,17 @@ nav {
     
     
     }
-    .button-left:hover{
-        background-color: #564b5f;
-        box-shadow: 0 0 6px rgba(55, 55, 55, 0.684);
-        }
-        .button-right:hover{
-            background-color: #564b5f;
-            box-shadow: 0 0 6px rgba(94, 94, 94, 0.684);
-            }
+  .button-left:hover{
+   background-color: #564b5f;
+   box-shadow: 0 0 6px rgba(55, 55, 55, 0.684);
+   }
+  .button-right:hover{
+   background-color: #564b5f;
+   box-shadow: 0 0 6px rgba(94, 94, 94, 0.684);
+   }
          
-            @media screen and (max-width: 980px) {
-                .button-left,
+ @media screen and (max-width: 980px) {
+  .button-left,
   .button-right {
     padding: 16px 24px;
     font-size: 16px;
