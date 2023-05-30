@@ -21,7 +21,7 @@
 }
 .form-container form{
     padding: 30px;
-    background: #00000063;
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0,0,0,.1);
     text-align: center;
@@ -32,7 +32,7 @@
     font-size: 30px;
     text-transform: uppercase;
     margin-bottom: 10px;
-    color: #ffffff;
+    color: #000000;
 }
 
 .form-container form input{
@@ -86,13 +86,13 @@
     padding: 50px;
     padding-bottom: 60px;
     font-family: 'Ubuntu', sans-serif;
-    background: #000000;  
-    background: -webkit-linear-gradient(to right, #9f9d9d, #000000);  
-    background: linear-gradient(to right, #7e787e, #201251); }
+    background: rgb(125,172,222);
+    background: -webkit-linear-gradient(45deg, rgba(125,172,222,1) 0%, rgba(100,110,147,1) 37%, rgba(146,109,184,1) 74%, rgba(129,66,185,1) 86%, rgba(115,158,204,1) 100%);
+    background: linear-gradient(45deg, rgba(125,172,222,1) 0%, rgba(100,110,147,1) 37%, rgba(146,109,184,1) 74%, rgba(129,66,185,1) 86%, rgba(115,158,204,1) 100%);}
 
 .form-producer form{
     padding: 30px;
-    background: #00000063;
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0,0,0,.1);
     text-align: center;
@@ -103,7 +103,7 @@
     font-size: 30px;
     text-transform: uppercase;
     margin-bottom: 10px;
-    color: #ffffff;
+    color: #000000;
 }
 
 .form-producer form input{
@@ -157,8 +157,8 @@
   
   .logout-btn {
     display: inline-block;
-    background-color: #090909;
-    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000000;
     padding: 10px 20px;
     margin-bottom: 20px;
     text-align: center;
@@ -172,7 +172,7 @@
   
   .logout-btn:hover {
     background-color: #ffffff;
-    color: #000000;
+    color: #440144;
   }
   
   
