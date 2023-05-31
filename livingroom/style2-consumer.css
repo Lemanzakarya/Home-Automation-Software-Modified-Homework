@@ -4,43 +4,24 @@
   box-sizing: border-box;  
 }
 
+html, body {
+  height: 100%;
+}
+
 body{
     font-family: 'Ubuntu', sans-serif;
-    background: rgb(125,172,222);
     background: -webkit-linear-gradient(45deg, rgba(125,172,222,1) 0%, rgba(100,110,147,1) 37%, rgba(146,109,184,1) 74%, rgba(129,66,185,1) 86%, rgba(115,158,204,1) 100%);
     background: linear-gradient(45deg, rgba(125,172,222,1) 0%, rgba(100,110,147,1) 37%, rgba(146,109,184,1) 74%, rgba(129,66,185,1) 86%, rgba(115,158,204,1) 100%);
+    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
 }
-h1{
-  color: white;
-  text-align: center;
-  text-emphasis: none;
-  margin-top: 3rem;
- padding-bottom: 2rem;
-  font-size:38px;
-  justify-content: center;
- letter-spacing: 1.4px;
-     
-} 
-.general{
-  color: white;
-  padding: 10px;
-  position:absolute;
-  flex-direction: row;
-  flex-wrap: wrap;
-  text-emphasis: none;
-  left: 10.2%;
-  margin-top: 2rem;
-  font-size:28px;
-  font-weight: 400;
-  letter-spacing: 1.3px;
-}
+
 .container {
   display: flex;
-justify-content: left;
-align-items: left;
-flex-wrap: wrap;
+  justify-content: left;
+  align-items: left;
+  flex-wrap: wrap;
   gap:50px;
   padding-right: 10%;
   padding-left: 10.6%;
@@ -48,11 +29,6 @@ flex-wrap: wrap;
   
   
 
-}
-@media screen and (max-width: 800px) {
-  .box {
-    min-width: 100%;
-  }
 }
 
 .box {
@@ -82,6 +58,39 @@ flex-wrap: wrap;
   font-size: 36px;
   margin-bottom: 20px;
 }
+
+h1{
+  color: white;
+  text-align: center;
+  text-emphasis: none;
+  margin-top: 3rem;
+  padding-bottom: 2rem;
+  font-size:38px;
+  justify-content: center;
+  letter-spacing: 1.4px;
+     
+} 
+.general{
+  color: white;
+  padding: 10px;
+  position:absolute;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-emphasis: none;
+  left: 36%;
+  margin-top: 2rem;
+  font-size:23px;
+  font-weight: 400;
+  letter-spacing: 1.3px;
+}
+
+@media screen and (max-width: 800px) {
+  .box {
+    min-width: 100%;
+  }
+}
+
+
 
 .button-container {
   display: flex;
@@ -686,8 +695,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 .goBack {
   background-color: rgba(255, 255, 255, 0.885);
   display: flex;
-  margin-left:1.5rem;
-  margin-top: -1.5rem;
+  margin-left:2rem;
+  margin-top: -1rem;
   flex-direction: row;
  
   color:black;
