@@ -8,7 +8,7 @@ body {
   font-family: 'Ubuntu', sans-serif;
   background: rgb(125,172,222);
   background: -webkit-linear-gradient(45deg, rgba(125,172,222,1) 0%, rgba(100,110,147,1) 37%, rgba(146,109,184,1) 74%, rgba(129,66,185,1) 86%, rgba(115,158,204,1) 100%);
-  background: linear-gradient(45deg, rgba(125,172,222,1) 0%, rgba(100,110,147,1) 37%, rgba(146,109,184,1) 74%, rgba(129,66,185,1) 86%, rgba(115,158,204,1) 100%);
+  background: linear-gradient(45deg, rgb(135, 176, 220) 0%, rgba(100,110,147,1) 37%, rgba(146,109,184,1) 74%, rgba(129,66,185,1) 86%, rgba(115,158,204,1) 100%);
   z-index: 10;
   margin: 0;
   padding: 0;
@@ -69,7 +69,7 @@ h2 {
 
 .radio-group label .icon {
   margin-right: 6px;
-  font-size: 24px;
+  font-size: 26px;
 }
 
 .h2 {
@@ -181,4 +181,160 @@ canvas {
   font-weight: bolder;
   box-shadow: rgba(0, 0, 0, 0.526) 3.95px 8.95px 3.6px;
   transform: scale(1.1);
+}
+
+.sidebar {
+  background: linear-gradient(to right, #ffffffae, #eee9e98b);
+  position: absolute;
+  top: 90px;
+  right: 15px;
+  width: 350px;
+  height: 550px;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(24, 1, 80, 0.348);
+  z-index: 10;
+}
+
+.sidebar-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.weather {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 800;
+  margin-right: 2rem;
+  color: #000000e2;
+  letter-spacing: 1.2px;
+}
+
+.weather-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.weather-list {
+  list-style: none;
+  padding: 3px;
+}
+
+.weather-item {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: normal;
+}
+
+.day {
+  flex: 1;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  color: #000000c8;
+}
+
+.weather-icon {
+  flex: 1;
+}
+
+.weather-icon img {
+  width: 35px;
+  height: 35px;
+  margin-left: 0.8rem;
+}
+
+.temperature {
+  flex: 1;
+  text-align: center;
+}
+
+.description {
+  flex: 1;
+}
+
+.storm {
+  width: 100px;
+  height: 100px;
+  margin-right: 2.5rem;
+  align-items: center;
+  filter: saturate(150%);
+}
+
+.current {
+  margin-top: -4rem;
+  margin-left: 8rem;
+  padding-bottom: 3rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #1b1b1be2;
+  font-size: 24px;
+  text-shadow: 2px 4px 6px #14141410;
+  letter-spacing: 1.4px;
+}
+
+.humidity {
+  color: rgb(27, 27, 27);
+  text-align: center;
+  align-items: center;
+  position: relative;
+  font-weight: 900;
+  bottom: 10px;
+  right: 1.5rem;
+  
+}
+.row{
+ display: grid;
+ flex-direction: row;
+ grid-template-columns: 1fr 1fr;
+
+}
+
+.chart-container {
+    
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 0.8rem;
+  padding-top: 1px;
+  width: 130px;
+  height: 150px;
+  background-color: #f1f3e9a7;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 6px;
+}
+
+.percentage {
+  position: relative;
+  display: flex;
+ text-align: center;
+  transform: translate(-50%, -50%);
+  margin-left: 4.2rem;
+  font-size: 19px;
+  padding: 5px;
+  text-shadow: 2px 6px 6px rgba(0, 0, 0, 0.168);
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #181818;
+  
+}
+#percentagex{
+  margin-left: 3.8rem;
+}
+#humidity-image {
+  width: 60px;
+  height: 60px;
+ margin-bottom: 1rem;
+  margin-left: 1.8rem;
+}
+#wind-image{
+  width: 60px;
+  height: 60px;
+margin-bottom: 1rem;
+  margin-left: 1.8rem;
 }
