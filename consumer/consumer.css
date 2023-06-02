@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background: rgb(125,172,222);
+  background: -webkit-linear-gradient(45deg, rgba(125,172,222,1) 0%, rgba(100,110,147,1) 37%, rgba(146,109,184,1) 74%, rgba(129,66,185,1) 86%, rgba(115,158,204,1) 100%);
+  background: linear-gradient(45deg, rgba(125,172,222,1) 0%, rgba(100,110,147,1) 37%, rgba(146,109,184,1) 74%, rgba(129,66,185,1) 86%, rgba(115,158,204,1) 100%);
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.container {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 {
+  color: white;
+  text-emphasis: none;
+  margin-top: 2.5rem;
+  margin-left: 3rem;
+  font-size: 26px;
+  letter-spacing: 1.4px;
+  text-shadow: 0 4px 0 #0f0f0f7b;
+}
+
+h2 {
+  color: rgba(255, 255, 255, 0.878);
+  text-emphasis: none;
+  margin-top: 1rem;
+  margin-left: 3rem;
+  font-size: 16px;
+  letter-spacing: 1.4px;
+  font-weight: normal;
+}
+
+.use {
+  color: rgb(255, 255, 255);
+}
+
+.radio-group {
+  display: flex;
+  position: relative;
+}
+
+.radio-group label {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: ease-in-out 0.4s;
+  margin-left: 1.2rem;
+  margin-top: 0.75rem;
+}
+
+.radio-group label input {
+  display: none;
+}
+
+.radio-group label .icon {
+  margin-right: 6px;
+  font-size: 24px;
+}
+
+.h2 {
+  position: fixed;
+}
+
+.icon i:hover {
+  font-size: 28px;
+  transition: ease-in 0.2s;
+}
+
+.profile-container {
+  position: absolute;
+  top: 20px;
+  right: 18px;
+  width: 40px;
+  margin-right: 0.8rem;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #dad9d9;
+  border: 0.1px solid #868686b3;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+}
