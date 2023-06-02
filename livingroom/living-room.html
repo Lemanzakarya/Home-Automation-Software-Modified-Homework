@@ -1,306 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style2-producer.css" ; />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts                                                                                                                                                                                                                                                                              .googleapis.com"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Belleza&family=Cookie&family=Kalam&family=Montserrat:wght@200;700&family=NTR&family=Quicksand&family=Satisfy&family=Swanky+and+Moo+Moo&family=Ubuntu:wght@300;400&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <title>Living room</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style2-producer.css" ; />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    crossorigin="anonymous" />
-  <link rel="preconnect"
-    href="https://fonts                                                                                                                                                                                                                                                                              .googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Belleza&family=Cookie&family=Kalam&family=Montserrat:wght@200;700&family=NTR&family=Quicksand&family=Satisfy&family=Swanky+and+Moo+Moo&family=Ubuntu:wght@300;400&family=VT323&display=swap"
-    rel="stylesheet">
-  <title>Living room </title>
-  
-</head>
+  <body>
+    <div class="container">
+      <a href="../producer/main.html" class="goBack">
+        <img width="30px" height="30px" src="../back.png" />
+        <p>Back</p>
+      </a>
+      <header>
+        <h1>Living Room</h1>
+      </header>
+      <img src="living-room.jpg" alt="Livingroom" class="living-image" />
+      <section>
+        <div class="general-sensors-container">
+          <h2 class="general">General Sensors</h2>
+          <div class="producer">
+            <div class="box box-general-sensor">
+              <i class="fas fa-thermometer-half"></i>
+              <div>
+                <h3>Temperature</h3>
+                <div class="button-producer">
+                  <button class="set-button" onclick="openPopup()">Set</button>
+                </div>
+              </div>
+            </div>
+            <div class="box box-general-sensor">
+              <i class="fas fa-tint"></i>
+              <div>
+                <h3>Humidity</h3>
+                <div class="button-producer">
+                  <button
+                    id="set-humidity-button"
+                    class="set-button"
+                    onclick="openHumidityPopup()"
+                  >
+                    Set
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="box box-general-sensor">
+              <i class="fas fa-cloud"></i>
+              <div>
+                <h3>CO2</h3>
+                <div class="button-producer">
+                  <button
+                    class="set-button"
+                    id="set-co2-button"
+                    onclick="openCo2Popup()"
+                  >
+                    Set
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="devices-container">
+          <h2 class="general">Devices</h2>
+          <div class="producer">
+            <div class="box box-device">
+              <div class="card-header">
+                <i class="fa-regular fa-lightbulb"></i>
+                <div class="card-body">
+                  <label class="switch" id="light-switch">
+                    <input
+                      id="light-slider"
+                      type="checkbox"
+                      id="light-switch"
+                    />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+              <div>
+                <h3>Light</h3>
+                <div class="card-btns">
+                  <button
+                    id="set-light-button"
+                    class="btn-set"
+                    onclick="openLightPopup()"
+                  >
+                    Set
+                  </button>
+                  <button id="light-delete" class="btn-delete">Delete</button>
+                </div>
+              </div>
+            </div>
+            <div class="box box-device">
+              <div class="card-header">
+                <i class="fa-solid fa-lock"></i>
+                <div class="card-body">
+                  <label class="switch" id="light-switch">
+                    <input type="checkbox" id="door-toggle-switch" />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+              <div>
+                <h3>Door Lock</h3>
+                <div class="card-btns">
+                  <button
+                    id="door-set"
+                    class="btn-set"
+                    onclick="openDoorPopup()"
+                  >
+                    Set
+                  </button>
+                  <button id="door-delete" class="btn-delete">Delete</button>
+                </div>
+              </div>
+            </div>
+            <div class="box box-device">
+              <div class="card-header">
+                <i class="fa-solid fa-tv"></i>
+                <div class="card-body">
+                  <label class="switch" id="light-switch">
+                    <input type="checkbox" id="tv-switch" />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+              <div>
+                <h3>Smart TV</h3>
+                <div class="card-btns">
+                  <button id="tv-set" class="btn-set" onclick="openTVPopup()">
+                    Set
+                  </button>
+                  <button id="tv-delete" class="btn-delete">Delete</button>
+                </div>
+              </div>
+            </div>
+            <div class="box box-device">
+              <div class="card-header">
+                <i class="fa-sharp fa-solid fa-wifi"></i>
+                <div class="card-body">
+                  <label class="switch" id="light-switch">
+                    <input type="checkbox" id="wifi-toggle-switch" />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+              <div>
+                <h3>Wifi</h3>
+                <div class="card-btns">
+                  <button
+                    id="wifi-set"
+                    class="btn-set"
+                    onclick="openWifiPopup()"
+                  >
+                    Set
+                  </button>
+                  <button id="wifi-delete" class="btn-delete">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="concuption-container">
+          <h2 class="general">Consumption</h2>
+            <div class="box box-general-sensor">
+              <i class="fa-solid fa-bolt"></i>
+              <div class="button-container">
+                <h3>Electric Usage</h3>
+                <button
+                  id="set-electric-button"
+                  class="set-button"
+                  onclick="ElectricPopup()"
+                >
+                  Set
+                </button>
+              </div>
+            </div>
+        </div>
+      </section>
+    </div>
+    <!-- Date - time -->
+    <div id="datetime"><span id="date"></span><span id="time"></span></div>
 
-<body>
-  <div class="container"></div>
-  <a href="../producer/main.html" class="goBack">
-    <img width="40px" height="40px" src="../back.png" />
-    <p>Back</p>
-  </a>
-  <header>
-    <h1>Living Room</h1>
-  </header>
-  <img src = "living-room.jpg" alt = "Livingroom" class="living-image">
-  
-  <h2 class="general">General Sensors</h2>
-
-<div class="producer">
-  <div class="box box-general-sensor">
-    <i class="fas fa-thermometer-half"></i>
-    <h3>Temperature</h3> 
-    <div class="button-producer">
-      <button class="set-button" onclick="openPopup()">Set</button>
-    </div> 
-  </div>
-
-  <div class="box box-general-sensor">
-    <i class="fas fa-tint"></i>
-    <h3>Humidity</h3>
-    <div class="button-producer">
-      <button id="set-humidity-button" class="set-button" onclick="openHumidityPopup()">Set</button>
-    </div>
-  </div>
-
-  <div class="box box-general-sensor">
-    <i class="fas fa-cloud"></i>
-    <h3>CO2</h3>
-    <div class="button-producer">
-      <button class="set-button" id="set-co2-button" onclick="openCo2Popup()">Set</button>
-    </div>
-  </div>
-
-</div>
-
-<div id="popup" class="popup">
-  <div class="popup-content">
-    <span class="close-button">&times;</span>
-    <h2>Set Temperature Range</h2>
-    <div class="input-container">
-      <label for="min">Min:</label>
-      <input type="number" id="min" name="min" placeholder="18 C°" readonly>
-    </div>
-    <div class="input-container">
-      <label for="max">Max:</label>
-      <input type="number" id="max" name="max" placeholder="30 C°" readonly>
-    </div>
-    <div class="input-container">
-      <label for="input">Value:</label>
-      <input type="number" id="input" name="input" placeholder="C°">
-    </div>
-    <div class="button-container">
-      <button id="save-button">Save</button>
-      <button id="send-button" disabled>Send</button>
-    </div>
-  </div>
-</div>
-
-<div id="humidity-popup" class="popup">
-  <div class="popup-content">
-    <span id="close-humidity-popup-button" class="close-button">&times;</span>
-    <h2>Set Humidity </h2>
-    <div class="input-container">
-      <label for="input">Enter Value :</label>
-      <input type="number" id="humidity-input" name="input" placeholder="%30 to %70">
-    </div>
-    <div class="button-container">
-      <button id="humidity-save-button">Save</button>
-      <button id="humidity-send-button" disabled>Send</button>
-    </div>
-  </div>
-</div>
-
-<div id="co2-popup" class="popup">
-  <div class="popup-content">
-    <span id="close-co2-popup-button" class="close-button">&times;</span>
-    <h2>Set CO2 </h2>
-    <div class="input-container">
-      <label for="input">Enter Value:</label>
-      <input type="number" id="co2-input" name="input" placeholder="%0 to %10">
-    </div>
-    <div class="button-container">
-      <button id="co2-save-button">Save</button>
-      <button id="co2-send-button" disabled>Send</button>
-    </div>
-  </div>
-</div>
-
-<h2 class="general" style="padding-top: 3rem;">Devices</h2>
-<div class="producer">
-  <div  class="box box-device">
-    <i class="fa-regular fa-lightbulb"></i>
-    <div class="card-header">
-      <h3>Light</h3>
-    </div>
-    <div class="card-btns">
-      <button id="set-light-button" class="btn-set" onclick="openLightPopup()">Set</button>
-      <button id="light-delete" class="btn-delete">Delete</button>
-    </div>
-    <div class="card-body">
-      <label class="switch" id="light-switch">
-        <input id="light-slider" type="checkbox" id="light-switch">
-        <span class="slider round"></span>
-      </label>
-    </div>
-  </div>
- 
-  <div  class="box box-device">
-    <i class="fa-sharp fa-solid fa-wifi"></i>
-    <div class="card-header">
-      <h3>Wifi</h3>
-    </div>
-    <div class="card-btns">
-      <button id="wifi-set" class="btn-set" onclick="openWifiPopup()">Set</button>
-      <button id="wifi-delete" class="btn-delete">Delete</button>
-    </div>
-    <div class="card-body">
-      <label class="switch" id="light-switch">
-        <input type="checkbox" id="wifi-toggle-switch" >
-        <span class="slider round"></span>
-      </label>
-    </div>
-  </div>
-  
-  <div  class="box box-device">
-    <i class="fa-solid fa-lock"></i>
-    <div class="card-header">
-      <h3>Door Lock</h3>
-    </div>
     
-    <div class="card-btns">
-      <button id="door-set" class="btn-set" onclick="openDoorPopup()">Set</button>
-      <button id="door-delete" class="btn-delete">Delete</button>
+
+
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close-button">&times;</span>
+        <h2>Set Temperature Range</h2>
+        <div class="input-container">
+          <label for="min">Min:</label>
+          <input
+            type="number"
+            id="min"
+            name="min"
+            placeholder="18 C°"
+            readonly
+          />
+        </div>
+        <div class="input-container">
+          <label for="max">Max:</label>
+          <input
+            type="number"
+            id="max"
+            name="max"
+            placeholder="30 C°"
+            readonly
+          />
+        </div>
+        <div class="input-container">
+          <label for="input">Value:</label>
+          <input type="number" id="input" name="input" placeholder="C°" />
+        </div>
+        <div class="button-container">
+          <button id="save-button">Save</button>
+          <button id="send-button" disabled>Send</button>
+        </div>
+      </div>
     </div>
-    <div class="card-body">
-      <label class="switch" id="light-switch">
-        <input type="checkbox" id="door-toggle-switch">
-        <span class="slider round"></span>
-      </label>
+
+    <div id="humidity-popup" class="popup">
+      <div class="popup-content">
+        <span id="close-humidity-popup-button" class="close-button"
+          >&times;</span
+        >
+        <h2>Set Humidity</h2>
+        <div class="input-container">
+          <label for="input">Enter Value :</label>
+          <input
+            type="number"
+            id="humidity-input"
+            name="input"
+            placeholder="%30 to %70"
+          />
+        </div>
+        <div class="button-container">
+          <button id="humidity-save-button">Save</button>
+          <button id="humidity-send-button" disabled>Send</button>
+        </div>
+      </div>
     </div>
-  </div>
- 
-  <div  class="box box-device">
-    <i class="fa-solid fa-tv"></i>
-    <div class="card-header">
-      <h3>Smart TV</h3>
+
+    <div id="co2-popup" class="popup">
+      <div class="popup-content">
+        <span id="close-co2-popup-button" class="close-button">&times;</span>
+        <h2>Set CO2</h2>
+        <div class="input-container">
+          <label for="input">Enter Value:</label>
+          <input
+            type="number"
+            id="co2-input"
+            name="input"
+            placeholder="%0 to %10"
+          />
+        </div>
+        <div class="button-container">
+          <button id="co2-save-button">Save</button>
+          <button id="co2-send-button" disabled>Send</button>
+        </div>
+      </div>
     </div>
+
+    <div id="light-popup" class="popup">
+      <div class="popup-content">
+        <span id="close-light-popup-button" class="close-button">&times;</span>
+        <h2>Set Brightness</h2>
+        <div class="input-container">
+          <label for="input">Enter Value:</label>
+          <input
+            type="number"
+            id="light-input"
+            name="input"
+            placeholder="%0 to %100"
+          />
+        </div>
+        <div class="button-container">
+          <button id="light-save-button">Save</button>
+          <button id="light-send-button" disabled>Send</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="wifi-popup" class="popup">
+      <div class="popup-content">
+        <span id="close-wifi-popup-button" class="close-button">&times;</span>
+        <h2>Set Wifi Timer</h2>
+        <div class="input-container">
+          <label for="wifi-on-time">Turn Wifi On : </label>
+          <input type="time" id="wifi-on-time" name="wifi-on-time" />
+        </div>
+        <div class="input-container">
+          <label for="wifi-off-time">Turn Wifi Off : </label>
+          <input type="time" id="wifi-off-time" name="wifi-off-time" />
+        </div>
+        <div class="button-container">
+          <button id="wifi-save-button">Save</button>
+          <button id="wifi-send-button" disabled>Send</button>
+        </div>
+      </div>
+    </div>
+    <div id="door-popup" class="popup">
+      <div class="popup-content">
+        <span id="close-door-popup-button" class="close-button">&times;</span>
+        <h2>Set Lock On/Off Timer</h2>
+        <div class="input-container">
+          <label for="door-on-time"> Lock On At : </label>
+          <input type="time" id="door-on-time" name="door-on-time" />
+        </div>
+        <div class="input-container">
+          <label for="door-off-time">Lock Off At : </label>
+          <input type="time" id="door-off-time" name="door-off-time" />
+        </div>
+        <div class="button-container">
+          <button id="door-save-button">Save</button>
+          <button id="door-send-button" disabled>Send</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="tv-popup" class="popup">
+      <div class="popup-content">
+        <span id="close-tv" class="close-button">&times;</span>
+        <h2>Set Values</h2>
+        <div class="input-container">
+          <label for="input">Channel number :</label>
+          <input
+            type="number"
+            id="tv-number"
+            name="input"
+            placeholder="1 to 250"
+          />
+        </div>
+        <div class="input-container">
+          <label for="input">Volume :</label>
+          <input
+            type="number"
+            id="tv-volume"
+            name="input"
+            placeholder="%0 to %100"
+          />
+        </div>
+        <div class="button-container">
+          <button id="tv-save-button">Save</button>
+          <button id="tv-send-button">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="electric-popup" class="popup">
+      <div class="popup-content">
+        <span id="close-electric-popup-button" class="close-electric-button"
+          >&times;</span
+        >
+        <h2>Consumption Amount</h2>
+        <div class="input-container">
+          <label for="input">Enter Value:</label>
+          <input
+            type="number"
+            id="electric-input"
+            name="input"
+            placeholder="kWh"
+          />
+        </div>
+        <div class="button-container">
+          <button id="electric-send-button">Send</button>
+        </div>
+      </div>
+    </div>
+
     
-    <div class="card-btns">
-      <button id="tv-set" class="btn-set" onclick="openTVPopup()">Set</button>
-      <button id="tv-delete" class="btn-delete">Delete</button>
-    </div>
-    <div class="card-body">
-      <label class="switch" id="light-switch">
-        <input type="checkbox" id="tv-switch">
-        <span class="slider round"></span>
-      </label>
-    </div>
-  </div>
- 
- 
-</div>
 
-
-
-<h2 class="general" style="padding-top:20rem;">Consumption</h2>
-<div class="container consumption">
-  <div class="box">
-    <i class="fa-solid fa-bolt"></i>
-    <h3>Electric Usage</h3>
-    <div class="button-container">
-      <button id = "set-electric-button" class="set-button" onclick="ElectricPopup()">Set</button>
-    </div>
-  </div>
-</div>
-
-<div id="light-popup" class="popup">
-  <div class="popup-content">
-    <span id="close-light-popup-button" class="close-button">&times;</span>
-    <h2>Set Brightness </h2>
-    <div class="input-container">
-      <label for="input">Enter Value:</label>
-      <input type="number" id="light-input" name="input" placeholder="%0 to %100">
-    </div>
-    <div class="button-container">
-      <button id="light-save-button">Save</button>
-      <button id="light-send-button" disabled>Send</button>
-    </div>
-  </div>
-</div>
-
-<div id="wifi-popup" class="popup">
-  <div class="popup-content">
-    <span id="close-wifi-popup-button" class="close-button">&times;</span>
-    <h2>Set Wifi Timer</h2>
-    <div class="input-container">
-      <label for="wifi-on-time">Turn Wifi On : </label>
-      <input type="time" id="wifi-on-time" name="wifi-on-time">
-    </div>
-    <div class="input-container">
-      <label for="wifi-off-time">Turn Wifi Off : </label>
-      <input type="time" id="wifi-off-time" name="wifi-off-time">
-    </div>
-    <div class="button-container">
-      <button id="wifi-save-button">Save</button>
-      <button id="wifi-send-button" disabled>Send</button>
-    </div>
-  </div>
-</div>
-<div id="door-popup" class="popup">
-  <div class="popup-content">
-    <span id="close-door-popup-button" class="close-button">&times;</span>
-    <h2>Set Lock On/Off Timer</h2>
-    <div class="input-container">
-      <label for="door-on-time"> Lock On At : </label>
-      <input type="time" id="door-on-time" name="door-on-time">
-    </div>
-    <div class="input-container">
-      <label for="door-off-time">Lock Off At : </label>
-      <input type="time" id="door-off-time" name="door-off-time">
-    </div>
-    <div class="button-container">
-      <button id="door-save-button">Save</button>
-      <button id="door-send-button" disabled>Send</button>
-    </div>
-  </div>
-</div>
-
-<div id="tv-popup" class="popup">
-  <div class="popup-content">
-    <span id="close-tv" class="close-button">&times;</span>
-    <h2> Set Values </h2>
-    <div class="input-container">
-      <label for="input">Channel number :</label>
-      <input type="number" id="tv-number" name="input" placeholder="1 to 250">
-    </div>
-    <div class="input-container">
-      <label for="input">Volume :</label>
-      <input type="number" id="tv-volume" name="input" placeholder="%0 to %100">
-    </div>
-    <div class="button-container">
-      <button id="tv-save-button">Save</button>
-      <button id="tv-send-button">Send</button>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-<div id="electric-popup" class="popup">
-  <div class="popup-content">
-    <span id="close-electric-popup-button" class="close-electric-button">&times;</span>
-    <h2> Consumption Amount </h2>
-    <div class="input-container">
-      <label for="input">Enter Value:</label>
-      <input type="number" id="electric-input" name="input" placeholder="kWh">
-    </div>
-    <div class="button-container">
-      <button id="electric-send-button">Send</button>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-<script src="living-room.js"></script>
-
-
-  <div id="datetime">
-    <span id="date"></span><span id="time"></span>
-  </div>
-  <div>
-   <script src="../producer/Time.js"></script>
-</body>
-
+    <script src="living-room.js"></script>
+    <script src="../producer/Time.js"></script>
+  </body>
 </html>
