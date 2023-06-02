@@ -85,13 +85,18 @@ h2 {
   position: absolute;
   top: 20px;
   right: 18px;
-  width: 40px;
+  width: 45px;
   margin-right: 0.8rem;
-  height: 40px;
+  height: 45px;
   border-radius: 50%;
   overflow: hidden;
   background-color: #dad9d9;
   border: 0.1px solid #868686b3;
+}
+.bell-photo{
+  position: absolute;
+  top: 24px;
+  right: 95px;
 }
 
 .profile-photo {
