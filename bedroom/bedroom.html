@@ -19,39 +19,181 @@
 
 </head>
 
-<body>
-  <a href="../producer/main.html" class="goBack">
-    <img width="40px" height="40px" src="../back.png" />
-    <p>Back</p>
-  </a>
-  <header>
-    <h1>Bedroom</h1>
-  </header>
 
-  <h2 class="general">General Sensors</h2>
-  <div class="container">
-    <div class="box">
-      <i class="fas fa-thermometer-half"></i>
-      <h3>Temperature</h3>
-      <div class="button-container">
-        <button class="set-button" onclick="openPopup()">Set</button>
+  <body>
+    <div class="container">
+      <a href="../producer/main.html" class="goBack">
+        <img width="30px" height="30px" src="../back.png" />
+        <p>Back</p>
+      </a>
+      <header>
+        <h1>Bedroom</h1>
+      </header>
+      <img src="bedroom.jpg" alt="Bedroom" class="bedroom-image" />
+      <section>
+        <div class="general-sensors-container">
+          <h2 class="general">General Sensors</h2>
+          <div class="producer">
+            <div class="box box-general-sensor">
+              <i class="fas fa-thermometer-half"></i>
+              <div>
+                <h3>Temperature</h3>
+                <div class="button-producer">
+                  <button class="set-button" onclick="openPopup()">Set</button>
+                </div>
+              </div>
+            </div>
+            <div class="box box-general-sensor">
+              <i class="fas fa-tint"></i>
+              <div>
+                <h3>Humidity</h3>
+                <div class="button-producer">
+                  <button
+                    id="set-humidity-button"
+                    class="set-button"
+                    onclick="openHumidityPopup()"
+                  >
+                    Set
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="box box-general-sensor">
+              <i class="fas fa-cloud"></i>
+              <div>
+                <h3>CO2</h3>
+                <div class="button-producer">
+                  <button
+                    class="set-button"
+                    id="set-co2-button"
+                    onclick="openCo2Popup()"
+                  >
+                    Set
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="devices-container">
+          <h2 class="general">Devices</h2>
+          <div class="producer">
+            <div class="box box-device">
+              <div class="card-header">
+                <i class="fa-regular fa-lightbulb"></i>
+                <div class="card-body">
+                  <label class="switch" id="light-switch">
+                    <input
+                      id="light-slider"
+                      type="checkbox"
+                      id="light-switch"
+                    />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+              <div>
+                <h3>Light</h3>
+                <div class="card-btns">
+                  <button
+                    id="set-light-button"
+                    class="btn-set"
+                    onclick="openLightPopup()"
+                  >
+                    Set
+                  </button>
+                  <button id="light-delete" class="btn-delete">Delete</button>
+                </div>
+              </div>
+            </div>
+            <div class="box box-device">
+              <div class="card-header">
+                <i class="fa-solid fa-lock"></i>
+                <div class="card-body">
+                  <label class="switch" id="light-switch">
+                    <input type="checkbox" id="door-toggle-switch" />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+              <div>
+                <h3>Door Lock</h3>
+                <div class="card-btns">
+                  <button
+                    id="door-set"
+                    class="btn-set"
+                    onclick="openDoorPopup()"
+                  >
+                    Set
+                  </button>
+                  <button id="door-delete" class="btn-delete">Delete</button>
+                </div>
+              </div>
+            </div>
+            <div class="box box-device">
+              <div class="card-header">
+                <i class="fa-solid fa-tv"></i>
+                <div class="card-body">
+                  <label class="switch" id="light-switch">
+                    <input type="checkbox" id="tv-switch" />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+              <div>
+                <h3>Wifi</h3>
+                <div class="card-btns">
+                  <button
+                    id="wifi-set"
+                    class="btn-set"
+                    onclick="openWifiPopup()"
+                  >
+                    Set
+                  </button>
+                  <button id="wifi-delete" class="btn-delete">Delete</button>
+                </div>
+              </div>
+            </div>
+               <div  class="box box-device">
+                <div class="card-header">
+                 <i class="bi bi-speaker" style="font-size: 45px; "></i>
+                 <div class="card-body">
+                  <label class="switch" id="light-switch">
+                 <input id = "speaker-slider" type="checkbox">
+                <span class="slider round"></span>
+               </label>
+              </div>
+             </div>
+             <div>
+               <h3 style="margin-top: 1px;">Smart Speaker</h3>
+                 <div class="card-btns">
+                  <button id="set-speaker-button" class="btn-set" >Set</button>
+                  <button id="speaker-delete" class="btn-delete">Delete</button>
+               </div>
+             </div>
+          </div>
+        </div>
       </div>
+     <div class="concuption-container">
+          <h2 class="general">Consumption</h2>
+            <div class="box box-general-sensor">
+              <i class="fa-solid fa-bolt"></i>
+              <div class="button-container">
+                <h3>Electric Usage</h3>
+                <button
+                  id="set-electric-button"
+                  class="set-button"
+                  onclick="ElectricPopup()"
+                >
+                  Set
+                </button>
+              </div>
+            </div>
+        </div>
+      </section>
     </div>
-    <div class="box">
-      <i class="fas fa-tint"></i>
-      <h3>Humidity</h3>
-      <div class="button-container">
-        <button id="set-humidity-button" class="set-button" onclick="openHumidityPopup()">Set</button>
-      </div>
-    </div>
-    <div class="box">
-      <i class="fas fa-cloud"></i>
-      <h3>CO2</h3>
-      <div class="button-container">
-        <button class="set-button" id="set-co2-button" onclick="openCo2Popup()">Set</button>
-      </div>
-    </div>
-  </div>
+
+
 
   <div id="popup" class="popup">
     <div class="popup-content">
@@ -103,97 +245,6 @@
       </div>
     </div>
   </div>
-
-
-
-  <h2 class="general">Devices</h2>
-  <div class="container">
-    <div  class="box">
-      <i class="fa-regular fa-lightbulb"></i>
-      <div class="card-header">
-        <h3>Light</h3>
-      </div>
-      <div class="card-btns">
-        <button id="set-light-button" class="btn-set" onclick="openLightPopup()">Set</button>
-        <button id="light-delete" class="btn-delete">Delete</button>
-      </div>
-      <div class="card-body">
-        <label class="switch" id="light-switch">
-          <input id="light-slider" type="checkbox" id="light-switch">
-          <span class="slider round"></span>
-        </label>
-      </div>
-    </div>
-   
-    <div  class="box">
-      <i class="fa-sharp fa-solid fa-wifi"></i>
-      <div class="card-header">
-        <h3>Wifi</h3>
-      </div>
-      <div class="card-btns">
-        <button id="wifi-set" class="btn-set" onclick="openWifiPopup()">Set</button>
-        <button id="wifi-delete" class="btn-delete">Delete</button>
-      </div>
-      <div class="card-body">
-        <label class="switch" id="light-switch">
-          <input type="checkbox" id="wifi-toggle-switch" >
-          <span class="slider round"></span>
-        </label>
-      </div>
-    </div>
-    
-    <div  class="box">
-      <i class="fa-solid fa-lock"></i>
-      <div class="card-header">
-        <h3>Door Lock</h3>
-      </div>
-      
-      <div class="card-btns">
-        <button id="door-set" class="btn-set" onclick="openDoorPopup()">Set</button>
-        <button id="door-delete" class="btn-delete">Delete</button>
-      </div>
-      <div class="card-body">
-        <label class="switch" id="light-switch">
-          <input type="checkbox" id="door-toggle-switch">
-          <span class="slider round"></span>
-        </label>
-      </div>
-    </div>
-   
-    <div  class="box">
-      <i class="bi bi-speaker" style="font-size: 45px; "></i>
-      <div class="card-header">
-        <h3 style="margin-top: 1px;">Smart Speaker</h3>
-      </div>
-      <div class="card-btns">
-        <button id="set-speaker-button" class="btn-set" >Set</button>
-        <button id="speaker-delete" class="btn-delete">Delete</button>
-      </div>
-      <div class="card-body">
-        <label class="switch" id="light-switch">
-          <input id = "speaker-slider" type="checkbox">
-          <span class="slider round"></span>
-        </label>
-      </div>
-    </div>
-   
-   
-  </div>
-
-
-  <h2 class="general">Consumption</h2>
-  <div class="container consumption">
-    <div class="box">
-      <i class="fa-solid fa-bolt"></i>
-      <h3>Electric Usage</h3>
-      <div class="button-container">
-        <button id = "set-electric-button" class="set-button" onclick="ElectricPopup()">Set</button>
-      </div>
-    </div>
-  
-  </div>
-
-
 
 
 
