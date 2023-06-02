@@ -70,9 +70,9 @@ body {
   padding: 3.5px;
   position: absolute;
   top: 12%;
-  left: 1.7%;
+  left: 1.5%;
   width: 370px;
-  height: 440px;
+  height: 450px;
   object-fit: cover;
 }
 
@@ -80,9 +80,9 @@ h1 {
   color: white;
   text-align: center;
   text-emphasis: none;
-  margin-top: 3rem;
-  padding-bottom: 2rem;
-  font-size: 38px;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  font-size: 28px;
   justify-content: center;
   letter-spacing: 1.4px;
 
@@ -90,15 +90,15 @@ h1 {
 
 .general {
   color: white;
-  padding: 10px;
-  font-size: 23px;
-  font-weight: 400;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 500;
   letter-spacing: 1.3px;
 }
 
 .devices-container .box-device {
   display: flex;
-  width: 180px;
+  width: 160px;
 }
 
 .producer {
@@ -109,27 +109,33 @@ h1 {
 
 .box-general-sensor {
   display: flex;
-  gap: 20px;
+  gap: 22px;
 }
 
 .box i {
   color: #ffffffe7;
-  font-size: 50px;
-  margin-bottom: 8px;
+  font-size: 40px;
+  margin-bottom: 7px;
 }
 
 .box i.fa-thermometer-half {
-  margin-right: 28px;
+  margin-bottom: auto;
+  margin-right: 23px;
 }
 
 .box i.fa-tint {
-  margin-right: 25px;
+  margin-right: 20px;
+}
+
+.box i.fa-solid.fa-tv{
+  margin-right: 20px;
 }
 
 .box h3 {
+  margin-bottom: 3px;
   text-align: left;
   color: #ffffff;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .button-container {
@@ -150,9 +156,9 @@ h1 {
   align-items: center;
   text-align: center;
   border: none;
-  font-size: 14px;
-  padding: 7px 2px;
-  width: 6rem;
+  font-size: 13px;
+  padding: 5px 0px;
+  width: 5rem;
   cursor: pointer;
 }
 
@@ -206,19 +212,19 @@ h1 {
 
 .popup-content {
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 330px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  padding: 20px;
+  padding: 17px;
   border: 2px solid black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   transform: translate(-50%, -50%);
-  top: 50%;
+  top: 40%;
   left: 50%;
 }
 
@@ -241,7 +247,7 @@ h1 {
 }
 
 .input-container label {
-  margin-bottom: 15px;
+  margin-bottom: 7px;
 }
 
 #min::placeholder {
@@ -264,19 +270,19 @@ h1 {
 }
 
 label {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;
-  margin-right: 10px;
+  margin-right: 18px;
 }
 
 input[type="number"] {
   border: none;
-  padding: 10px;
+  padding: 7px;
   border-radius: 5px;
-  border: 2px solid rgba(21, 21, 21, 0.878);
+  border: 1px solid rgba(21, 21, 21, 0.878);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-  font-size: 16px;
-  margin-right: 10px;
+  font-size: 13px;
+  margin-right: 2px;
 }
 
 
@@ -294,10 +300,10 @@ button {
   background-color: #3c903f;
   border: none;
   color: #fff;
-  padding: 10px 10px;
-  margin-right: 1rem;
+  padding: 7px 10px;
+  margin-right: 2rem;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
   cursor: pointer;
 }
@@ -306,12 +312,13 @@ button {
   border: none;
   background-color: #4c66c3;
   color: #fff;
-  padding: 10px 12px;
+  padding: 8px 11px;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
   cursor: pointer;
 }
+
 
 #send-button:disabled {
   background-color: #ccc;
@@ -350,9 +357,9 @@ button {
 
 
 #humidity-popup .popup-content {
-  width: 400px;
-  height: 300px;
-  margin-top: 20px;
+  width: 300px;
+  height: 250px;
+  margin-top: 15px;
 }
 
 #humidity-popup .input-container {
@@ -395,9 +402,9 @@ button {
 
 
 #co2-popup .popup-content {
-  width: 400px;
-  height: 300px;
-  margin-top: 20px;
+  width: 300px;
+  height: 250px;
+  margin-top: 15px;
 }
 
 #co2-popup .input-container {
@@ -455,7 +462,7 @@ button {
 
 
 #tv-popup .popup-content {
-  width: 400px;
+  width: 350px;
   margin-top: 20px;
 }
 
@@ -473,9 +480,9 @@ button {
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
-  margin-top: 10px;
+  width: 45px;
+  height: 25px;
+  margin-top: 7px;
 }
 
 .switch input {
@@ -500,9 +507,9 @@ button {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
+  height: 17px;
+  width: 17px;
+  left: 3px;
   bottom: 4px;
   background-color: white;
   -webkit-transition: .4s;
@@ -535,30 +542,30 @@ input:checked+.slider:before {
 }
 
 .btn-delete {
-  background-color: #3838eb;
+  background-color: #1d1da9;
   border-radius: 4px;
   color: #fff;
   margin: auto;
   align-items: center;
   text-align: center;
   border: none;
-  font-size: 16px;
   margin-top: 0.6rem;
-  padding: 10px 5px;
+  font-size: 13px;
+  padding: 5px 0px;
   width: 5rem;
   cursor: pointer;
 
 }
 
 .btn-set {
-  background-color: #b81d1d;
-  border-radius: 4px;
+  background-color: rgba(83, 0, 91, 0.815);
+  border-radius: 3px;
   color: #fff;
   align-items: center;
   text-align: center;
   border: none;
-  font-size: 16px;
-  padding: 10px 5px;
+  font-size: 13px;
+  padding: 5px 0px;
   width: 5rem;
   cursor: pointer;
 
@@ -572,7 +579,7 @@ input:checked+.slider:before {
 
 .btn-set:hover {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 30px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-  background-color: #741414;
+  background-color: rgba(42, 5, 53, 0.735);
 }
 
 #light-save-button {
@@ -609,10 +616,9 @@ input:checked+.slider:before {
 
 
 #light-popup .popup-content {
-  width: 400px;
-  height: 300px;
-  margin-top: 20px;
-
+  width: 300px;
+  height: 250px;
+  margin-top: 15px;
 
 }
 
@@ -720,7 +726,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   background-color: rgba(255, 255, 255, 0.885);
   display: flex;
   top: 10px;
-  left: 20px;
+  left: 15px;
   flex-direction: row;
 
   color: black;
@@ -732,14 +738,14 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 .goBack>p {
-  font-size: 13px;
+  font-size: 12px;
   margin: auto;
   margin-right: 1rem;
 }
 
 .goBack>img {
   margin: auto;
-  padding: 7px;
+  padding: 6px;
 }
 
 #wifi-send-button {
@@ -822,9 +828,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 
 #electric-popup .popup-content {
-  width: 400px;
-  height: 330px;
-  margin-top: 50px;
+  width: 330px;
+  height: 270px;
+  margin-top: 15px;
 
 }
 
@@ -881,15 +887,14 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 #datetime {
   background-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 3px 3px rgb(156, 217, 255);
-  ;
-  width: 300px;
-  padding: 10px;
+  box-shadow: 0 0 2px 2px rgb(156, 217, 255);
+  width: 230px;
+  padding: 7px;
   position: fixed;
-  top: 50px;
-  right: 70px;
+  top: 40px;
+  right: 50px;
   color: #fff;
-  font-size: 25px;
+  font-size: 19px;
   text-align: center;
   border-radius: 5px;
 }
