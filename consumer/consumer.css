@@ -128,3 +128,12 @@ canvas {
   width: 100% !important;
   height: 300px;
 }
+
+.title {
+  margin-left: 3rem;
+  font-size: 20px;
+  font-weight: 800;
+  color: #ffffff;
+ margin-top: 2rem;
+  margin-bottom: -0.5rem;
+}
