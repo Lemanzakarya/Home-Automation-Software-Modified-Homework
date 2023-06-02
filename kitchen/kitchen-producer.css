@@ -63,7 +63,7 @@ body {
   flex-direction: row;
 }
 
-.living-image {
+.kitchen-image {
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
   border: 2px solid rgb(156, 217, 255);
@@ -87,6 +87,7 @@ h1 {
   letter-spacing: 1.4px;
 
 }
+
 
 .general {
   color: white;
@@ -214,7 +215,7 @@ h1 {
   position: relative;
   width: 350px;
   height: 330px;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   padding: 17px;
@@ -227,6 +228,7 @@ h1 {
   top: 40%;
   left: 50%;
 }
+
 
 .close-button {
   position: absolute;
@@ -284,7 +286,6 @@ input[type="number"] {
   font-size: 13px;
   margin-right: 2px;
 }
-
 
 button {
   border: none;
@@ -424,56 +425,6 @@ button {
   margin-left: -60rem;
   margin-top: 8rem;
 }
-
-
-#tv-save-button {
-  background-color: #3c903f;
-  border: none;
-  color: #fff;
-  padding: 10px 12px;
-  margin-right: 1rem;
-  margin-left: 1rem;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-#tv-send-button {
-  border: none;
-  background-color: #4c66c3;
-  color: #fff;
-  padding: 10px 12px;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-#tv-send-button:disabled {
-  background-color: #ccc;
-  cursor: default;
-}
-
-#tv-set:disabled {
-  background-color: #ccc;
-  cursor: default;
-}
-
-
-#tv-popup .popup-content {
-  width: 350px;
-  margin-top: 20px;
-}
-
-#tv-popup .input-container {
-  margin-top: 30px;
-}
-
-#tv-popup .button-container {
-  margin-top: 20px;
-}
-
 
 
 
@@ -857,11 +808,6 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   margin-bottom: 1rem;
 }
 
-
-
-
-
-
 .lightning {
   width: 38%;
   flex-direction: column;
@@ -884,26 +830,44 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
+#water-popup .popup-content {
+  width: 330px;
+  height: 270px;
+  margin-top: 15px;
+}
+#water-popup  .input-container {
+  margin-top: 1rem;
+}
 
-#datetime {
-  background-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 2px 2px rgb(156, 217, 255);
-  width: 230px;
-  padding: 7px;
-  position: fixed;
-  top: 40px;
-  right: 50px;
+#water-send-button {
+  margin-bottom: 1.5rem;
+  width: 6rem;
+  border: none;
+  background-color: #4c66c3;
   color: #fff;
-  font-size: 19px;
-  text-align: center;
+  padding: 12px 12px;
   border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-#datetime span {
-  display: inline-block;
-  margin-right: 35px;
+
+.close-water-button{
+
+position: absolute;
+top: 10px;
+right: 10px;
+font-size: 24px;
+font-weight: bold;
+color: #555;
+cursor: pointer;
+
 }
 
-#datetime span:last-child {
-  margin-right: 0;
-}
+
+
+
+
+
+

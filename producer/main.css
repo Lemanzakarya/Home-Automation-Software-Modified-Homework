@@ -179,34 +179,6 @@ body {
 }
 
 
-/* Time */
-
-#datetime {
-  background-color: rgba(255, 255, 255, 0.5);
-  width: 230px;
-  padding: 5px;
-  position: fixed;
-  top: 50px; 
-  right: 70px;
-  color: #fff;
-  font-size: 18px;
-  box-shadow: 0 0 1.5px 1.5px rgb(156, 217, 255); 
-  text-align: center;
-  border-bottom-right-radius: 50px;
-  border-top-right-radius: 0;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 0;
-}
-
-#datetime span {
-  display: inline-block;
-  margin-right: 35px; 
-}
-
-#datetime span:last-child {
-  margin-right: 0;
-}
-
 /* Mobile friendly */
 
 @media only screen and (max-width: 767px) {
@@ -296,27 +268,5 @@ body {
   .button-icon {
     width: 30px;
     height: 30px;
-  }
-
-  #datetime {
-    position: static;
-    border-radius: 30px;
-    margin: 30px;
-    text-align: center;
-    border-top-right-radius: inherit;
-    border-top-left-radius: inherit;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    padding: initial;
-    font-size: inherit;
-    margin-bottom: auto;
-    width: auto;
-    background: bottom;
-  }
-
-  #datetime span {
-    display: block;
-    margin-right: 0;
-    margin-bottom: 5px;
   }
 }
