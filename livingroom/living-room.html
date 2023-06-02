@@ -32,15 +32,15 @@
   <h2 class="general">General Sensors</h2>
 
 <div class="producer">
-  <div class="box">
+  <div class="box box-general-sensor">
     <i class="fas fa-thermometer-half"></i>
-    <h3>Temperature</h3>
+    <h3>Temperature</h3> 
     <div class="button-producer">
       <button class="set-button" onclick="openPopup()">Set</button>
-    </div>
+    </div> 
   </div>
 
-  <div class="box">
+  <div class="box box-general-sensor">
     <i class="fas fa-tint"></i>
     <h3>Humidity</h3>
     <div class="button-producer">
@@ -48,13 +48,14 @@
     </div>
   </div>
 
-  <div class="box">
+  <div class="box box-general-sensor">
     <i class="fas fa-cloud"></i>
     <h3>CO2</h3>
     <div class="button-producer">
       <button class="set-button" id="set-co2-button" onclick="openCo2Popup()">Set</button>
     </div>
   </div>
+
 </div>
 
 <div id="popup" class="popup">
@@ -79,6 +80,7 @@
     </div>
   </div>
 </div>
+
 <div id="humidity-popup" class="popup">
   <div class="popup-content">
     <span id="close-humidity-popup-button" class="close-button">&times;</span>
@@ -93,6 +95,7 @@
     </div>
   </div>
 </div>
+
 <div id="co2-popup" class="popup">
   <div class="popup-content">
     <span id="close-co2-popup-button" class="close-button">&times;</span>
@@ -108,11 +111,9 @@
   </div>
 </div>
 
-  
-
-<h2 class="general">Devices</h2>
+<h2 class="general" style="padding-top: 3rem;">Devices</h2>
 <div class="producer">
-  <div  class="box">
+  <div  class="box box-device">
     <i class="fa-regular fa-lightbulb"></i>
     <div class="card-header">
       <h3>Light</h3>
@@ -129,7 +130,7 @@
     </div>
   </div>
  
-  <div  class="box">
+  <div  class="box box-device">
     <i class="fa-sharp fa-solid fa-wifi"></i>
     <div class="card-header">
       <h3>Wifi</h3>
@@ -146,7 +147,7 @@
     </div>
   </div>
   
-  <div  class="box">
+  <div  class="box box-device">
     <i class="fa-solid fa-lock"></i>
     <div class="card-header">
       <h3>Door Lock</h3>
@@ -164,7 +165,7 @@
     </div>
   </div>
  
-  <div  class="box">
+  <div  class="box box-device">
     <i class="fa-solid fa-tv"></i>
     <div class="card-header">
       <h3>Smart TV</h3>
@@ -187,7 +188,7 @@
 
 
 
-<h2 class="general">Consumption</h2>
+<h2 class="general" style="padding-top:20rem;">Consumption</h2>
 <div class="container consumption">
   <div class="box">
     <i class="fa-solid fa-bolt"></i>
@@ -196,13 +197,7 @@
       <button id = "set-electric-button" class="set-button" onclick="ElectricPopup()">Set</button>
     </div>
   </div>
-
 </div>
-
-
-
-
-
 
 <div id="light-popup" class="popup">
   <div class="popup-content">
@@ -304,7 +299,7 @@
   <div id="datetime">
     <span id="date"></span><span id="time"></span>
   </div>
-  iv>
+  <div>
    <script src="../producer/Time.js"></script>
 </body>
 
