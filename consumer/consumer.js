@@ -80,4 +80,3 @@ const waterUsageChart = new Chart(document.getElementById('water-usage-chart'), 
     },
   },
 });
-
