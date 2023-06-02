@@ -47,6 +47,7 @@ const electricUsageChart = new Chart(document.getElementById('electric-usage-cha
     scales: {
       y: {
         beginAtZero: true,
+        display: true,
       },
     },
   },
@@ -76,6 +77,7 @@ const waterUsageChart = new Chart(document.getElementById('water-usage-chart'), 
     scales: {
       y: {
         beginAtZero: true,
+        display: true,
       },
     },
   },

@@ -100,33 +100,31 @@ h2 {
 }
 
 .usage-container {
+  width: 650px; 
+  height: 100%;
+  padding: 15px; 
+  margin-left: 20px;
   display: flex;
-  justify-content: left;
+  justify-content: center;
   margin-top: 10px;
-  position: relative;
-  margin-right: 5rem;
-  margin-left: 3rem;
 }
 
 .usage {
-  width: 240px;
+  width: 100%;
   margin: 10px;
   padding: 15px;
-  margin-top: 1.5rem;
-  background-color: #f0f0f0f6;
+  background-color: rgba(240, 240, 240, 0.858);
   border-radius: 5px;
 }
 
-.usage:not(:last-child) {
-  margin-right: 30px;
-}
-
 .usage h2 {
-  font-size: 14px;
-  width: 50%;
+  font-size: 16px;
   font-weight: bold;
   margin-bottom: 10px;
-  margin-top: -4px;
-  margin-right: 4rem;
   color: black;
+}
+
+canvas {
+  width: 100% !important;
+  height: 300px;
 }
