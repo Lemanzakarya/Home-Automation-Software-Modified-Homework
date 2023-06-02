@@ -69,14 +69,20 @@ h1{
 }
 
 .producer{
-  display: flex;
   flex-direction: column; 
-  gap:70px;
   padding-left: 38%;
   margin-top: 7rem;
 }
 
+.box-general-sensor{
+  float:left;
+  width: 30%;
+}
 
+.box-device {
+  float: left;
+  width: 20%;
+}
 .box i {
   color: #ffffffe7;
   font-size: 50px;
@@ -84,6 +90,9 @@ h1{
 }
 
 .box h3 {
+  position: relative;
+  left: 90px;
+  top: -60px;
   text-align: left;
   color: #ffffff;
   font-size: 15px;
@@ -94,6 +103,10 @@ h1{
 
 .button-producer {
   position: absolute;
+  float:left;
+  position: relative;
+  left: 90px;
+  top: -60px;
 }
 
 
@@ -149,6 +162,7 @@ h1{
   border-radius: 5px;
 }
 .popup {
+  padding-top:5rem;
   display: none;
   position: fixed;
   top: 0;
@@ -870,6 +884,4 @@ position: absolute;
 #datetime span:last-child {
   margin-right: 0;
 }
-
-
 
