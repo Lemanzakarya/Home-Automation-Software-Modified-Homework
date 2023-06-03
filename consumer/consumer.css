@@ -232,7 +232,10 @@ canvas {
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
-  padding: 15px;
+  background-color: #f1f3e9e4;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 10px;
 }
 
 .weather-list {
@@ -241,7 +244,7 @@ canvas {
 }
 
 .weather-item {
-  font-size: 14px;
+  font-size: 16px;
   display: flex;
   align-items: center;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -283,13 +286,13 @@ canvas {
 }
 
 .current {
-  margin-top: -4rem;
+  margin-top: -5rem;
   margin-left: 8rem;
   padding-bottom: 3rem;
   font-family: 'Lato', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   color: #1b1b1be2;
-  font-size: 24px;
+  font-size: 22px;
   text-shadow: 2px 4px 6px #14141410;
   letter-spacing: 1.4px;
 }
@@ -300,7 +303,7 @@ canvas {
   align-items: center;
   position: relative;
   font-weight: 900;
-  bottom: 10px;
+  bottom: 14px;
   right: 1.5rem;
   
 }
@@ -317,13 +320,14 @@ canvas {
   align-items: center;
   position: relative;
   margin-top: 10px;
-  margin-left: 0.8rem;
+  margin-left: 0.6rem;
   padding-top: 1px;
   width: 130px;
-  height: 150px;
-  background-color: #f1f3e9a7;
-  border: 1px solid #ccc;
-  border-radius: 20px;
+  height: 110px;
+  background-color: #f1f3e9;
+  border: 0.1px solid #9191913a;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  border-radius: 12px;
   padding: 6px;
 }
 
@@ -332,29 +336,40 @@ canvas {
   display: flex;
  text-align: center;
   transform: translate(-50%, -50%);
-  margin-left: 4.2rem;
+  margin-left: 3.8rem;
   font-size: 19px;
-  padding: 5px;
-  text-shadow: 2px 6px 6px rgba(0, 0, 0, 0.168);
-  margin-bottom: 8px;
+  position: relative;
+display: flex;
+  padding: 6px;
+  text-shadow: 2px 6px 6px rgba(0, 0, 0, 0.19);
+  
   font-weight: bold;
   color: #181818;
   
 }
 #percentagex{
   margin-left: 3.8rem;
+  color: #181818;
+  text-shadow: 2px 6px 6px rgba(0, 0, 0, 0.19);
+  
 }
 #humidity-image {
-  width: 60px;
-  height: 60px;
- margin-bottom: 1rem;
-  margin-left: 1.8rem;
+  width: 40px;
+  height: 40px;
+ margin-bottom: 0.5rem;
+position: relative;
+display: flex;
+bottom:0.5rem;
+  margin-left: 2.4rem;
 }
 #wind-image{
-  width: 60px;
-  height: 60px;
-margin-bottom: 1rem;
-  margin-left: 1.8rem;
+  width:40px;
+  height: 42px;
+  position: relative;
+display: flex;
+bottom: 0.5rem;
+margin-bottom: 0.4rem;
+  margin-left: 2.4rem;
 }
 
 /* Circular buttons */
