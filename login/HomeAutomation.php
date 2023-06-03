@@ -23,8 +23,8 @@
         <span class="menubtn">&#9776;</span>
         <div class="navLinks">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="../login/HomeAutomation.php">Home</a></li>
+            <li><a href="../login/About.html">About</a></li>
             <li><a href="#">Contact</a></li>
            </li>
           </ul>
