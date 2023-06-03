@@ -95,8 +95,9 @@ h2 {
 }
 .bell-photo{
   position: absolute;
-  top: 24px;
-  right: 95px;
+  top: 26px;
+  right: 98px;
+ 
 }
 
 .profile-photo {
@@ -187,13 +188,27 @@ canvas {
   background: linear-gradient(to right, #ffffffae, #eee9e98b);
   position: absolute;
   top: 90px;
-  right: 15px;
-  width: 350px;
+  right: 10px;
+  width: 325px;
+  max-width: 350px;
   height: 550px;
   border-radius: 12px;
   padding: 15px;
   box-shadow: 0 2px 8px rgba(24, 1, 80, 0.348);
   z-index: 10;
+}
+@media (max-width: 350px) {
+  .sidebar {
+    position: static;
+    width: auto;
+    max-width: none;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 10px;
+    background: none;
+    margin: 0;
+  }
 }
 
 .sidebar-icon {
