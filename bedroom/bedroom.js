@@ -75,65 +75,64 @@ speakerSlider.addEventListener("change", () => {
   speakerSet.disabled = !speakerSlider.checked;
 })
 
-speakerSave.disabled = true;
+speakerSave.disabled = false;
 speakerSend.disabled = true;
 
-speakerSave.addEventListener("click" , function() {
-  if(speakerInput.value < 0 ||speakerInput.value > 100){
+speakerSave.addEventListener("click", function () {
+  if (speakerInput.value < 0 || speakerInput.value > 100) {
+    alert("Please enter a valid number !");
+  }
+  else {
+    speakerSend.disabled = false;
+    speakerSave.disabled = true;
+  }
+});
+
+
+speakerSend.onclick = function () {
+  let userInput = parseInt(speakerInput.value);
+  if (isNaN(userInput)) {
     alert("Please enter a valid number !");
     speakerSend.disabled = true;
-    
+    return;
   }
-  else{
-   speakerSend.disabled = false;
+  speakerSend.disabled = false;
+  localStorage.setItem("smartLevel", speakerInput.value);
+  localStorage.setItem("colorBedroom", colorInput.value);
+  alert("User input: " + speakerInput.value);
+  speakerPopup.style.display = "none";
+};
+
+
+speakerInput.addEventListener("input", function () {
+
+  if (speakerInput.value.trim() === "" || parseInt(speakerInput.value) < 0 || parseInt(speakerInput.value) > 100) {
+    speakerSave.disabled = true;
+    speakerSend.disabled = true;
+
+  } else {
+    speakerSave.disabled = false;
+
+
   }
-
-  });
-
-
-  speakerSend.onclick = function() {
-    let userInput = parseInt(speakerInput.value);
-    if (isNaN(userInput) ) {
-      alert("Please enter a valid number !");
-      return;
-    }
-    speakerSend.disabled = false;
-    localStorage.setItem("smartLevel" , speakerInput.value);
-    localStorage.setItem("colorBedroom", colorInput.value);
-    alert("User input: " + speakerInput.value);
-  };
-
- 
-  speakerInput.addEventListener("input", function() {
-    
-    if (speakerInput.value.trim() === "" || parseInt(speakerInput.value) < 0 || parseInt(speakerInput.value) > 100 ) {
-        speakerSave.disabled = true;
-        speakerSend.disabled = true;
-      
-      } else {
-        speakerSave.disabled = false;
-        
-    
-      }
-    });
+});
 
 
 
-  
-  speakerSet.addEventListener("click", function() {
-    speakerPopup.style.display = "block";
-  });
-  
-  closeSpeaker.onclick = function() {
+
+speakerSet.addEventListener("click", function () {
+  speakerPopup.style.display = "block";
+});
+
+closeSpeaker.onclick = function () {
+  speakerPopup.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == speakerPopup) {
     speakerPopup.style.display = "none";
-  };
-  
-  window.onclick = function(event) {
-    if (event.target == speakerPopup) {
-      speakerPopup.style.display = "none";
-    }
-  };
-
+  }
+};
 
 
 

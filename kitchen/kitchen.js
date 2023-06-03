@@ -308,16 +308,16 @@ doorSendButton.onclick = function() {
   doorPopup.style.display = "none";
 }
 
-deleteBtnLight.addEventListener('click', function() {
-  this.closest('.card').remove();
+deleteBtnLight.addEventListener('click', function () {
+  this.closest('.box')?.remove();
 });
 
-deleteBtnWifi.addEventListener('click', function() {
-  this.closest('.card').remove();
+deleteBtnWifi.addEventListener('click', function () {
+  this.closest('.box')?.remove();
 });
 
-deleteDoor.addEventListener('click', function() {
-  this.closest('.card').remove();
+deleteDoor.addEventListener('click', function () {
+  this.closest('.box')?.remove();
 });
 wifiToggleSwitch.checked = localStorage.getItem("k-wifiCheck") == "true" ? true : false;
 wifiToggleSwitch.addEventListener('change', function() {
@@ -329,11 +329,14 @@ doorToggleSwitch.addEventListener('change', function() {
   localStorage.setItem("k-doorCheck",doorToggleSwitch.checked);
   doorSet.disabled = doorToggleSwitch.checked;
 });
+
+console.log(lightSlider)
 lightSlider.checked = localStorage.getItem("k-lightSet") == "true" ? true : false;
-lightSlider.addEventListener('change', function() {
-  localStorage.setItem("k-lightSet",lightSlider.checked);
+lightSlider.addEventListener('change', changeToggle);
+ function changeToggle() {
+  localStorage.setItem("k-lightSet", lightSlider.checked);
   lightSet.disabled = !lightSlider.checked;
-});
+}
 
 saveButton.onclick = function() {
   let userInput = parseInt(input.value);
@@ -366,6 +369,7 @@ function openPopup() {
 function closePopup() {
   event.preventDefault();
   popup.style.display = "none";
+  console.log("Clicked")
 }
 window.onload = function() {
   document.getElementById("popup").style.display = "none";
