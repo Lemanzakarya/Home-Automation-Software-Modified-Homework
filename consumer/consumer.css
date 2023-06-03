@@ -423,7 +423,7 @@ margin-bottom: 0.4rem;
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 39, 86, 0.5);
 }
 .general-sensors-container{
   margin-top: 10px;
@@ -431,25 +431,34 @@ margin-bottom: 0.4rem;
   height: 38vh;
   max-width: 400px;
   margin: 0 auto;
-  background-color: #f1f3e9e4;
-  border: 1px solid #ccc;
+ background-color: #f1f3e9e4;
+  border: 1px solid #ccccccb8;
   border-radius: 20px;
   padding: 10px;
 
+}
+
+.btn-status {
+   bottom: 20px;
+   display: inline-block;
+ color: #181818;
 }
 
 .sensor-container{
   flex-direction: row;
   display: flex;
   flex: 1;
+  
+  margin-bottom: 50px;
   gap: 40px;
+  margin-left: 15px;
 }
 
 .circular-button span {
   color: #ffffff;
   position: absolute;
   font-size: 18px;
-  top: 80px;
+  top: 70px;
 } 
 
 .btn-on {
