@@ -360,8 +360,8 @@ margin-bottom: 1rem;
 /* Circular buttons */
 .circular-btn {
   position: absolute;
-  top: 50%;
-  right: 40%;
+  top: 70%;
+  right: 32%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
