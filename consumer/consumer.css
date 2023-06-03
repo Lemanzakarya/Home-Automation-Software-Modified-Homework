@@ -106,20 +106,21 @@ h2 {
 }
 
 .usage-container {
-  width: 650px; 
+  width: 625px; 
   height: 100%;
-  padding: 15px; 
-  margin-left: 20px;
+  padding: 15px;
+  margin-top: 10px;
+  margin-left: 30px;
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+
 }
 
 .usage {
   width: 100%;
   margin: 10px;
   padding: 15px;
-  background-color: rgba(240, 240, 240, 0.858);
+  background-color: rgba(245, 245, 245, 0.916);
   border-radius: 5px;
 }
 
@@ -150,7 +151,7 @@ canvas {
   margin-right: 30px;
   margin-top: 40px;
   gap: 30px;
-  min-height: 50vh;
+  margin-bottom: 50px;
 }
 
 .room-card {
