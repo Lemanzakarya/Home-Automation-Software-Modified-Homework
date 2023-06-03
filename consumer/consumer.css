@@ -152,6 +152,7 @@ canvas {
   margin-top: 40px;
   gap: 30px;
   margin-bottom: 50px;
+  min-height: 50vh;
 }
 
 .room-card {
@@ -190,14 +191,15 @@ canvas {
   position: absolute;
   top: 90px;
   right: 10px;
-  width: 325px;
+  width: 350px;
   max-width: 350px;
-  height: 550px;
+  height: 600px;
   border-radius: 12px;
   padding: 15px;
   box-shadow: 0 2px 8px rgba(24, 1, 80, 0.348);
   z-index: 10;
 }
+
 @media (max-width: 350px) {
   .sidebar {
     position: static;
@@ -353,4 +355,8 @@ canvas {
   height: 60px;
 margin-bottom: 1rem;
   margin-left: 1.8rem;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> a7b472c46cfb499806f4e4cf1f75035f9e6acfbf
