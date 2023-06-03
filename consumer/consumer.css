@@ -29,7 +29,7 @@ h1 {
   text-emphasis: none;
   margin-top: 2.5rem;
   margin-left: 3rem;
-  font-size: 26px;
+  font-size: 28px;
   letter-spacing: 1.4px;
   text-shadow: 0 4px 0 #0f0f0f7b;
 }
@@ -188,7 +188,7 @@ canvas {
   right: 10px;
   width: 350px;
   max-width: 350px;
-  height: 620px;
+  height: 600px;
   border-radius: 12px;
   padding: 15px;
   box-shadow: 0 2px 8px rgba(24, 1, 80, 0.348);
@@ -222,7 +222,8 @@ canvas {
   background-color: #f1f3e9e4;
   border: 1px solid #ccc;
   border-radius: 20px;
-  padding: 10px;
+  margin-bottom: 18px;
+  padding: 4px;
 }
 
 .weather-list {
@@ -311,11 +312,12 @@ canvas {
   margin-top: 10px;
   margin-left: 0.6rem;
   padding-top: 1px;
+  margin-bottom: 0.5rem;
   width: 130px;
   height: 110px;
   background-color: #f1f3e9;
-  border: 0.1px solid #9191913a;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  border: 1px solid #a1a1a14d;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
   border-radius: 12px;
   padding: 6px;
 }
@@ -401,13 +403,13 @@ margin-bottom: 0.4rem;
 /* Circular buttons */
 .circular-btn {
   position: absolute;
-  top: 50%;
+  top: 54%;
   right: 32%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 48px;
+  gap: 40px;
 }
 
 
@@ -422,6 +424,25 @@ margin-bottom: 0.4rem;
   height: 60px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.5);
+}
+.general-sensors-container{
+  margin-top: 10px;
+  width: 100%;
+  height: 38vh;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #f1f3e9e4;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 10px;
+
+}
+
+.sensor-container{
+  flex-direction: row;
+  display: flex;
+  flex: 1;
+  gap: 40px;
 }
 
 .circular-button span {
@@ -453,6 +474,7 @@ margin-bottom: 0.4rem;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
+
 
 .button {
   background-color: #ffffffb7;
