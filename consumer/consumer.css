@@ -29,7 +29,7 @@ h1 {
   text-emphasis: none;
   margin-top: 2.5rem;
   margin-left: 3rem;
-  font-size: 28px;
+  font-size: 29px;
   letter-spacing: 1.4px;
   text-shadow: 0 4px 0 #0f0f0f7b;
 }
@@ -37,13 +37,29 @@ h1 {
 h2 {
   color: rgba(255, 255, 255, 0.878);
   text-emphasis: none;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   margin-left: 3rem;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 1.4px;
   font-weight: normal;
 }
 
+
+.titleh{
+  bottom: 0.4rem;
+  display: flex;
+  position: relative;
+  margin-left: 0rem;
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffffff;
+ padding-bottom: 6rem;
+ display: flex;
+ letter-spacing: 2px;
+ 
+  
+  
+}
 .use {
   color: rgb(255, 255, 255);
 }
@@ -60,7 +76,7 @@ h2 {
   cursor: pointer;
   transition: ease-in-out 0.4s;
   margin-left: 1.2rem;
-  margin-top: 0.75rem;
+  margin-top: 1.3rem;
 }
 
 .radio-group label input {
@@ -132,9 +148,10 @@ canvas {
 }
 
 .title {
-  margin-left: 3rem;
+  margin-left: 4rem;
   font-size: 20px;
   font-weight: 800;
+  font-size: 28px;
   color: #ffffff;
  margin-top: 2rem;
   margin-bottom: -0.5rem;
@@ -147,7 +164,7 @@ canvas {
   margin-top: 40px;
   gap: 30px;
   margin-bottom: 50px;
-  min-height: 50vh;
+  min-height: 70vh;
 }
 
 .room-card {
@@ -184,8 +201,8 @@ canvas {
 .sidebar {
   background: linear-gradient(to right, #ffffffae, #eee9e98b);
   position: absolute;
-  top: 85px;
-  right: 10px;
+  top: 90px;
+  right: 15px;
   width: 350px;
   max-width: 350px;
   height: 600px;
@@ -291,11 +308,22 @@ canvas {
   color: rgb(27, 27, 27);
   text-align: center;
   align-items: center;
+  text-align: center;
   position: relative;
   font-weight: 900;
-  bottom: 14px;
-  right: 1.5rem;
+  bottom: 20px;
+ right: 2rem;
   
+}
+.wind{
+  color: rgb(27, 27, 27);
+  text-align: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  font-weight: 900;
+  bottom: 20px;
+ right: 1.5rem;
 }
 .row{
  display: grid;
@@ -314,12 +342,13 @@ canvas {
   padding-top: 1px;
   margin-bottom: 0.5rem;
   width: 130px;
-  height: 110px;
+  height: 120px;
   background-color: #f1f3e9;
   border: 1px solid #a1a1a14d;
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
   border-radius: 12px;
   padding: 6px;
+ 
 }
 
 .percentage {
@@ -365,12 +394,16 @@ margin-bottom: 0.4rem;
 #home-image {
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
-  margin-top: 1.5rem;
+  margin-top: 5.2rem;
+  left: -100px;
+  position: relative;
+  display:flex;
+  
   
 }
 
 #home-image:hover {
-  transform: rotate(-3deg) scale(1.1);
+  transform: scale(1.1);
   
 }
 
@@ -459,8 +492,8 @@ margin-bottom: 0.4rem;
 
 .button-container {
   position: absolute;
-  top: 45%;
-  left: 51%;
+  top: 50%;
+  left: 52%;
   transform: translate(-50%, -50%);
   z-index: 2;
   display: flex;
@@ -476,7 +509,7 @@ margin-bottom: 0.4rem;
   background-color: #ffffffb7;
   color: #000000;
   border: none;
-  padding: 10px 22px;
+  padding: 12px 24px;
   font-size: 17px;
   font-weight: normal;
   cursor: pointer;
@@ -497,5 +530,5 @@ margin-bottom: 0.4rem;
   opacity: 1;
 }
 .rooms-container:hover .home-photo {
-  transform: scale(1.1) rotate(-3deg);
+  transform: scale(1.1) ;
 }
