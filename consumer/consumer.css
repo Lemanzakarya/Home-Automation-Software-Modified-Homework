@@ -355,8 +355,48 @@ canvas {
   height: 60px;
 margin-bottom: 1rem;
   margin-left: 1.8rem;
-<<<<<<< HEAD
 }
-=======
+
+/* Circular buttons */
+.circular-btn {
+  position: absolute;
+  top: 50%;
+  right: 40%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
 }
->>>>>>> a7b472c46cfb499806f4e4cf1f75035f9e6acfbf
+
+
+.circular-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.circular-button span {
+  color: #ffffff;
+  position: absolute;
+  font-size: 18px;
+  top: 80px;
+} 
+
+.btn-on {
+  background-color: rgba(41, 0, 66, 0.8);
+} 
+
+.button-icon {
+  width: 25px;
+  height: 25px;
+}
+
+
