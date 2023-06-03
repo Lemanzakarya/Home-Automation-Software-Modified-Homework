@@ -24,10 +24,10 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 375px;
-  height: 375px;
+  width: 450px;
+  height: 450px;
   transform: translate(-50%, -50%);
-  border: 3px solid rgb(255, 255, 255);
+  border: medium solid rgb(255, 255, 255);
   border-radius: 50%;
   padding: 7px;
   box-sizing: border-box;
@@ -37,8 +37,8 @@ body {
   position: fixed;
   top: 5%;
   left: 3%;
-  width: 205px;
-  height: 57.5px;
+  width: 270px;
+  height: 77px;
   max-width: 100%;
 }
 
@@ -53,8 +53,8 @@ body {
 
 .rooms {
   position: absolute;
-  top: 52%;
-  left: 1.3%;
+  top: 54%;
+  left: 1.1%;
   transform: translateY(-50%);
 }
 
@@ -72,14 +72,14 @@ body {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 17px;
+  font-size: 22px;
   cursor: pointer;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
   border-top-right-radius: 50px;
   border-bottom-left-radius: 0;
-  width: 300px;
-  height: 44px;
+  width: 380px;
+  height: 55px;
   font-weight: bold;
 }
 
@@ -101,8 +101,8 @@ body {
 
 .logout-container {
   position: fixed;
-  bottom: 90px;
-  left: 1.3%;
+  bottom: 100px;
+  left: 1.1%;
 }
 
 .logout-btn {
@@ -110,13 +110,13 @@ body {
   border: none;
   color: #ffffff;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 24px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  padding: 7px 10px;
+  padding: 14px 14px;
   border-bottom-right-radius: 50px;
   border-top-right-radius: 50px;
   border-bottom-left-radius: 0;
-  width: 135px;
+  width: 150px;
   text-align: center;
 }
 
@@ -129,7 +129,7 @@ body {
 /* Circular buttons */
 .right-column {
   position: absolute;
-  top: 54%;
+  top: 56%;
   right: 7%;
   transform: translateY(-50%);
   display: flex;
@@ -140,7 +140,7 @@ body {
 
 .left-column {
   position: absolute;
-  top: 48%;
+  top: 50%;
   right: 20%;
   transform: translateY(-50%);
   display: flex;
@@ -156,8 +156,8 @@ body {
   align-items: center;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  width: 75px;
-  height: 75px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -166,7 +166,7 @@ body {
   color: #ffffff;
   position: absolute;
   font-size: 18px;
-  top: 80px;
+  top: 97px;
 } 
 
 .btn-on {
@@ -174,8 +174,8 @@ body {
 } 
 
 .button-icon {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
 }
 
 
