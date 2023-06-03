@@ -1,120 +1,153 @@
-*{
-  margin : 0;
-  padding : 0;
-  box-sizing: border-box;  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
-body{
-    font-family: 'Ubuntu', sans-serif;
-    background: -webkit-linear-gradient(45deg, rgba(125,172,222,1) 0%, rgba(100,110,147,1) 37%, rgba(146,109,184,1) 74%, rgba(129,66,185,1) 86%, rgba(115,158,204,1) 100%);
-    background: linear-gradient(45deg, rgba(125,172,222,1) 0%, rgba(100,110,147,1) 37%, rgba(146,109,184,1) 74%, rgba(129,66,185,1) 86%, rgba(115,158,204,1) 100%);
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background: -webkit-linear-gradient(45deg, rgba(125, 172, 222, 1) 0%, rgba(100, 110, 147, 1) 37%, rgba(146, 109, 184, 1) 74%, rgba(129, 66, 185, 1) 86%, rgba(115, 158, 204, 1) 100%);
+  background: linear-gradient(45deg, rgba(125, 172, 222, 1) 0%, rgba(100, 110, 147, 1) 37%, rgba(146, 109, 184, 1) 74%, rgba(129, 66, 185, 1) 86%, rgba(115, 158, 204, 1) 100%);
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
 }
+
 
 .container {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  bottom: 20px;
-  left: 20px;
-  border: medium solid rgb(156, 217, 255);
-} 
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  border: 2px solid rgb(156, 217, 255);
+}
+
+.container section {
+  width: 60%;
+  height: 70vh;
+  position: relative;
+  left: 38%;
+  display: grid;
+  grid-template-areas: "General Consumption"
+    "Devices Devices";
+}
+
+.container section>div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.general-sensors-container {
+  grid-area: General;
+}
+
+.devices-container {
+  width: 100% !important;
+  grid-area: Devices;
+}
+
+.concuption-container {
+  grid-area: Consumption;
+
+}
+
+.devices-container>.producer {
+  flex-direction: row;
+}
+
 .living-image {
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
-  border: medium solid rgb(156, 217, 255);
-  padding: 5px;
+  border: 2px solid rgb(156, 217, 255);
+  padding: 3.5px;
   position: absolute;
-  top: 13%;
-  left: 1.7%;
+  top: 12%;
+  left: 1.5%;
+  width: 370px;
+  height: 450px;
+  object-fit: cover;
 }
 
-h1{
+h1 {
   color: white;
   text-align: center;
   text-emphasis: none;
-  margin-top: 3rem;
-  padding-bottom: 2rem;
-  font-size:38px;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  font-size: 28px;
   justify-content: center;
   letter-spacing: 1.4px;
-     
-} 
-.general{
+
+}
+
+.general {
   color: white;
-  padding: 10px;
-  position:absolute;
-  left: 36%;
-  margin-top: 2rem;
-  font-size:23px;
-  font-weight: 400;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 500;
   letter-spacing: 1.3px;
 }
 
-.devices{
-  color: white;
-  padding: 10px;
-  position:absolute;
-  top: 20%;
-  left: 60%;
-  font-size:23px;
-  font-weight: 400;
-  letter-spacing: 1.3px;
+.devices-container .box-device {
+  display: flex;
+  width: 160px;
 }
 
-.producer{
-  flex-direction: column; 
-  padding-left: 38%;
-  margin-top: 7rem;
+.producer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.box-general-sensor{
-  float:left;
-  width: 30%;
+.box-general-sensor {
+  display: flex;
+  gap: 22px;
 }
 
-.box-device {
-  float: left;
-  width: 20%;
-}
 .box i {
   color: #ffffffe7;
-  font-size: 50px;
-  margin-bottom: 8px;
+  font-size: 40px;
+  margin-bottom: 7px;
+}
+
+.box i.fa-thermometer-half {
+  margin-bottom: auto;
+  margin-right: 23px;
+}
+
+.box i.fa-tint {
+  margin-right: 20px;
+}
+
+.box i.fa-solid.fa-tv{
+  margin-right: 20px;
 }
 
 .box h3 {
-  position: relative;
-  left: 90px;
-  top: -60px;
+  margin-bottom: 3px;
   text-align: left;
   color: #ffffff;
-  font-size: 15px;
-  margin-bottom: 8px;
+  font-size: 13px;
 }
-
-
-
-.button-producer {
-  position: absolute;
-  float:left;
-  position: relative;
-  left: 90px;
-  top: -60px;
-}
-
 
 .button-container {
   display: flex;
   justify-content: space-between;
-
+  flex-direction: column;
 }
+
+.popup-content .button-container {
+  flex-direction: row;
+}
+
 .set-button {
   background-color: rgba(83, 0, 91, 0.815);
   border-radius: 3px;
@@ -123,11 +156,10 @@ h1{
   align-items: center;
   text-align: center;
   border: none;
-  font-size: 14px;
-  margin-top: 0.5rem;
-  padding: 7px 2px;
-  width: 6rem;
-  cursor: pointer;  
+  font-size: 13px;
+  padding: 5px 0px;
+  width: 5rem;
+  cursor: pointer;
 }
 
 .send-button {
@@ -137,7 +169,7 @@ h1{
   width: 40%;
   font-size: 16px;
   border: none;
-  padding: 10px 10px ;
+  padding: 10px 10px;
   margin-left: 10%;
   cursor: pointer;
 }
@@ -145,14 +177,13 @@ h1{
 .set-button:hover {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 30px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   background-color: rgba(42, 5, 53, 0.735);
- 
+
 }
 
-.send-button:hover{
+.send-button:hover {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 30px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   background-color: #123d76;
 }
-
 
 #set-btn {
   background-color: black;
@@ -161,8 +192,9 @@ h1{
   padding: 10px 20px;
   border-radius: 5px;
 }
+
 .popup {
-  padding-top:5rem;
+  padding-top: 5rem;
   display: none;
   position: fixed;
   top: 0;
@@ -173,27 +205,26 @@ h1{
   justify-content: center;
   align-items: center;
   overflow: auto;
-background-color: rgba(0, 0, 0, 0.4);
-backdrop-filter: blur(5px);
-z-index: 999;
-
-
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  z-index: 999;
 }
+
 .popup-content {
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 330px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  padding: 20px;
+  padding: 17px;
   border: 2px solid black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   transform: translate(-50%, -50%);
-  top: 50%;
+  top: 40%;
   left: 50%;
 }
 
@@ -213,11 +244,10 @@ z-index: 999;
   justify-content: center;
   margin-bottom: 10px;
   align-items: center;
-  
-  
 }
+
 .input-container label {
-  margin-bottom: 15px;
+  margin-bottom: 7px;
 }
 
 #min::placeholder {
@@ -236,82 +266,80 @@ z-index: 999;
   padding: 6px;
   align-self: center;
   font-size: 16px;
-display: flex;
-  
+  display: flex;
 }
 
 label {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;
-  margin-right: 10px;
-  
+  margin-right: 18px;
 }
 
 input[type="number"] {
   border: none;
-  padding: 10px;
+  padding: 7px;
   border-radius: 5px;
-  border: 2px solid rgba(21, 21, 21, 0.878);
+  border: 1px solid rgba(21, 21, 21, 0.878);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-  font-size: 16px;
-  margin-right: 10px;
+  font-size: 13px;
+  margin-right: 2px;
 }
 
 
 button {
-border: none;
- color: #fff;
-  padding: 10px 10px;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-}
-#save-button{
-  background-color:#3c903f;
   border: none;
   color: #fff;
   padding: 10px 10px;
- margin-right: 1rem;
   border-radius: 5px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-   
 }
 
-#send-button{
+#save-button {
+  background-color: #3c903f;
+  border: none;
+  color: #fff;
+  padding: 7px 10px;
+  margin-right: 2rem;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#send-button {
   border: none;
   background-color: #4c66c3;
   color: #fff;
-  padding: 10px 12px;
+  padding: 8px 11px;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
   cursor: pointer;
- 
 }
+
 
 #send-button:disabled {
   background-color: #ccc;
   cursor: default;
 }
 
-#humidity-save-button{
+#humidity-save-button {
   background-color: #3c903f;
   border: none;
   color: #fff;
   padding: 10px 12px;
- margin-right: 1rem;
+  margin-right: 1rem;
   margin-left: 1rem;
   border-radius: 5px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-   
+
 }
 
-#humidity-send-button{
+#humidity-send-button {
   border: none;
   background-color: #4c66c3;
   color: #fff;
@@ -320,8 +348,6 @@ border: none;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
- 
- 
 }
 
 #humidity-send-button:disabled {
@@ -331,11 +357,9 @@ border: none;
 
 
 #humidity-popup .popup-content {
-  width: 400px;
-  height: 300px;
-  margin-top: 20px;
-
-  
+  width: 300px;
+  height: 250px;
+  margin-top: 15px;
 }
 
 #humidity-popup .input-container {
@@ -347,21 +371,20 @@ border: none;
 }
 
 
-#co2-save-button{
-  background-color:#3c903f;
+#co2-save-button {
+  background-color: #3c903f;
   border: none;
   color: #fff;
   padding: 10px 12px;
- margin-right: 1rem;
+  margin-right: 1rem;
   margin-left: 1rem;
   border-radius: 5px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-   
 }
 
-#co2-send-button{
+#co2-send-button {
   border: none;
   background-color: #4c66c3;
   color: #fff;
@@ -370,8 +393,6 @@ border: none;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
- 
- 
 }
 
 #co2-send-button:disabled {
@@ -381,11 +402,9 @@ border: none;
 
 
 #co2-popup .popup-content {
-  width: 400px;
-  height: 300px;
-  margin-top: 20px;
-
-  
+  width: 300px;
+  height: 250px;
+  margin-top: 15px;
 }
 
 #co2-popup .input-container {
@@ -398,30 +417,29 @@ border: none;
 
 .device-container {
   display: flex;
-   justify-content: space-between;
-  align-items:center;
+  justify-content: space-between;
+  align-items: center;
   flex-direction: column;
   height: 400px;
-margin-left: -60rem;
+  margin-left: -60rem;
   margin-top: 8rem;
 }
 
 
-#tv-save-button{
+#tv-save-button {
   background-color: #3c903f;
   border: none;
   color: #fff;
   padding: 10px 12px;
- margin-right: 1rem;
+  margin-right: 1rem;
   margin-left: 1rem;
   border-radius: 5px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-   
 }
 
-#tv-send-button{
+#tv-send-button {
   border: none;
   background-color: #4c66c3;
   color: #fff;
@@ -430,26 +448,22 @@ margin-left: -60rem;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
- 
- 
 }
 
 #tv-send-button:disabled {
   background-color: #ccc;
   cursor: default;
 }
-#tv-set:disabled{
+
+#tv-set:disabled {
   background-color: #ccc;
   cursor: default;
 }
 
 
 #tv-popup .popup-content {
-  width: 400px;
-
+  width: 350px;
   margin-top: 20px;
-
-  
 }
 
 #tv-popup .input-container {
@@ -466,9 +480,9 @@ margin-left: -60rem;
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
-  margin-top: 10px;
+  width: 45px;
+  height: 25px;
+  margin-top: 7px;
 }
 
 .switch input {
@@ -493,9 +507,9 @@ margin-left: -60rem;
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
+  height: 17px;
+  width: 17px;
+  left: 3px;
   bottom: 4px;
   background-color: white;
   -webkit-transition: .4s;
@@ -504,15 +518,15 @@ margin-left: -60rem;
 }
 
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: #038f26;
 }
 
-input:focus + .slider {
+input:focus+.slider {
   box-shadow: 0 0 2px #038f26;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
@@ -528,63 +542,61 @@ input:checked + .slider:before {
 }
 
 .btn-delete {
-  background-color: #3838eb;
- border-radius: 4px;
-  color: #fff;
-  margin: auto;
-  align-items: center;
-  text-align: center;
-  border: none;
-  font-size: 16px;
-  margin-top: 0.6rem;
-  padding: 10px 5px;
-  width: 5rem;
-  cursor: pointer;
-  
-}
-
-.btn-set{
-  background-color: #b81d1d;
+  background-color: #1d1da9;
   border-radius: 4px;
   color: #fff;
   margin: auto;
   align-items: center;
   text-align: center;
   border: none;
-  font-size: 16px;
   margin-top: 0.6rem;
-  padding: 10px 5px;
-  margin-right: 4px;
+  font-size: 13px;
+  padding: 5px 0px;
   width: 5rem;
   cursor: pointer;
-  
+
+}
+
+.btn-set {
+  background-color: rgba(83, 0, 91, 0.815);
+  border-radius: 3px;
+  color: #fff;
+  align-items: center;
+  text-align: center;
+  border: none;
+  font-size: 13px;
+  padding: 5px 0px;
+  width: 5rem;
+  cursor: pointer;
+
 }
 
 .btn-delete:hover {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 30px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   background-color: #090989;
- 
-}
-.btn-set:hover{
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 30px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-  background-color: #741414;
+
 }
 
-#light-save-button{
-  background-color:#3c903f;
+.btn-set:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 30px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  background-color: rgba(42, 5, 53, 0.735);
+}
+
+#light-save-button {
+  background-color: #3c903f;
   border: none;
   color: #fff;
   padding: 10px 12px;
- margin-right: 1rem;
+  margin-right: 1rem;
   margin-left: 1rem;
   border-radius: 5px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-   
+
 }
 
-#light-send-button{
+#light-send-button {
   border: none;
   background-color: #4c66c3;
   color: #fff;
@@ -593,8 +605,8 @@ input:checked + .slider:before {
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
- 
- 
+
+
 }
 
 #light-send-button:disabled {
@@ -604,11 +616,10 @@ input:checked + .slider:before {
 
 
 #light-popup .popup-content {
-  width: 400px;
-  height: 300px;
-  margin-top: 20px;
+  width: 300px;
+  height: 250px;
+  margin-top: 15px;
 
-  
 }
 
 #light-popup .input-container {
@@ -619,14 +630,15 @@ input:checked + .slider:before {
   margin-top: 20px;
 }
 
-#wifi-card{
+#wifi-card {
   margin-left: 40%;
-  top:31.8rem;
+  top: 31.8rem;
   position: absolute;
-  background-color: #fffffff6; }
+  background-color: #fffffff6;
+}
 
-#wifi-buttons{
- padding-top: 2px ; 
+#wifi-buttons {
+  padding-top: 2px;
 }
 
 .wifi-popup-timer {
@@ -662,8 +674,9 @@ input:checked + .slider:before {
 .timer-inputs input[type="time"] {
   width: 20px;
 }
+
 input[type="time"]::-webkit-calendar-picker-indicator {
-  padding: 1em  0em;
+  padding: 1em 0em;
   outline: none;
 }
 
@@ -697,11 +710,11 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 #wifi-save-button {
-  background-color:#3c903f;
+  background-color: #3c903f;
   border: none;
   color: #fff;
   padding: 10px 12px;
- margin-right: 1rem;
+  margin-right: 1rem;
   margin-left: 1rem;
   border-radius: 5px;
   font-size: 16px;
@@ -712,25 +725,29 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 .goBack {
   background-color: rgba(255, 255, 255, 0.885);
   display: flex;
-  margin-left:2rem;
-  margin-top: -1rem;
+  top: 10px;
+  left: 15px;
   flex-direction: row;
- 
-  color:black;
-  height: 40px;
-  position:absolute;
+
+  color: black;
+  height: 32px;
+  position: absolute;
   border-radius: 5px;
-  cursor:pointer;
+  cursor: pointer;
   text-decoration: none;
 }
 
-.goBack > p {
-  margin:auto;
-  margin-right:1rem;
+.goBack>p {
+  font-size: 12px;
+  margin: auto;
+  margin-right: 1rem;
 }
-.goBack > img {
-  padding: 8px;
+
+.goBack>img {
+  margin: auto;
+  padding: 6px;
 }
+
 #wifi-send-button {
   border: none;
   background-color: #4c66c3;
@@ -741,19 +758,21 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   font-weight: bold;
   cursor: pointer;
 }
+
 #wifi-send-button:disabled {
   background-color: #bbbbbb;
   cursor: default;
 }
-  
+
 #wifi-set:disabled {
   background-color: #bbbbbb;
   cursor: default;
 }
- #btn-set:disabled{
+
+#btn-set:disabled {
   background-color: #bbbbbb;
   cursor: default;
- }
+}
 
 .input-container input[type="time"] {
   width: 85%;
@@ -762,26 +781,28 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   box-sizing: border-box;
   border: 2px solid black;
 }
+
 #set-light-button:disabled {
   background-color: #bbbbbb;
   cursor: default;
 }
-#door-set:disabled{
+
+#door-set:disabled {
   background-color: #bbbbbb;
   cursor: default;
 }
 
-#set-door-button:disabled{
+#set-door-button:disabled {
   background-color: #bbbbbb;
   cursor: default;
 }
 
 #door-save-button {
-  background-color:#3c903f;
+  background-color: #3c903f;
   border: none;
   color: #fff;
   padding: 10px 12px;
- margin-right: 1rem;
+  margin-right: 1rem;
   margin-left: 1rem;
   border-radius: 5px;
   font-size: 16px;
@@ -799,6 +820,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   font-weight: bold;
   cursor: pointer;
 }
+
 #door-send-button:disabled {
   background-color: #bbbbbb;
   cursor: default;
@@ -806,12 +828,13 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 
 #electric-popup .popup-content {
-  width: 400px;
-  height: 330px;
-  margin-top: 50px;
-  
+  width: 330px;
+  height: 270px;
+  margin-top: 15px;
+
 }
-#electric-popup  .input-container {
+
+#electric-popup .input-container {
   margin-top: 1rem;
 }
 
@@ -839,20 +862,20 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 
 
-.lightning{
-width: 38%;
+.lightning {
+  width: 38%;
   flex-direction: column;
   display: flex;
   position: relative;
-   bottom: -10px;
+  bottom: -10px;
   padding-bottom: 20px;
   margin-left: 4.5rem;
 
 }
 
 
-.close-electric-button{
-position: absolute;
+.close-electric-button {
+  position: absolute;
   top: 10px;
   right: 10px;
   font-size: 24px;
@@ -864,24 +887,23 @@ position: absolute;
 
 #datetime {
   background-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 3px 3px rgb(156, 217, 255);;
-  width: 300px;
-  padding: 10px;
+  box-shadow: 0 0 2px 2px rgb(156, 217, 255);
+  width: 230px;
+  padding: 7px;
   position: fixed;
-  top: 50px; 
-  right: 70px;
+  top: 40px;
+  right: 50px;
   color: #fff;
-  font-size: 25px;
+  font-size: 19px;
   text-align: center;
   border-radius: 5px;
 }
 
 #datetime span {
   display: inline-block;
-  margin-right: 35px; 
+  margin-right: 35px;
 }
 
 #datetime span:last-child {
   margin-right: 0;
 }
-
