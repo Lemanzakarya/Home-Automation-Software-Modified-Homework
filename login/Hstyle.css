@@ -63,7 +63,7 @@ nav {
   nav ul{
     display: flex;
     list-style: none;
-    margin-top: 7.5%;
+    margin-top: 3.5%;
   }
   nav ul li{
     padding: 8px 15px;
