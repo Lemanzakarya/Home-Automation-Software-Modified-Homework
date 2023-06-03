@@ -360,10 +360,48 @@ margin-bottom: 0.4rem;
   margin-left: 2.4rem;
 }
 
+#home-image {
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  
+}
+
+#home-image:hover {
+  transform: rotate(-3deg) scale(1.1);
+  
+}
+#home-image:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  animation: glowing 1.5s ease-in-out infinite;
+}
+
+@keyframes glowing {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+
 /* Circular buttons */
 .circular-btn {
   position: absolute;
-  top: 70%;
+  top: 50%;
   right: 32%;
   transform: translateY(-50%);
   display: flex;
@@ -402,4 +440,44 @@ margin-bottom: 0.4rem;
   height: 25px;
 }
 
+.button-container {
+  position: absolute;
+  top: 45%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
 
+.button {
+  background-color: #ffffffb7;
+  color: #000000;
+  border: none;
+  padding: 10px 22px;
+  font-size: 17px;
+  font-weight: normal;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14);
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: #670278;
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.297);
+  transform: scale(1.05);
+}
+
+.rooms-container:hover .button-container {
+  pointer-events: initial;
+  opacity: 1;
+}
+.rooms-container:hover .home-photo {
+  transform: scale(1.1) rotate(-3deg);
+}
