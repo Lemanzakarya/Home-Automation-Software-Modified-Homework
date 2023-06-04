@@ -1,20 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel = "stylesheet" href="consumer.css";/>
-   
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="preconnect" href="https://fonts                                                                                                                                                                                                                                                                              .googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Belleza&family=Cookie&family=Kalam&family=Montserrat:wght@200;700&family=NTR&family=Quicksand&family=Satisfy&family=Swanky+and+Moo+Moo&family=Ubuntu:wght@300;400&family=VT323&display=swap" rel="stylesheet">
-  <title>Consumer</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="consumer.css" ; />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect"
+  href="https://fonts                                                                                                                                                                                                                                                                              .googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Belleza&family=Cookie&family=Kalam&family=Montserrat:wght@200;700&family=NTR&family=Quicksand&family=Satisfy&family=Swanky+and+Moo+Moo&family=Ubuntu:wght@300;400&family=VT323&display=swap"
+  rel="stylesheet" />
+<title>Consumer</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
-  
+
   <nav>
     <span class="menubtn">&#9776;</span>
     <div class="navLinks">
@@ -23,156 +25,158 @@
         <li><a href="../login/About.html">Statistics</a></li>
         <li><a href="#">Widgets</a></li>
         <button class="button logout">Logout</button>
-       </li>
+        </li>
       </ul>
     </div>
- </nav>
- 
- 
+  </nav>
+
+
   <div class="container">
 
     <div class="profile-container">
-        <img src="man.png" alt="Profile Photo" class="profile-photo" >
-        </div>
-       
-   <h1>Welcome, User!</h1>
+      <img src="man.png" alt="Profile Photo" class="profile-photo">
+    </div>
+
+    <h1>Welcome, User!</h1>
     <div class="radio-group">
-    <h2 id="feeling-heading"> How are you feeling today? </h2>
-       <label>
-          <input type="radio" name="feeling" value="good">
-          <span class="icon"><i class="fa-regular fa-face-smile" style="color: #f8e4c9f0;"></i></span>
-        </label>
-        <label>
-          <input type="radio" name="feeling" value="normal">
-          <span class="icon"><i class="fa-regular fa-face-meh" style="color:  #f8e4c9f0;"></i></span>
-        </label>
-        <label>
-          <input type="radio" name="feeling" value="bad">
-          <span class="icon"><i class="fa-regular fa-face-frown" style="color:  #f8e4c9f0;"></i></span>
-        </label>
+      <h2 id="feeling-heading"> How are you feeling today? </h2>
+      <label>
+        <input type="radio" name="feeling" value="good">
+        <span class="icon"><i class="fa-regular fa-face-smile" style="color: #f8e4c9f0;"></i></span>
+      </label>
+      <label>
+        <input type="radio" name="feeling" value="normal">
+        <span class="icon"><i class="fa-regular fa-face-meh" style="color:  #f8e4c9f0;"></i></span>
+      </label>
+      <label>
+        <input type="radio" name="feeling" value="bad">
+        <span class="icon"><i class="fa-regular fa-face-frown" style="color:  #f8e4c9f0;"></i></span>
+      </label>
+    </div>
+
+
+    <!-- Circular buttons -->
+
+
+    <div class="rooms-section">
+
+      <div class="rooms-container">
+        <h2 class="titleh">Home</h2>
+        <img id="home-image" src="home4.png" alt="home" class="home-photo" width="580" height="400">
+        <div class="button-container">
+          <button class="button living-room">Living Room</button>
+          <button class="button bathroom">Bathroom</button>
+          <button class="button bedroom">Bedroom</button>
+          <button class="button kitchen">Kitchen</button>
+        </div>
       </div>
+    </div>
 
 
-  <!-- Circular buttons -->
+    <h2 class="title">Statistics</h2>
+    <div class="usage-container">
+      <div class="usage">
+        <h2>Electric Consumption</h2>
+        <canvas id="electric-usage-chart"></canvas>
+      </div>
+      <div class="usage">
+        <h2>Water Consumption</h2>
+        <canvas id="water-usage-chart"></canvas>
+      </div>
+    </div>
 
+    <div class="widget-section">
+      <h2 class="title">Widgets</h2>
+      <div class="widget-container">
+        <div class="room-card">
+          <h3>Bedroom</h3>
+          <img src="bed.png" alt="Bedroom">
+        </div>
+        <div class="room-card">
+          <h3>Bathroom</h3>
+          <img src="shower.png" alt="Bathroom">
+        </div>
+        <div class="room-card">
+          <h3>Living Room</h3>
+          <img src="sofa.png" alt="Living Room">
+        </div>
+        <div class="room-card">
+          <h3>Kitchen</h3>
+          <img src="fridge.png" alt="Kitchen">
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="weather-container">
+        <img src="storm.png" alt="storm" class="storm">
+        <p class="current"> 14°C / Stormy </p>
 
-      <div class="rooms-section">
-
-         <div class="rooms-container">
-          <h2 class="titleh">Home</h2>
-         <img id="home-image" src="home4.png" alt="home" class="home-photo" width="580" height="400">
-          <div class="button-container">
-            <button class="button living-room">Living Room</button>
-            <button class="button bathroom">Bathroom</button>
-            <button class="button bedroom">Bedroom</button>
-            <button class="button kitchen">Kitchen</button>
-          </div>
+        <ul class="weather-list">
+          <li class="weather-item">
+            <div class="day">Tomorrow</div>
+            <div class="weather-icon">
+              <img src="sun.png" alt="Weather Icon">
+            </div>
+            <div class="temperature">18°C</div>
+            <div class="description">Sunny</div>
+          </li>
+        </ul>
+        <div class="container">
+          <div class="row">
+            <div class="chart-container">
+              <h2 class="humidity">Humidity</h2>
+              <img id="humidity-image" src="humidity.png" alt="humidity Icon">
+              <div id="percentagex" class="percentage">75%</div>
+            </div>
+            <div class="chart-container">
+              <h2 class="wind">Wind</h2>
+              <img id="wind-image" src="wind.png" alt="humidity Icon">
+              <div id="percentage" class="percentage">16%</div>
+            </div>
           </div>
         </div>
-     
-
-      <h2 class="title">Statistics</h2>
-          <div class="usage-container">
-            <div class="usage">
-              <h2 >Electric Consumption</h2>
-              <canvas id="electric-usage-chart"></canvas>
-            </div>
-            <div class="usage">
-              <h2>Water Consumption</h2>
-              <canvas id="water-usage-chart"></canvas>
-            </div>
+      </div>
+      <div class="general-sensors-container">
+        <h2 class="sensor">General Sensors</h2>
+        <div class="sensor-container">
+          <div class="circular-button" title="General Electricity">
+            <img src="../producer/elec.png" alt="Electricity" class="button-icon" />
+            <span class="btn-status">OFF</span>
           </div>
-   
-      <div class="widget-section">
-            <h2 class="title">Widgets</h2>
-            <div class="widget-container">
-              <div class="room-card">
-                 <h3>Bedroom</h3>
-                <img src="bed.png" alt="Bedroom">
-              </div>
-              <div class="room-card">
-                <h3>Bathroom</h3>
-                <img src="shower.png" alt="Bathroom">
-              </div>
-              <div class="room-card">
-                <h3>Living Room</h3>
-                <img src="sofa.png" alt="Living Room">
-                  </div>
-              <div class="room-card">
-                <h3>Kitchen</h3>
-                <img src="fridge.png" alt="Kitchen">
-              </div>
-            </div>
+          <div class="circular-button" title="General Water">
+            <img src="../producer/water.png" alt="Water" class="button-icon" />
+            <span class="btn-status">OFF</span>
           </div>
-          <div class="sidebar">
-            <div class="weather-container">
-              <img src="storm.png" alt="storm" class="storm" >
-              <p class="current"> 14°C / Stormy </p>
-
-              <ul class="weather-list">
-                <li class="weather-item">
-                  <div class="day">Tomorrow</div>
-                  <div class="weather-icon">
-                    <img src="sun.png" alt="Weather Icon">
-                  </div>
-                  <div class="temperature">18°C</div>
-                  <div class="description">Sunny</div>
-                   </li>
-                  </ul>
-                  <div class="container">
-                    <div class="row">
-                       <div class="chart-container">
-                          <h2 class="humidity">Humidity</h2>
-                          <img id="humidity-image" src="humidity.png" alt="humidity Icon">
-                          <div id="percentagex" class="percentage">75%</div>
-                        </div>
-                        <div class="chart-container">
-                          <h2 class="wind">Wind</h2>
-                          <img id="wind-image" src="wind.png" alt="humidity Icon">
-                          <div id="percentage" class="percentage">16%</div>
-                        </div>
-                    </div>
-                 </div>
-            </div>
-            <div class="general-sensors-container">
-            <h2 class="sensor">General Sensors</h2>
-            <div class="sensor-container">
-            <div class="circular-button" title="General Electricity">
-              <img src="../producer/elec.png" alt="Electricity" class="button-icon" />
-              <span class="btn-status">OFF</span>
-            </div>
-            <div class="circular-button" title="General Water">
-              <img src="../producer/water.png" alt="Water" class="button-icon" />
-              <span class="btn-status">OFF</span>
-            </div>
-            <div class="circular-button" title="Alarm">
-              <img src="../producer/alarm.png" alt="Alarm" class="button-icon" />
-              <span class="btn-status">OFF</span>
-            </div>
-          </div>
-          <div class="sensor-container">
-            
-            <div class="circular-button" title="Doors Lock">
-      <img src="../producer/lock.png" alt="Lock" class="button-icon" />
-      <span class="btn-status">OFF</span>
-    </div>
-    <div class="circular-button" title="Garage">
-      <img src="../producer/garage.png" alt="Garage" class="button-icon" />
-      <span class="btn-status">OFF</span>
-    </div>
-    <div class="circular-button" title="Wi-Fi">
-      <img src="../producer/wifi.png" alt="Wi-Fi" class="button-icon" />
-      <span class="btn-status">OFF</span>
-    </div>
-
+          <div class="circular-button" title="Alarm">
+            <img src="../producer/alarm.png" alt="Alarm" class="button-icon" />
+            <span class="btn-status">OFF</span>
           </div>
         </div>
-           </div>
-           
-              
-        
+        <div class="sensor-container">
 
-  <script src="consumer.js"></script>
-                  
+          <div class="circular-button" title="Doors Lock">
+            <img src="../producer/lock.png" alt="Lock" class="button-icon" />
+            <span class="btn-status">OFF</span>
+          </div>
+          <div class="circular-button" title="Garage">
+            <img src="../producer/garage.png" alt="Garage" class="button-icon" />
+            <span class="btn-status">OFF</span>
+          </div>
+          <div class="circular-button" title="Wi-Fi">
+            <img src="../producer/wifi.png" alt="Wi-Fi" class="button-icon" />
+            <span class="btn-status">OFF</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <script src="consumer.js"></script>
+    <script src="../producer/main.js"></script>
 </body>
+
 </html>

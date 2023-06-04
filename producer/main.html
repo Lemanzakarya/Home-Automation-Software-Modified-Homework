@@ -1,81 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel = "stylesheet" href="main.css";/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="preconnect" href="https://fonts                                                                                                                                                                                                                                                                              .googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Belleza&family=Cookie&family=Kalam&family=Montserrat:wght@200;700&family=NTR&family=Quicksand&family=Satisfy&family=Swanky+and+Moo+Moo&family=Ubuntu:wght@300;400&family=VT323&display=swap" rel="stylesheet">
-    <title>Producer</title>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="main.css" ; />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect"
+  href="https://fonts                                                                                                                                                                                                                                                                              .googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Belleza&family=Cookie&family=Kalam&family=Montserrat:wght@200;700&family=NTR&family=Quicksand&family=Satisfy&family=Swanky+and+Moo+Moo&family=Ubuntu:wght@300;400&family=VT323&display=swap"
+  rel="stylesheet" />
+<title>Producer</title>
 </head>
+
 <body>
   <header>
- 
-</header>
- <div class="container"></div>
- <img src = "Producer.png" alt = "Producer" class="producer-image">
- <img src = "producerlogo.png" alt = "Producer" class="producer-logo">
- 
 
- <!-- Rooms -->
- <div class="rooms">        
-  <div class="room" id="living-room">
-    <button onclick="location.href='../livingroom/living-room.html'">Living Room</button>
+  </header>
+  <div class="container"></div>
+  <img src="Producer.png" alt="Producer" class="producer-image">
+  <img src="producerlogo.png" alt="Producer" class="producer-logo">
+
+
+  <!-- Rooms -->
+  <div class="rooms">
+    <div class="room" id="living-room">
+      <button onclick="location.href='../livingroom/living-room.html'">Living Room</button>
+    </div>
+
+    <div class="room" id="kitchen">
+      <button onclick="location.href='../kitchen/kitchen.html'">Kitchen</button>
+    </div>
+
+    <div class="room" id="bedroom">
+      <button onclick="location.href='../bedroom/bedroom.html'">Bedroom</button>
+    </div>
+
+    <div class="room" id="bathroom">
+      <button onclick="location.href='../bathroom/bathroom.html'">Bathroom</button>
+    </div>
+  </div>
+  <div class="logout-container">
+    <form action="..\login\logout.php" method="post">
+      <input type="submit" name="submit" value="Logout" class="logout-btn">
+    </form>
   </div>
 
-  <div class="room" id="kitchen">
-    <button onclick="location.href='../kitchen/kitchen.html'">Kitchen</button>
+  <!-- Circular buttons -->
+  <div class="circular-buttons">
+    <div class="left-column">
+      <div class="circular-button" title="General Electricity">
+        <img src="elec.png" alt="Electricity" class="button-icon" />
+        <span class="btn-status">OFF</span>
+      </div>
+      <div class="circular-button" title="General Water">
+        <img src="water.png" alt="Water" class="button-icon" />
+        <span class="btn-status">OFF</span>
+      </div>
+      <div class="circular-button" title="Alarm">
+        <img src="alarm.png" alt="Alarm" class="button-icon" />
+        <span class="btn-status">OFF</span>
+      </div>
+    </div>
+    <div class="right-column">
+      <div class="circular-button" title="Doors Lock">
+        <img src="lock.png" alt="Lock" class="button-icon" />
+        <span class="btn-status">OFF</span>
+      </div>
+      <div class="circular-button" title="Garage">
+        <img src="garage.png" alt="Garage" class="button-icon" />
+        <span class="btn-status">OFF</span>
+      </div>
+      <div class="circular-button" title="Wi-Fi">
+        <img src="wifi.png" alt="Wi-Fi" class="button-icon" />
+        <span class="btn-status">OFF</span>
+      </div>
+    </div>
   </div>
 
-  <div class="room" id="bedroom">
-    <button onclick="location.href='../bedroom/bedroom.html'">Bedroom</button>
-  </div>
-    
-  <div class="room" id="bathroom">
-    <button onclick="location.href='../bathroom/bathroom.html'">Bathroom</button>
-  </div>
-</div>
-<div class="logout-container">
-  <form action="..\login\logout.php" method="post">
-    <input type="submit" name="submit" value="Logout" class="logout-btn">
-  </form>
-</div>
-
-<!-- Circular buttons -->
-<div class="circular-buttons">
-  <div class="left-column">
-    <div class="circular-button" title="General Electricity">
-      <img src="elec.png" alt="Electricity" class="button-icon" />
-      <span class="btn-status">OFF</span>
-    </div>
-    <div class="circular-button" title="General Water">
-      <img src="water.png" alt="Water" class="button-icon" />
-      <span class="btn-status">OFF</span>
-    </div>
-    <div class="circular-button" title="Alarm">
-      <img src="alarm.png" alt="Alarm" class="button-icon" />
-      <span class="btn-status">OFF</span>
-    </div>
-  </div>
-  <div class="right-column">
-    <div class="circular-button" title="Doors Lock">
-      <img src="lock.png" alt="Lock" class="button-icon" />
-      <span class="btn-status">OFF</span>
-    </div>
-    <div class="circular-button" title="Garage">
-      <img src="garage.png" alt="Garage" class="button-icon" />
-      <span class="btn-status">OFF</span>
-    </div>
-    <div class="circular-button" title="Wi-Fi">
-      <img src="wifi.png" alt="Wi-Fi" class="button-icon" />
-      <span class="btn-status">OFF</span>
-    </div>
-  </div>
-</div>
-
-   <script src="main.js"></script>
+  <script src="main.js"></script>
 </body>
+
 </html>
