@@ -1,105 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href="bathroom-consumer.css";/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bathroom-consumer.css" ; />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    crossorigin="anonymous"
-  />
-  <link rel="preconnect" href="https://fonts                                                                                                                                                                                                                                                                              .googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Belleza&family=Cookie&family=Kalam&family=Montserrat:wght@200;700&family=NTR&family=Quicksand&family=Satisfy&family=Swanky+and+Moo+Moo&family=Ubuntu:wght@300;400&family=VT323&display=swap" rel="stylesheet">
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts                                                                                                                                                                                                                                                                              .googleapis.com"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Belleza&family=Cookie&family=Kalam&family=Montserrat:wght@200;700&family=NTR&family=Quicksand&family=Satisfy&family=Swanky+and+Moo+Moo&family=Ubuntu:wght@300;400&family=VT323&display=swap"
+      rel="stylesheet"
+    />
     <title>Bathroom</title>
-</head>
-<body>
-        <a href="consumer.html" class="goBack">
-        <img width="40px" height="40px" src="back.png"/>
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <a href="../consumer/consumer.html" class="goBack">
+        <img width="30px" height="30px" src="../back.png" />
         <p>Back</p>
       </a>
       <header>
-        <h1> Bathroom </h1>
-       </header>
-       
-       <h2 class = "general">General Sensors</h2>
-    
-       <div class="container">
-        <div id="tempRoot" class="box">
-          <i class="fas fa-thermometer-half"></i>
-          <h3>Temperature</h3>
-      
-        </div>
-        <div id="humRoot" class="box">
-          <i class="fas fa-tint"></i>
-          <h3>Humidity</h3>
-         
-        </div>
-        <div id="co2Root" class="box">
-          <i class="fas fa-cloud"></i>
-          <h3>CO2</h3>
-          
-        </div>
-      </div>
-      <h2 class="general">Devices</h2>
-  <div class="container">
-    <div  class="box">
-      <i class="fa-regular fa-lightbulb"></i>
-      <div class="card-header">
-        <h3>Light</h3>
-      </div>
-    
-      <div id = "brightRoot" class="card-body">
-      </div>
-    </div>
-   
-    <div id = "wifiRoot" class="box">
-      <i class="fa-sharp fa-solid fa-wifi"></i>
-      <div class="card-header">
-        <h3>Wifi</h3>
-      </div>
-    
-      <div class="card-body">
-        
-      </div>
-    </div>
-    
-    <div id = "doorRoot" class="box">
-      <i class="fa-solid fa-lock"></i>
-      <div class="card-header">
-        <h3>Door Lock</h3>
-      </div>
-      
-   
-      <div class="card-body">
-      
-      </div>
-    </div>
-  
-   
-   
-  </div>
-
-
-  <h2 class="general">Consumption</h2>
-  <div class="container">
-    <div id = "electricRoot" class="box"> 
-      <i class="fa-solid fa-bolt"></i>
-      <h3>Electric Usage</h3>
-    </div>
-      <div id = "waterRoot" class="box">
-        <i class="fa-solid fa-faucet-drip"></i>
-        <h3>Water Usage</h3>
-    </div>
-  </div>
- 
-      
-      
-      
+        <h1>Bathroom</h1>
+      </header>
+      <img src="bathroom.jpg" alt="Bathroom" class="bathroom-image" />
+      <section>
+        <div class="general-sensors-container">
+          <h2 class="general">General Sensors</h2>
+          <div class="producer">
+            <div id="tempRoot" class="box box-general-sensor">
+              <i class="fas fa-thermometer-half"></i>
+              <div>
+                <h3>Temperature</h3>
+                <div class="button-producer">
+               </div>
+              </div>
+            </div>
+            <div id ="humRoot" class="box box-general-sensor">
+              <i class="fas fa-tint"></i>
+              <div>
+                <h3>Humidity</h3>
+                <div class="button-producer">
+                 
+                </div>
+              </div>
+            </div>
+            <div id ="co2Root" class="box box-general-sensor">
+              <i class="fas fa-cloud"></i>
+              <div>
+                <h3>CO2</h3>
+               
+                </div>
+              </div>
+            </div>
+          </div>
      
+        <div class="devices-container">
+          <h2 class="general">Devices</h2>
+          <div class="flex-wrap">
+            <span id="wifiRoot" class="box-device">
+            
+              <i class="fa-solid fa-wifi scale2 mb-auto mt-2"></i>
+            </span>
+
+            <span id="brightRoot" class="box-device">
+              <i class="fa-solid fa-lightbulb scale2 mb-auto mt-2"></i>
+            </span>
+
+            <span id="doorRoot" class="box-device">
+              <i class="fa-solid fa-lock scale2 mb-auto mt-2"></i>
+            </span>
+
+            
+           
+          </div>
+        </div>
+        <div class="concuption-container">
+          <h2 class="general-c">Consumption</h2>
+          <div id = "usage-container" class="usage-container">
+            <div class="usage">
+              <h2 >Water Consumption</h2>
+              <canvas id="electric-usage-chart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
     
-<script src = "bathroom-c.js"></script>
-</body>
+    <script src="bathroom-c.js"></script>
+  </body>
 </html>

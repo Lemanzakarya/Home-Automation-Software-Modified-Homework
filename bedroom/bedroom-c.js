@@ -1,50 +1,53 @@
+
 const tempRoot = document.getElementById("tempRoot");
 const wifiRoot = document.getElementById("wifiRoot");
 const doorRoot = document.getElementById("doorRoot")
 const humRoot = document.getElementById("humRoot");
+const speakerRoot = document.getElementById("speaker-root");
 const co2Root = document.getElementById("co2Root");
 const brightRoot = document.getElementById("brightRoot");
-const electricRoot = document.getElementById("electricRoot");
-const speakerRoot = document.getElementById("speaker-root");
-const colorCard = document.getElementById("speaker-card");
-var temperature = localStorage.getItem("be-temperature");
-var wifiString = localStorage.getItem("be-wifiTime");
-var doorString = localStorage.getItem("be-doorTime");
-var humidity = localStorage.getItem("be-humidity");
-var co2 = localStorage.getItem("be-co2");
-var wifiOn = localStorage.getItem("be-wifiCheck");
-var bright = localStorage.getItem("be-bright");
-var electric = localStorage.getItem("be-electric");
-var doorOn = localStorage.getItem("be-doorCheck");
-var lightOn = localStorage.getItem("be-lightCheck");
-var color = localStorage.getItem("colorBedroom")
+const tvRoot = document.getElementById("tvRoot");
+var temperature = localStorage.getItem("ba-temperature");
+var wifiString = localStorage.getItem("ba-wifiTime");
+var doorString = localStorage.getItem("ba-doorTime");
+var humidity = localStorage.getItem("ba-humidity");
+var co2 = localStorage.getItem("ba-co2");
+var wifiOn = localStorage.getItem("ba-wifiCheck");
+var bright = localStorage.getItem("ba-bright");
+var electric = localStorage.getItem("ba-electric");
+var doorOn = localStorage.getItem("ba-doorCheck");
+var lightOn = localStorage.getItem("ba-lightSet");
+var tvOn = localStorage.getItem("ba-tvOn");
+var tvString1 = localStorage.getItem("ba-tv1")
+var tvString2 = localStorage.getItem("ba-tv2");
 var smartOn = localStorage.getItem("smartOn");
 var smartLevel = localStorage.getItem("smartLevel");
 
-if(smartOn == "true")
-smartOn = "ON"
+if(doorOn == "true")
+doorOn = "ON";
+else
+doorOn = "OFF";
+
+if(smartOn == 'true')
+smartOn = "ON";
 else
 smartOn = "OFF"
-
-if(!smartLevel)
-smartLevel = 0;
-
-if(!color)
-color = "#fff";
-if(doorOn == "true")
-doorOn = "ON";
-else
-doorOn = "OFF";
-
-if(doorOn == "true")
-doorOn = "ON";
-else
-doorOn = "OFF";
 
 if(wifiOn == "true")
 wifiOn = "ON";
 else
 wifiOn = "OFF";
+
+if(tvOn == "true")
+tvOn = "ON"
+else
+tvOn = "OFF"
+
+if(!tvString1)
+tvString1 = 0
+
+if(!tvString2)
+tvString2 = 0
 
 
 if(!wifiString)
@@ -52,9 +55,6 @@ wifiString = "";
 
 if(!doorString)
 doorString = "";
-
- if(!smartLevel)
- smartLevel = "" ;
 
 if(doorOn == "ON"){
   doorString = " - ";
@@ -81,27 +81,58 @@ if(lightOn == "true")
 lightOn = "ON";
 else
 lightOn = "OFF";
-if(lightOn == "OFF")
-bright = 0;
+
+
 
 if(wifiOn == "ON"){
   wifiString = " - ";
 }
-if(smartOn == "OFF"){
- smartLevel = 0;
-}
+
+tempRoot.innerHTML += '<h3 style="color:black; font-size:25px; margin-left:30px ; ">' + temperature + " °C " + '</h3>';
+wifiOn == "OFF" ? wifiRoot.innerHTML +=  '<h4 style="color: red; font-size:12px; margin-top:4px; ">' + " Open Between : " + wifiString + '</h4>' : 0;
+wifiRoot.innerHTML +=  '<h3 style="color: #8b1c1c; font-size:18px ; margin-top: 4px ;  ">' + wifiOn + '</h3>';
+humRoot.innerHTML += '<h3 style="color:black; font-size:25px; margin-left:48px ; ">' + "% " +  humidity + '</h3>';
+co2Root.innerHTML += '<h3 style="color:black; font-size:25px; margin-left:65px ; ">'  + "% " + co2 + '</h3>';
+brightRoot.innerHTML += '<h3 style="color: black; font-size:16px; margin-top:4px; ">' + "Brightness is % " +  bright + '</h3>';
+brightRoot.innerHTML += '<h3 style="color: #8b1c1c;  margin-top: 4px ; font-size:18px; ">' + lightOn + '</h3>';
+doorOn == "OFF" ? doorRoot.innerHTML += '<h4 style="color: black; font-size:16px ;">'   + " Open Between : " + doorString + '</h4>' : 0;
+doorRoot.innerHTML += '<h3 style="color: #8b1c1c; font-size:18px ">' + doorOn + '</h3>'
+  
+speakerRoot.innerHTML += '<h3 style="color:black; font-size:15px;  ">Sound Level %' + smartLevel + '</h3>';  
+speakerRoot.innerHTML += '<h4 style="color:#8b1c1c; margin-top: 4px ; font-size:18px; ">' + smartOn + '</h4>';  
 
 
-speakerRoot.innerHTML += '<h4 style="color: red; background-color:white ;  font-size:18px;  margin-top:5% ; border-top-left-radius :5px ;  border-top-right-radius :5px ; margin-top:16px; font-size:20px; ">' + "Volume:  %" + smartLevel + '</h4>';
-speakerRoot.innerHTML += '<h4 style="color:#B22222; font-size:20px ; background-color:white;  padding: 0px 46px 5px 45.8px ; border-bottom-left-radius :5px ;  border-bottom-right-radius :5px ; font-size:22px ;">' + smartOn + '</h4>';
-tempRoot.innerHTML += '<h3 style="color: red; font-size:25px; margin-top: 12px ; ">' + temperature + " °C " + '</h3>';
-wifiOn == "OFF" ? wifiRoot.innerHTML +=  '<h4 style="color: red; font-size:20px; margin-top:16px; ">' + " Open Between : " + wifiString + '</h4>' : 0;
-wifiRoot.innerHTML +=  '<h3 style="color: #8b1c1c; font-size:22px ; margin-top: 16px ; ">' + wifiOn + '</h3>';
-humRoot.innerHTML += '<h3 style="color: red; font-size:25px; margin-top: 12px ; ">' + "% " +  humidity + '</h3>';
-co2Root.innerHTML += '<h3 style="color: red; font-size:25px; margin-top: 12px ; ">' + "% " + co2 + '</h3>';
-brightRoot.innerHTML += '<h3 style="color: red; font-size:20px; margin-top:16px; ">' + "Brightness is % " +  bright + '</h3>';
-brightRoot.innerHTML += '<h3 style="color: #8b1c1c;  margin-top: 16px ; font-size:22px; ">' + lightOn + '</h3>';
-doorOn == "OFF" ? doorRoot.innerHTML += '<h4 style="color: red; font-size:20px ;margin-top:16px;">'   + " Open Between : " + doorString + '</h4>' : 0;
-doorRoot.innerHTML += '<h3 style="color: #8b1c1c; margin-top: 16px ; font-size:22px ">' + doorOn + '</h3>'
-electricRoot.innerHTML += '<h3 style="color: red; font-size:20px; ">' +  electric + " kWh"+ '</h3>';
-colorCard.style.backgroundColor = color;
+const electricUsageToday = [10, 15, 20, 25, 30, 35, 40];
+const electricUsageThisMonth = [200, 250, 300, 350, 400, 450, 500];
+const waterUsageToday = [5, 8, 12, 15, 10, 7, 9];
+const waterUsageThisMonth = [100, 120, 150, 130, 110, 140, 160];
+
+// Create electric usage chart
+const electricUsageChart = new Chart(document.getElementById('electric-usage-chart'), {
+  type: 'line',
+  data: {
+    labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7'],
+    datasets: [
+      {
+        label: 'Today',
+        data: electricUsageToday,
+        borderColor: 'blue',
+        backgroundColor: 'rgba(0, 0, 255, 0.1)',
+      },
+      {
+        label: 'This Month',
+        data: electricUsageThisMonth,
+        borderColor: 'red',
+        backgroundColor: 'rgba(255, 0, 0, 0.1)',
+      },
+    ],
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true,
+        display: true,
+      },
+    },
+  },
+});
