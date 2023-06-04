@@ -1,3 +1,5 @@
+
+
 const icons = document.querySelectorAll('.icon');
 const feelingHeading = document.getElementById('feeling-heading');
 

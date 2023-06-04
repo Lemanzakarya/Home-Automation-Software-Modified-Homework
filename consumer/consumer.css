@@ -268,8 +268,9 @@ canvas {
 }
 
 .room-card {
-  width: 150px;
+  width: 180px;
   height: 150px;
+  gap: 20px;
   padding: 15px ;
   background-color: #f8f8f8;
   border-radius: 8px;
@@ -279,11 +280,11 @@ canvas {
 }
 
 .room-card img {
-  width: 70px;
-  max-height: 70px;
+  width: 90px;
+  
   object-fit: fill;
   border-radius: 8px;
-  margin-top: 5px;
+  margin-top: 20px;
 }
 
 .room-card h3 {
