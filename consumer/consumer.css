@@ -22,12 +22,14 @@ nav {
   height: 20px;
   position: relative;
   display: flex;
-  top: 0.8rem;
-  gap: 5px;
-  right: 6rem;
+  top: 0.6rem;
+  gap: 4px;
+  right: 4.2rem;
   
 }
 
+
+/* CSS */
 
 
 
@@ -52,12 +54,11 @@ nav ul{
   float: right;
   top: 0;
   right: 0;
-  margin-top: 3.5%;
+  margin-top: 4%;
 }
 nav ul li{
-  padding: 10px 12px;
   border-radius: 10px;
- margin-right: 2rem;
+ margin-right: 1.5rem;
  margin-left: 1rem;
   transition: 0.2s ease-in;
 }
@@ -67,18 +68,26 @@ nav ul li a{
   font-size: 18px;
   font-weight: 400;
   text-decoration: none;
-
+  text-align: center;
+  padding: 10px;
 }
 
-nav ul li:hover{
-  background-color: #5a006a;
-  color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.297);
-  transform: scale(1.05);
-  border-radius: 8px;
+nav ul li :hover{
+  opacity: 90%;
+  background-color: #5a006ae4;
+  font-size: 18px;
+  padding: 10px 14px;
+   transform: scale(1.1);
+  background-size: 300% 100%;
+border-radius: 6px;
+ -webkit-transition: all .4s ease-in-out;
+  transition: all .3s ease-in-out;
+  box-shadow: 0 4px 10px 0 rgba(28, 32, 37, 0.422);
  
-}
+ }
 
+
+ 
 nav .menubtn {
   font-size: 50px;
   font-weight: bolder;
@@ -610,11 +619,39 @@ margin-bottom: 0.4rem;
 }
 
 .button:hover {
-  background-color: #670278;
+  background-color: #5f0278;
   color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.297);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.297);
   transform: scale(1.05);
 }
+.button.logout {
+  box-shadow: 0 4px 10px 0 rgba(28, 32, 37, 0.422);
+width: 115px;
+  font-size: 17px;
+  background-color: #e8e8e88b;
+  font-weight: 400;
+  color: #313131e7;
+  position: relative;
+  border: 2px solid #5a006a;
+  bottom: 26px;
+  right: 12px;
+  cursor: pointer;
+  margin: 20px;
+  padding: 5px 12px;
+  height: 36px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+border-radius: 6px;
+ -webkit-transition: all .4s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.button.logout:hover{
+  background-color: #49406b;
+color: white;
+}
+
 
 .rooms-container:hover .button-container {
   pointer-events: initial;
