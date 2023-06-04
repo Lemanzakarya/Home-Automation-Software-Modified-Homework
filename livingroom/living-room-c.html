@@ -37,7 +37,7 @@
         <div class="general-sensors-container">
           <h2 class="general">General Sensors</h2>
           <div class="producer">
-            <div class="box box-general-sensor">
+            <div id="tempRoot" class="box box-general-sensor">
               <i class="fas fa-thermometer-half"></i>
               <div>
                 <h3>Temperature</h3>
@@ -45,7 +45,7 @@
                </div>
               </div>
             </div>
-            <div class="box box-general-sensor">
+            <div id ="humRoot" class="box box-general-sensor">
               <i class="fas fa-tint"></i>
               <div>
                 <h3>Humidity</h3>
@@ -54,7 +54,7 @@
                 </div>
               </div>
             </div>
-            <div class="box box-general-sensor">
+            <div id ="co2Root" class="box box-general-sensor">
               <i class="fas fa-cloud"></i>
               <div>
                 <h3>CO2</h3>
@@ -66,62 +66,25 @@
      
         <div class="devices-container">
           <h2 class="general">Devices</h2>
-          <div class="producer">
-            <div class="box box-device">
-              <div class="card-header">
-                <i class="fa-regular fa-lightbulb"></i>
-                <div class="card-body">
-                 
-                </div>
-              </div>
-              <div>
-                <h3>Light</h3>
-                
-              </div>
-            </div>
-            <div class="box box-device">
-              
-              <div>
-                <h3>Door Lock</h3>
-                <div class="card-btns">
-                 
-                 
-                </div>
-              </div>
-            </div>
-            <div class="box box-device">
-              <div class="card-header">
-                <i class="fa-solid fa-tv"></i>
-                <div class="card-body">
-                 
-                </div>
-              </div>
-              <div>
-                <h3>Smart TV</h3>
-                <div class="card-btns">
-                 
-                
-                </div>
-              </div>
-            </div>
-            <div class="box box-device">
-              <div class="card-header">
-                <i class="fa-sharp fa-solid fa-wifi"></i>
-                <div class="card-body">
-               
-                </div>
-              </div>
-              <div>
-                <h3>Wifi</h3>
-                <div class="card-btns">
-                 
-                 
-                </div>
-              </div>
-            </div>
+          <div class="flex-wrap">
+            <span id="wifiRoot" class="box-device">
+              <i class="fa-solid fa-wifi scale2 mb-auto mt-2"></i>
+            </span>
+
+            <span id="brightRoot" class="box-device">
+              <i class="fa-solid fa-lightbulb scale2 mb-auto mt-2"></i>
+            </span>
+
+            <span id="doorRoot" class="box-device">
+              <i class="fa-solid fa-lock scale2 mb-auto mt-2"></i>
+            </span>
+
+            
+            <span id="tvRoot" class="box-device">
+              <i class="fa-solid fa-tv scale2 mb-auto mt-2"></i>
+            </span>
           </div>
         </div>
-        
         <div class="concuption-container">
           <h2 class="general-c">Consumption</h2>
           <div id = "usage-container" class="usage-container">
@@ -129,9 +92,11 @@
               <h2 >Electric Consumption</h2>
               <canvas id="electric-usage-chart"></canvas>
             </div>
+          </div>
         </div>
+      </div>
 
-
-    <script src="living-room.js"></script>
+    
+    <script src="living-room-c.js"></script>
   </body>
 </html>

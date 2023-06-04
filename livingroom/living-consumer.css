@@ -14,29 +14,107 @@
     background: -webkit-linear-gradient(45deg, rgba(125, 172, 222, 1) 0%, rgba(100, 110, 147, 1) 37%, rgba(146, 109, 184, 1) 74%, rgba(129, 66, 185, 1) 86%, rgba(115, 158, 204, 1) 100%);
     background: linear-gradient(45deg, rgba(125, 172, 222, 1) 0%, rgba(100, 110, 147, 1) 37%, rgba(146, 109, 184, 1) 74%, rgba(129, 66, 185, 1) 86%, rgba(115, 158, 204, 1) 100%);
     background-repeat: no-repeat;
+    background-size: cover;
     margin: 0;
     padding: 0;
   }
   .box {
-    background-color: #fff;
+    background-color: #ffffffd5;
     border-radius: 10px;
-    padding: 20px 24px;
+    padding: 5px 10px;
     text-align: left;
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
   }
   
   .box i {
     color: #000;
     font-size: 30px;
-    margin-right: 20px;
+    margin-right: 10px;
   }
   
   .box h3 {
     color: #000;
     font-size: 16px;
     text-align: left;
+    
+    margin: 0;
   }
+  .box.box-general-sensor {
+  
+    width: 250px;
+    height: 50px;
+  }
+  
+  .box.box-general-sensor i {
+    margin-right: 10px;
+  }
+  
+  .mb-auto {
+    margin-bottom:auto;
+  }
+
+  .mt-2 {
+    margin-top: 1rem;
+  }
+  .scale2 {
+    scale: 1.6;
+  }
+
+  .flex-wrap {
+    width: 50vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: wrap;
+  }
+  
+  .box.box-general-sensor h3 {
+    text-align: right;
+  }
+  .devices-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+  
+  .box-device {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffffd5;
+    border-radius: 6px;
+    height: 18vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    
+   
+  }
+  
+  .box-device .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .box-device .card-header i {
+    color: #000;
+    font-size: 30px;
+    margin-right: 10px;
+  }
+  
+  .box-device h3 {
+    color: #000;
+    font-size: 16px;
+    margin: 0;
+  }
+  
+
+  
+ 
+ 
   
   .container {
     position: absolute;
@@ -70,7 +148,10 @@
   align-items: center;
   justify-content: center;
  position: relative;
- right: 3rem;
+ margin: 10px;
+ left: 3rem;
+ bottom: 3rem;
+
  
 }
 
@@ -82,14 +163,18 @@
   .devices-container {
     width: 100% !important;
     grid-area: Devices;
+    display: flex;
+    position: relative;
+  bottom: 2rem;
 
   }
   
   .concuption-container {
     grid-area: Consumption;
     margin-left: 10rem;
-   bottom: 4rem;
+   bottom: 2.5rem;
    display: flex;
+   position: relative;
   
   }
   
@@ -139,19 +224,21 @@
     color: white;
     padding: 30px;
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 1.3px;
-    margin-bottom: -12px;
+
  
   }
   .general-c{
     color: white;
-    padding: 30px;
+    padding: 20px;
     font-size: 24px;
     font-weight: 500;
     letter-spacing: 1.3px;
-    margin-bottom: -12px;
-    margin-left: 9rem;
+    display: flex;
+    position: relative;
+    top: 1rem;
+    margin-left: 11.5rem;
   }
   
   .devices-container .box-device {
@@ -217,6 +304,7 @@
   
   .usage h2 {
     font-size: 18px;
+    text-align: center;
     font-weight: bold;
     margin-bottom: 20px;
     color: black;
@@ -226,4 +314,5 @@
     width: 100% !important;
     height: 400px;
   }
+  
   

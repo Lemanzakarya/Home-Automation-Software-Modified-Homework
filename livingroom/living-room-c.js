@@ -5,7 +5,6 @@ const doorRoot = document.getElementById("doorRoot")
 const humRoot = document.getElementById("humRoot");
 const co2Root = document.getElementById("co2Root");
 const brightRoot = document.getElementById("brightRoot");
-const electricRoot = document.getElementById("electricRoot");
 const tvRoot = document.getElementById("tvRoot");
 var temperature = localStorage.getItem("ba-temperature");
 var wifiString = localStorage.getItem("ba-wifiTime");
@@ -81,19 +80,18 @@ if(wifiOn == "ON"){
   wifiString = " - ";
 }
 
-tempRoot.innerHTML += '<h3 style="color: red; font-size:25px; margin-top: 12px ; ">' + temperature + " °C " + '</h3>';
-wifiOn == "OFF" ? wifiRoot.innerHTML +=  '<h4 style="color: red; font-size:20px; margin-top:16px; ">' + " Open Between : " + wifiString + '</h4>' : 0;
-wifiRoot.innerHTML +=  '<h3 style="color: #8b1c1c; font-size:22px ; margin-top: 16px ; ">' + wifiOn + '</h3>';
-humRoot.innerHTML += '<h3 style="color: red; font-size:25px; margin-top: 12px ; ">' + "% " +  humidity + '</h3>';
-co2Root.innerHTML += '<h3 style="color: red; font-size:25px; margin-top: 12px ; ">' + "% " + co2 + '</h3>';
-brightRoot.innerHTML += '<h3 style="color: red; font-size:20px; margin-top:12px; ">' + "Brightness is % " +  bright + '</h3>';
-brightRoot.innerHTML += '<h3 style="color: #8b1c1c;  margin-top: 16px ; font-size:22px; ">' + lightOn + '</h3>';
-doorOn == "OFF" ? doorRoot.innerHTML += '<h4 style="color: red; font-size:20px ;margin-top:16px;">'   + " Open Between : " + doorString + '</h4>' : 0;
-doorRoot.innerHTML += '<h3 style="color: #8b1c1c; margin-top: 16px ; font-size:22px ">' + doorOn + '</h3>'
-electricRoot.innerHTML += '<h3 style="color: red; font-size:20px; ">' +  electric + " kWh"+ '</h3>';
-tvOn == "ON" ? tvRoot.innerHTML +=  '<h4 style="color: red; font-size:20px ; margin-top:16px;">' + "Channel : " + tvString1 + '</h4>' : 0;
-tvOn == "ON" ? tvRoot.innerHTML +=  '<h4 style="color: red; font-size:20px ;">' + "Volume : % " + tvString2 + '</h4>' : 0;
-tvRoot.innerHTML += '<h4 style="color:#8b1c1c; margin-top: 16px ; font-size:22px; ">' + tvOn + '</h4>';   
+tempRoot.innerHTML += '<h3 style="color:black; font-size:25px; margin-left:30px ; ">' + temperature + " °C " + '</h3>';
+wifiOn == "OFF" ? wifiRoot.innerHTML +=  '<h4 style="color: red; font-size:12px; margin-top:4px; ">' + " Open Between : " + wifiString + '</h4>' : 0;
+wifiRoot.innerHTML +=  '<h3 style="color: #8b1c1c; font-size:18px ; margin-top: 4px ;  ">' + wifiOn + '</h3>';
+humRoot.innerHTML += '<h3 style="color:black; font-size:25px; margin-left:48px ; ">' + "% " +  humidity + '</h3>';
+co2Root.innerHTML += '<h3 style="color:black; font-size:25px; margin-left:65px ; ">'  + "% " + co2 + '</h3>';
+brightRoot.innerHTML += '<h3 style="color: black; font-size:16px; margin-top:4px; ">' + "Brightness is % " +  bright + '</h3>';
+brightRoot.innerHTML += '<h3 style="color: #8b1c1c;  margin-top: 4px ; font-size:18px; ">' + lightOn + '</h3>';
+doorOn == "OFF" ? doorRoot.innerHTML += '<h4 style="color: black; font-size:16px ;">'   + " Open Between : " + doorString + '</h4>' : 0;
+doorRoot.innerHTML += '<h3 style="color: #8b1c1c; font-size:18px ">' + doorOn + '</h3>'
+tvOn == "ON" ? tvRoot.innerHTML +=  '<h4 style="color: black; font-size:12px ; margin-top:4px;">' + "Channel : " + tvString1 + '</h4>' : 0;
+tvOn == "ON" ? tvRoot.innerHTML +=  '<h4 style="color: red; font-size:12px ;">' + "Volume : % " + tvString2 + '</h4>' : 0;
+tvRoot.innerHTML += '<h4 style="color:#8b1c1c; margin-top: 4px ; font-size:18px; ">' + tvOn + '</h4>';   
 
 const electricUsageToday = [10, 15, 20, 25, 30, 35, 40];
 const electricUsageThisMonth = [200, 250, 300, 350, 400, 450, 500];
