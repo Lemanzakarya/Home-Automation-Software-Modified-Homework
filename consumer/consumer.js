@@ -82,3 +82,37 @@ const waterUsageChart = new Chart(document.getElementById('water-usage-chart'), 
     },
   },
 });
+
+const dashboard = document.getElementById('rooms-section');
+const statistics = document.getElementById('usage-container');
+
+dashboard.addEventListener('click' , () => {
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+      });
+});
+
+statistics.addEventListener('click' , () => {
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+      });
+});
+
+function reveal() {
+    var reveals = document.querySelectorAll(".notActive");
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 145;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+
+window.addEventListener('scroll',reveal);
+

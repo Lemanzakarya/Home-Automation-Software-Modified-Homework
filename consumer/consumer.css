@@ -660,3 +660,7 @@ color: white;
 .rooms-container:hover .home-photo {
   transform: scale(1.1) ;
 }
+html, body {
+  scroll-behavior: smooth;
+}
+

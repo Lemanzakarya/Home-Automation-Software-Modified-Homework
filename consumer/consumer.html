@@ -19,9 +19,9 @@
     <span class="menubtn">&#9776;</span>
     <div class="navLinks">
       <ul>
-        <li><a href="../login/HomeAutomation.php">Dashboard</a></li>
-        <li><a href="../login/About.html">Statistics</a></li>
-        <li><a href="#">Widgets</a></li>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#statistics">Statistics</a></li>
+        <li><a href="#widgets">Widgets</a></li>
         <button class="button logout">Logout</button>
        </li>
       </ul>
@@ -31,10 +31,11 @@
  
   <div class="container">
 
-    <div class="profile-container">
+    <div id = "profile-container" class="profile-container">
         <img src="man.png" alt="Profile Photo" class="profile-photo" >
         </div>
        
+        <section id="dashboard">
    <h1>Welcome, User!</h1>
     <div class="radio-group">
     <h2 id="feeling-heading"> How are you feeling today? </h2>
@@ -51,18 +52,17 @@
           <span class="icon"><i class="fa-regular fa-face-frown" style="color:  #f8e4c9f0;"></i></span>
         </label>
       </div>
+    </section>
 
 
-  <!-- Circular buttons -->
-
-
-      <div class="rooms-section">
+ 
+      <div  class="rooms-section">
 
          <div class="rooms-container">
           <h2 class="titleh">Home</h2>
          <img id="home-image" src="home4.png" alt="home" class="home-photo" width="580" height="400">
           <div class="button-container">
-            <button class="button living-room">Living Room</button>
+            <button onclick= "location.href='../livingroom/living-room-c.html'"class="button living-room">Living Room</button>
             <button class="button bathroom">Bathroom</button>
             <button class="button bedroom">Bedroom</button>
             <button class="button kitchen">Kitchen</button>
@@ -71,8 +71,9 @@
         </div>
      
 
-      <h2 class="title">Statistics</h2>
-          <div class="usage-container">
+      <section id="statistics">
+  <h2 class="title">Statistics</h2>
+          <div id = "usage-container" class="usage-container">
             <div class="usage">
               <h2 >Electric Consumption</h2>
               <canvas id="electric-usage-chart"></canvas>
@@ -82,7 +83,9 @@
               <canvas id="water-usage-chart"></canvas>
             </div>
           </div>
-   
+        </section>
+
+        <section id="widgets">
       <div class="widget-section">
             <h2 class="title">Widgets</h2>
             <div class="widget-container">
@@ -104,6 +107,8 @@
               </div>
             </div>
           </div>
+        </section>
+
           <div class="sidebar">
             <div class="weather-container">
               <img src="storm.png" alt="storm" class="storm" >
