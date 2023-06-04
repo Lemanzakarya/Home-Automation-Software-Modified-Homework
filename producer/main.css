@@ -192,11 +192,20 @@ body {
     width: auto;
     max-width: 100%;
     margin: 50px;
+    top: auto;
   }
 
   .container {
     margin: auto;
   }
+
+  .circular-button span {
+    color: #ffffff;
+    position: absolute;
+    font-size: 18px;
+    top: 62px;
+  } 
+  
 
   .rooms {
     display: flex;
@@ -250,13 +259,13 @@ body {
   .right-column {
     display: -webkit-inline-box;
     position: absolute;
-    top: 36%;
+    top: 34%;
     left: 17%;
   }
   .left-column {
     display: -webkit-inline-box;
     position: absolute;
-    top: 27%;
+    top: 23%;
     left: 17%;
   }
 
