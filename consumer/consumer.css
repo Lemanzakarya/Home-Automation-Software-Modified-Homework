@@ -16,6 +16,85 @@ body {
  min-height: 50vh;
 
 }
+nav {
+  width: 100%;
+    justify-content: flex-end;
+  height: 20px;
+  position: relative;
+  display: flex;
+  top: 0.8rem;
+  gap: 5px;
+  right: 6rem;
+  
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  h1 {
+      margin-left: 10%;
+    }
+  
+
+
+}
+nav ul{
+  display: flex;
+  list-style: none;
+  float: right;
+  top: 0;
+  right: 0;
+  margin-top: 3.5%;
+}
+nav ul li{
+  padding: 10px 12px;
+  border-radius: 10px;
+ margin-right: 2rem;
+ margin-left: 1rem;
+  transition: 0.2s ease-in;
+}
+
+nav ul li a{
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+
+}
+
+nav ul li:hover{
+  background-color: #5a006a;
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.297);
+  transform: scale(1.05);
+  border-radius: 8px;
+ 
+}
+
+nav .menubtn {
+  font-size: 50px;
+  font-weight: bolder;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+ nav .menubtn{
+      display: flex;
+  }
+  nav .navLinks{
+      display: none;
+  }
+}
+
 
 .container {
   
@@ -27,11 +106,11 @@ body {
 h1 {
   color: white;
   text-emphasis: none;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   margin-left: 3rem;
-  font-size: 29px;
+  font-size: 30px;
   letter-spacing: 1.4px;
-  text-shadow: 0 4px 0 #0f0f0f7b;
+  text-shadow: 0 4px 0 #0f0f0f88;
 }
 
 h2 {
@@ -51,7 +130,7 @@ h2 {
   position: relative;
   margin-left: 0rem;
   font-size: 28px;
-  left: 2rem;
+  left: 1.5rem;
   font-weight: 800;
   color: #ffffff;
  padding-bottom: 6rem;
@@ -123,7 +202,7 @@ h2 {
   padding: 15px;
   margin-top: 20px;
   margin-left: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   display: flex;
   gap: 40px;
   justify-content: center;
@@ -158,6 +237,7 @@ canvas {
   color: #ffffff;
  margin-top: 2rem;
   margin-bottom: -0.5rem;
+  letter-spacing: 2px;
 }
 
 .rooms-container {
@@ -216,7 +296,7 @@ canvas {
   right: 15px;
   width: 350px;
   max-width: 350px;
-  height: 600px;
+  height: 620px;
   border-radius: 12px;
   padding: 15px;
   box-shadow: 0 2px 8px rgba(24, 1, 80, 0.348);
@@ -405,7 +485,7 @@ margin-bottom: 0.4rem;
 #home-image {
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
-  margin-top: 6rem;
+  margin-top: 5rem;
   left: -100px;
   position: relative;
   display:flex;
@@ -458,7 +538,7 @@ margin-bottom: 0.4rem;
 .general-sensors-container{
   margin-top: 10px;
   width: 100%;
-  height: 38vh;
+  height: 40vh;
   max-width: 400px;
   margin: 0 auto;
  background-color: #f1f3e9e4;
@@ -503,7 +583,7 @@ margin-bottom: 0.4rem;
 
 .button-container {
   position: absolute;
-  top: 52%;
+  top: 53%;
   left: 52%;
   transform: translate(-50%, -50%);
   z-index: 2;
