@@ -933,7 +933,12 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
   .box i {
     color: #ffffffe7;
-    font-size: 34px;
+    font-size: 32px;
     margin-bottom: 7px;
   }
+
+.box i.fa-bolt{
+  margin: 10px;
+}
+
 }
