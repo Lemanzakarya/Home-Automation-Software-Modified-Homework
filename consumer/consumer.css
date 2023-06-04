@@ -253,7 +253,7 @@ canvas {
   display: flex;
   margin-left: 60px;
   margin-right: 30px;
-  margin-top: 40px;
+  margin-top: 60px;
   gap: 30px;
   margin-bottom: 50px;
   min-height: 70vh;
@@ -268,10 +268,11 @@ canvas {
 }
 
 .room-card {
-  width: 180px;
+  width: 250px;
   height: 150px;
-  gap: 20px;
-  padding: 15px ;
+  gap: 50px;
+  padding: 20px ;
+  
   background-color: #f8f8f8;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.29);
