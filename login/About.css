@@ -84,3 +84,41 @@ ul li:hover {
     opacity: 90%;
 }
 
+@media screen and (max-width: 992px) {
+    body {
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  
+    .container {
+      max-width: 100%;
+      margin-right: 10px;
+      margin-left: 90px;
+    }
+  
+    .home-image {
+      width: 100%;
+      height: auto;
+      position: static;
+      margin-top: 20px;
+    }
+  
+    ul {
+      position: static;
+      justify-content: flex-start;
+      margin-top: 20px;
+    }
+  
+    ul li {
+      padding: 6px 12px;
+    }
+  
+    ul li a {
+      font-size: 14px;
+    }
+  }
+
