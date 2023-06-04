@@ -75,6 +75,18 @@ body {
   height: 580px;
   object-fit: cover;
 }
+@media (max-width: 768px) {
+  /* Styles for screens up to 768px wide (e.g., mobile devices) */
+  .living-image {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+  }
+}
 
 h1 {
   color: white;
