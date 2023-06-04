@@ -25,12 +25,12 @@
         <li><a href="#statistics">Statistics</a></li>
         <li><a href="#widgets">Widgets</a></li>
         <button class="button logout">Logout</button>
-        </li>
+       </li>
       </ul>
     </div>
-  </nav>
-
-
+ </nav>
+ 
+ 
   <div class="container">
 
     <div id = "profile-container" class="profile-container">
@@ -40,103 +40,107 @@
         <section id="dashboard">
    <h1>Welcome, User!</h1>
     <div class="radio-group">
-      <h2 id="feeling-heading"> How are you feeling today? </h2>
-      <label>
-        <input type="radio" name="feeling" value="good">
-        <span class="icon"><i class="fa-regular fa-face-smile" style="color: #f8e4c9f0;"></i></span>
-      </label>
-      <label>
-        <input type="radio" name="feeling" value="normal">
-        <span class="icon"><i class="fa-regular fa-face-meh" style="color:  #f8e4c9f0;"></i></span>
-      </label>
-      <label>
-        <input type="radio" name="feeling" value="bad">
-        <span class="icon"><i class="fa-regular fa-face-frown" style="color:  #f8e4c9f0;"></i></span>
-      </label>
-    </div>
-
-
-    <!-- Circular buttons -->
-
-
-    <div class="rooms-section">
-
-      <div class="rooms-container">
-        <h2 class="titleh">Home</h2>
-        <img id="home-image" src="home4.png" alt="home" class="home-photo" width="580" height="400">
-        <div class="button-container">
-          <button class="button living-room">Living Room</button>
-          <button class="button bathroom">Bathroom</button>
-          <button class="button bedroom">Bedroom</button>
-          <button class="button kitchen">Kitchen</button>
-        </div>
+    <h2 id="feeling-heading"> How are you feeling today? </h2>
+       <label>
+          <input type="radio" name="feeling" value="good">
+          <span class="icon"><i class="fa-regular fa-face-smile" style="color: #f8e4c9f0;"></i></span>
+        </label>
+        <label>
+          <input type="radio" name="feeling" value="normal">
+          <span class="icon"><i class="fa-regular fa-face-meh" style="color:  #f8e4c9f0;"></i></span>
+        </label>
+        <label>
+          <input type="radio" name="feeling" value="bad">
+          <span class="icon"><i class="fa-regular fa-face-frown" style="color:  #f8e4c9f0;"></i></span>
+        </label>
       </div>
-    </div>
+    </section>
 
 
-    <h2 class="title">Statistics</h2>
-    <div class="usage-container">
-      <div class="usage">
-        <h2>Electric Consumption</h2>
-        <canvas id="electric-usage-chart"></canvas>
-      </div>
-      <div class="usage">
-        <h2>Water Consumption</h2>
-        <canvas id="water-usage-chart"></canvas>
-      </div>
-    </div>
+ 
+      <div  class="rooms-section">
 
-    <div class="widget-section">
-      <h2 class="title">Widgets</h2>
-      <div class="widget-container">
-        <div class="room-card">
-          <h3>Bedroom</h3>
-          <img src="bed.png" alt="Bedroom">
-        </div>
-        <div class="room-card">
-          <h3>Bathroom</h3>
-          <img src="shower.png" alt="Bathroom">
-        </div>
-        <div class="room-card">
-          <h3>Living Room</h3>
-          <img src="sofa.png" alt="Living Room">
-        </div>
-        <div class="room-card">
-          <h3>Kitchen</h3>
-          <img src="fridge.png" alt="Kitchen">
-        </div>
-      </div>
-    </div>
-    <div class="sidebar">
-      <div class="weather-container">
-        <img src="storm.png" alt="storm" class="storm">
-        <p class="current"> 14°C / Stormy </p>
-
-        <ul class="weather-list">
-          <li class="weather-item">
-            <div class="day">Tomorrow</div>
-            <div class="weather-icon">
-              <img src="sun.png" alt="Weather Icon">
-            </div>
-            <div class="temperature">18°C</div>
-            <div class="description">Sunny</div>
-          </li>
-        </ul>
-        <div class="container">
-          <div class="row">
-            <div class="chart-container">
-              <h2 class="humidity">Humidity</h2>
-              <img id="humidity-image" src="humidity.png" alt="humidity Icon">
-              <div id="percentagex" class="percentage">75%</div>
-            </div>
-            <div class="chart-container">
-              <h2 class="wind">Wind</h2>
-              <img id="wind-image" src="wind.png" alt="humidity Icon">
-              <div id="percentage" class="percentage">16%</div>
-            </div>
+         <div class="rooms-container">
+          <h2 class="titleh">Home</h2>
+         <img id="home-image" src="home4.png" alt="home" class="home-photo" width="580" height="400">
+          <div class="button-container">
+            <button onclick= "location.href='../livingroom/living-room-c.html'"class="button living-room">Living Room</button>
+            <button class="button bathroom">Bathroom</button>
+            <button class="button bedroom">Bedroom</button>
+            <button class="button kitchen">Kitchen</button>
+          </div>
           </div>
         </div>
-      </div>
+     
+
+      <section id="statistics">
+  <h2 class="title">Statistics</h2>
+          <div id = "usage-container" class="usage-container">
+            <div class="usage">
+              <h2 >Electric Consumption</h2>
+              <canvas id="electric-usage-chart"></canvas>
+            </div>
+            <div class="usage">
+              <h2>Water Consumption</h2>
+              <canvas id="water-usage-chart"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <section id="widgets">
+      <div class="widget-section">
+            <h2 class="title">Widgets</h2>
+            <div class="widget-container">
+              <div class="room-card">
+                 <h3>Bedroom</h3>
+                <img src="bed.png" alt="Bedroom">
+              </div>
+              <div class="room-card">
+                <h3>Bathroom</h3>
+                <img src="shower.png" alt="Bathroom">
+              </div>
+              <div class="room-card">
+                <h3>Living Room</h3>
+                <img src="sofa.png" alt="Living Room">
+                  </div>
+              <div class="room-card">
+                <h3>Kitchen</h3>
+                <img src="fridge.png" alt="Kitchen">
+              </div>
+            </div>
+          </div>
+        </section>
+
+          <div class="sidebar">
+            <div class="weather-container">
+              <img src="storm.png" alt="storm" class="storm" >
+              <p class="current"> 14°C / Stormy </p>
+
+              <ul class="weather-list">
+                <li class="weather-item">
+                  <div class="day">Tomorrow</div>
+                  <div class="weather-icon">
+                    <img src="sun.png" alt="Weather Icon">
+                  </div>
+                  <div class="temperature">18°C</div>
+                  <div class="description">Sunny</div>
+                   </li>
+                  </ul>
+                  <div class="container">
+                    <div class="row">
+                       <div class="chart-container">
+                          <h2 class="humidity">Humidity</h2>
+                          <img id="humidity-image" src="humidity.png" alt="humidity Icon">
+                          <div id="percentagex" class="percentage">75%</div>
+                        </div>
+                        <div class="chart-container">
+                          <h2 class="wind">Wind</h2>
+                          <img id="wind-image" src="wind.png" alt="humidity Icon">
+                          <div id="percentage" class="percentage">16%</div>
+                        </div>
+                    </div>
+                 </div>
+          
       <div class="general-sensors-container">
         <h2 class="sensor">General Sensors</h2>
         <div class="sensor-container">
