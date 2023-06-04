@@ -1,3 +1,4 @@
+
 const tempRoot = document.getElementById("tempRoot");
 const wifiRoot = document.getElementById("wifiRoot");
 const doorRoot = document.getElementById("doorRoot")
@@ -93,3 +94,38 @@ electricRoot.innerHTML += '<h3 style="color: red; font-size:20px; ">' +  electri
 tvOn == "ON" ? tvRoot.innerHTML +=  '<h4 style="color: red; font-size:20px ; margin-top:16px;">' + "Channel : " + tvString1 + '</h4>' : 0;
 tvOn == "ON" ? tvRoot.innerHTML +=  '<h4 style="color: red; font-size:20px ;">' + "Volume : % " + tvString2 + '</h4>' : 0;
 tvRoot.innerHTML += '<h4 style="color:#8b1c1c; margin-top: 16px ; font-size:22px; ">' + tvOn + '</h4>';   
+
+const electricUsageToday = [10, 15, 20, 25, 30, 35, 40];
+const electricUsageThisMonth = [200, 250, 300, 350, 400, 450, 500];
+const waterUsageToday = [5, 8, 12, 15, 10, 7, 9];
+const waterUsageThisMonth = [100, 120, 150, 130, 110, 140, 160];
+
+// Create electric usage chart
+const electricUsageChart = new Chart(document.getElementById('electric-usage-chart'), {
+  type: 'line',
+  data: {
+    labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7'],
+    datasets: [
+      {
+        label: 'Today',
+        data: electricUsageToday,
+        borderColor: 'blue',
+        backgroundColor: 'rgba(0, 0, 255, 0.1)',
+      },
+      {
+        label: 'This Month',
+        data: electricUsageThisMonth,
+        borderColor: 'red',
+        backgroundColor: 'rgba(255, 0, 0, 0.1)',
+      },
+    ],
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true,
+        display: true,
+      },
+    },
+  },
+});
