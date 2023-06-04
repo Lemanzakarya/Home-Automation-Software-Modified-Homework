@@ -14,12 +14,27 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+  
+  <nav>
+    <span class="menubtn">&#9776;</span>
+    <div class="navLinks">
+      <ul>
+        <li><a href="../login/HomeAutomation.php">Dashboard</a></li>
+        <li><a href="../login/About.html">Statistics</a></li>
+        <li><a href="#">Widgets</a></li>
+        <button class="button logout">Logout</button>
+       </li>
+      </ul>
+    </div>
+ </nav>
+ 
+ 
   <div class="container">
 
     <div class="profile-container">
         <img src="man.png" alt="Profile Photo" class="profile-photo" >
         </div>
-   
+       
    <h1>Welcome, User!</h1>
     <div class="radio-group">
     <h2 id="feeling-heading"> How are you feeling today? </h2>
@@ -44,7 +59,8 @@
       <div class="rooms-section">
 
          <div class="rooms-container">
-          <img id="home-image" src="home2.png" alt="home" class="home-photo" width="686" height="440">
+          <h2 class="titleh">Home</h2>
+         <img id="home-image" src="home4.png" alt="home" class="home-photo" width="580" height="400">
           <div class="button-container">
             <button class="button living-room">Living Room</button>
             <button class="button bathroom">Bathroom</button>
@@ -55,7 +71,7 @@
         </div>
      
 
-      <h2 class="title">Usage Amount</h2>
+      <h2 class="title">Statistics</h2>
           <div class="usage-container">
             <div class="usage">
               <h2 >Electric Consumption</h2>
@@ -67,9 +83,9 @@
             </div>
           </div>
    
-      <div class="rooms-section">
-            <h2 class="title">Rooms</h2>
-            <div class="rooms-container">
+      <div class="widget-section">
+            <h2 class="title">Widgets</h2>
+            <div class="widget-container">
               <div class="room-card">
                  <h3>Bedroom</h3>
                 <img src="bed.png" alt="Bedroom">
@@ -111,7 +127,7 @@
                           <div id="percentagex" class="percentage">75%</div>
                         </div>
                         <div class="chart-container">
-                          <h2 class="humidity">Wind</h2>
+                          <h2 class="wind">Wind</h2>
                           <img id="wind-image" src="wind.png" alt="humidity Icon">
                           <div id="percentage" class="percentage">16%</div>
                         </div>
