@@ -901,12 +901,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     height: 1000px;
   }
   .container {
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    height: max-content;
-    position: relative;
+    margin: auto;
   }
 
   .living-image {
@@ -923,7 +918,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   }
 
   .devices-container .producer {
-    width: 100%;
+    width: 90%;
     flex-wrap: wrap;
   }
   .devices-container .box-device{
@@ -934,5 +929,11 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .box i {
+    color: #ffffffe7;
+    font-size: 34px;
+    margin-bottom: 7px;
   }
 }
