@@ -13,7 +13,7 @@ body {
   margin: 0;
   padding: 0;
   background-repeat: no-repeat;
- min-height: 50vh;
+  min-height: 50vh;
 
 }
 nav {
@@ -28,33 +28,24 @@ nav {
   
 }
 
+.consumer-logo {
+  position: relative;
+  top: 2.5%;
+  left: 3%;
+  width: 220px;
+  height: 60px;
+  max-width: 100%;
+}
+
 
 /* CSS */
 
-
-
-
-
-@media screen and (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-  }
-  h1 {
-      margin-left: 10%;
-    }
-  
-
-
-}
 nav ul{
   display: flex;
   list-style: none;
   float: right;
-  top: 0;
   right: 0;
-  margin-top: 4%;
+  margin-top: -6%;
 }
 nav ul li{
   border-radius: 10px;
@@ -95,14 +86,6 @@ nav .menubtn {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
- nav .menubtn{
-      display: flex;
-  }
-  nav .navLinks{
-      display: none;
-  }
-}
 
 
 .container {
@@ -115,7 +98,7 @@ nav .menubtn {
 h1 {
   color: white;
   text-emphasis: none;
-  margin-top: 2rem;
+  margin-top: 1.2rem;
   margin-left: 3.2rem;
   font-size: 32px;
   letter-spacing: 1.4px;
@@ -201,8 +184,8 @@ h2 {
 
 .profile-container {
   position: absolute;
-  top: 20px;
-  right: 18px;
+  top: 34px;
+  right: 15px;
   width: 45px;
   margin-right: 0.8rem;
   height: 45px;
@@ -307,7 +290,7 @@ canvas {
 .sidebar {
   background: linear-gradient(to right, #ffffffae, #eee9e98b);
   position: absolute;
-  top: 90px;
+  top: 120px;
   right: 25px;
   width: 350px;
   max-width: 350px;
@@ -316,20 +299,6 @@ canvas {
   padding: 15px;
   box-shadow: 0 2px 8px rgba(24, 1, 80, 0.348);
   z-index: 10;
-}
-
-@media (max-width: 350px) {
-  .sidebar {
-    position: static;
-    width: auto;
-    max-width: none;
-    height: auto;
-    border-radius: 0;
-    box-shadow: none;
-    padding: 10px;
-    background: none;
-    margin: 0;
-  }
 }
 
 .sidebar-icon {
@@ -666,3 +635,68 @@ html, body {
   scroll-behavior: smooth;
 }
 
+/*--Mobil friendly--*/
+
+@media only screen and (max-width: 992px) {
+  html,body{
+    width:fit-content;
+  }
+  .sidebar {
+    position: static;
+    width: auto;
+    max-width: none;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 10px;
+    background: none;
+    margin: 0;
+    margin-right: 190px;
+  }
+
+  .consumer-logo {
+    width: auto;
+    max-width: 100%;
+    margin: 50px;
+    top: auto;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  h1 {
+    margin-top: 5%;
+      margin-left: 27%;
+    }
+  
+  nav .menubtn{
+      display: flex;
+  }
+  nav .navLinks{
+      display: none;
+  }
+
+  .profile-container {
+    display: none;
+  }
+  
+
+.usage {
+  width: auto;
+  margin: auto;
+  padding: 15px;
+  background-color: rgba(245, 245, 245, 0.916);
+  border-radius: 5px;
+}
+.usage-container {
+  width: 600px; 
+}
+.widget-container {
+  display: grid;
+  gap: 30px;
+  min-height: 20vh;
+  align-content: center;
+}
+}
