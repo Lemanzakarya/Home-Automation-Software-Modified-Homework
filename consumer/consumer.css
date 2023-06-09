@@ -134,22 +134,22 @@ h2 {
 
 
 .titleh{
-  bottom: 0.6rem;
+  bottom: 1rem;
   display: flex;
   position: relative;
   margin-left: 0rem;
-  font-size: 28px;
-  left: 1.5rem;
+  font-size: 29px;
+  left: 1rem;
   font-weight: 800;
-  text-shadow: 0 2px 2px #0f0f0f88;
+  text-shadow: 0 2px 3px #0f0f0f95;
   color: #ffffff;
- padding-bottom: 6rem;
+ padding-bottom: 5rem;
  display: flex;
  letter-spacing: 2.4px;
  
 }
 .title {
-  margin-left: 5.5rem;
+  margin-left: 5.2rem;
   font-size: 20px;
   text-shadow: 0 2px 2px #0f0f0f88;
   font-weight: 800;
@@ -308,10 +308,10 @@ canvas {
   background: linear-gradient(to right, #ffffffae, #eee9e98b);
   position: absolute;
   top: 90px;
-  right: 15px;
+  right: 25px;
   width: 350px;
   max-width: 350px;
-  height: 620px;
+  height: 615px;
   border-radius: 12px;
   padding: 15px;
   box-shadow: 0 2px 8px rgba(24, 1, 80, 0.348);
@@ -446,12 +446,12 @@ canvas {
   margin-top: 10px;
   margin-left: 0.6rem;
   padding-top: 1px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
   width: 130px;
   height: 120px;
   background-color: #f1f3e9;
   border: 1px solid #a1a1a14d;
-  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  box-shadow: rgba(0, 0, 0, 0.256) 0px 2px 4px, rgba(0, 0, 0, 0.212) 0px 7px 13px -3px, rgba(0, 0, 0, 0.158) 0px -3px 0px inset;
   border-radius: 12px;
   padding: 6px;
  
@@ -466,16 +466,14 @@ canvas {
   font-size: 19px;
   position: relative;
 display: flex;
-  padding: 6px;
-  text-shadow: 2px 6px 6px rgba(0, 0, 0, 0.19);
-  font-weight: normal;
+padding: 6px;
   color: #181818;
   
 }
 #percentagex{
   margin-left: 3.8rem;
   color: #181818;
-  text-shadow: 2px 6px 6px rgba(0, 0, 0, 0.19);
+  
   
 }
 #humidity-image {
@@ -498,19 +496,17 @@ margin-bottom: 0.4rem;
 }
 
 #home-image {
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   cursor: pointer;
-  margin-top: 5rem;
-  left: -100px;
+  bottom: 7.5rem;
+   left: -140px;
   position: relative;
   display:flex;
-  
-  
-}
-
-#home-image:hover {
-  transform: scale(1.1);
-  
+ filter: drop-shadow(10px 12px 6px rgba(48, 48, 48, 0.262));
+margin-bottom: 40px;
+  top: 60px;
+  margin-top: 10px;
+  z-index: -10;
 }
 
 
@@ -532,7 +528,9 @@ margin-bottom: 0.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+text-decoration: none;
+-webkit-user-select: none;
+cursor: pointer;
   transition: all 0.3s ease-in-out;
   width: 60px;
   height: 60px;
@@ -543,6 +541,7 @@ margin-bottom: 0.4rem;
   color: rgba(1, 24, 53, 0.822);
   text-emphasis: none;
   margin-left: 4.4rem;
+ text-decoration: none;
   margin-bottom: 1rem;
   position: relative;
   bottom: 6px;
@@ -553,7 +552,7 @@ margin-bottom: 0.4rem;
 .general-sensors-container{
   margin-top: 15px;
   width: 100%;
-  height: 44vh;
+  height: 42vh;
   max-width: 400px;
   margin: 0 auto;
  background-color: #f1f3e9e4;
@@ -598,8 +597,8 @@ margin-bottom: 0.4rem;
 
 .button-container {
   position: absolute;
-  top: 53%;
-  left: 52%;
+  top: 63%;
+  left: 49%;
   transform: translate(-50%, -50%);
   z-index: 2;
   display: flex;
@@ -620,7 +619,7 @@ margin-bottom: 0.4rem;
   font-weight: normal;
   cursor: pointer;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.215);
   transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -628,23 +627,23 @@ margin-bottom: 0.4rem;
   background-color: #5f0278;
   color: #ffffff;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.297);
-  transform: scale(1.05);
+  transform: scale(1.12);
 }
 .button.logout {
   box-shadow: 0 4px 10px 0 rgba(28, 32, 37, 0.422);
-width: 115px;
+width: 110px;
   font-size: 17px;
-  background-color: #e8e8e88b;
   font-weight: 400;
-  color: #313131e7;
+  background-color: #49406b;
+  color: white;
   position: relative;
   border: 2px solid #5a006a;
   bottom: 26px;
   right: 12px;
   cursor: pointer;
   margin: 20px;
-  padding: 5px 12px;
-  height: 36px;
+  padding: 4px 10px;
+  height: 35px;
   text-align:center;
   border: none;
   background-size: 300% 100%;
@@ -653,10 +652,7 @@ border-radius: 6px;
   transition: all .3s ease-in-out;
 }
 
-.button.logout:hover{
-  background-color: #49406b;
-color: white;
-}
+
 
 
 .rooms-container:hover .button-container {
