@@ -20,10 +20,10 @@ icons.forEach(icon => {
   });
 });
 
-const electricUsageToday = [10, 15, 20, 25, 30, 35, 40];
-const electricUsageThisMonth = [200, 250, 300, 350, 400, 450, 500];
-const waterUsageToday = [5, 8, 12, 15, 10, 7, 9];
-const waterUsageThisMonth = [100, 120, 150, 130, 110, 140, 160];
+const electricUsageThisWeek = [1067, 1445, 2230, 2599, 3000, 2885, 2700];
+const electricUsageThisMonth = [5000, 6250, 6300, 8350, 6400, 3450, 6500];
+const waterUsageThisWeek = [1005, 558, 1012, 1500, 2110, 1077, 1099];
+const waterUsageThisMonth = [4009, 5200, 6540, 6730, 6110, 6140, 5160];
 
 // Create electric usage chart
 const electricUsageChart = new Chart(document.getElementById('electric-usage-chart'), {
@@ -32,8 +32,8 @@ const electricUsageChart = new Chart(document.getElementById('electric-usage-cha
     labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7'],
     datasets: [
       {
-        label: 'Today',
-        data: electricUsageToday,
+        label: 'This Week',
+        data: electricUsageThisWeek,
         borderColor: 'blue',
         backgroundColor: 'rgba(0, 0, 255, 0.1)',
       },
@@ -62,8 +62,8 @@ const waterUsageChart = new Chart(document.getElementById('water-usage-chart'), 
     labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7'],
     datasets: [
       {
-        label: 'Today',
-        data: waterUsageToday,
+        label: 'This Week',
+        data: waterUsageThisWeek,
         borderColor: 'green',
         backgroundColor: 'rgba(0, 255, 0, 0.1)',
       },

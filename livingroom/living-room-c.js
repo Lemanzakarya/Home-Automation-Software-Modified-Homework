@@ -159,4 +159,4 @@ document.getElementById('lockOn').textContent = lockOn.toUpperCase();
 const isLightOn = localStorage.getItem('ba-lightSet') ? localStorage.getItem('ba-lightSet') : 'off';
 const lightOn = isLightOn == 'true' ? 'on' : 'off';
 document.getElementById('lightOn').classList.add(lightOn);
-document.getElementById('lightOn').textContent = lightOn.toUpperCase;
+document.getElementById('lightOn').textContent = lightOn.toUpperCase();

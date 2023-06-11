@@ -118,6 +118,7 @@ usageChartCtx.textBaseline = 'middle';
 usageChartCtx.fillText(text, textX, textY);
 
 
+document.getElementById('kwh').textContent = `${usageValue}%`;
 
 
 var waterBtn = document.getElementById("water-btn");
