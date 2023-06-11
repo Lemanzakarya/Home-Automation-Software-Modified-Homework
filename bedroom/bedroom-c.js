@@ -1,6 +1,6 @@
 
-const weeklyData = [65, 59, 80, 81, 56, 55, 70];
-const monthlyData = [200, 180, 220, 210, 190, 195, 205, 12 ,198 , 288 , 56 , 204];
+const weeklyData = [75, 59, 70, 81, 146, 102, 60];
+const monthlyData = [100, 100, 105, 160, 190, 125, 295, 120 ,198 , 288 , 56 , 204];
 
 const weeklyBtn = document.getElementById('weekly-chart-btn');
 const monthlyBtn = document.getElementById('monthly-chart-btn');
@@ -77,7 +77,7 @@ lineChart = new Chart(lineChartCanvas, {
 
 
 // Electricity Usage This Week için çember pasta grafik oluşturma
-const usageValue = 75; // Kullanım yüzdesi
+const usageValue = 26; // Kullanım yüzdesi
 
 const usageChartCanvas = document.getElementById('usage-chart');
 const usageChartCtx = usageChartCanvas.getContext('2d');

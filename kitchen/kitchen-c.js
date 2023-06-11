@@ -76,7 +76,7 @@ lineChart = new Chart(lineChartCanvas, {
 
 
 // Electricity Usage This Week için çember pasta grafik oluşturma
-const usageValue = 75; // Kullanım yüzdesi
+const usageValue = 15; // Kullanım yüzdesi
 
 const usageChartCanvas = document.getElementById('usage-chart');
 const usageChartCtx = usageChartCanvas.getContext('2d');

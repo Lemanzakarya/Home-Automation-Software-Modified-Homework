@@ -76,7 +76,7 @@ lineChart = new Chart(lineChartCanvas, {
 
 
 // Electricity Usage This Week için çember pasta grafik oluşturma
-const usageValue = 75; // Kullanım yüzdesi
+const usageValue = 34; // Kullanım yüzdesi
 
 const usageChartCanvas = document.getElementById('usage-chart');
 const usageChartCtx = usageChartCanvas.getContext('2d');
@@ -159,4 +159,4 @@ document.getElementById('lockOn').textContent = lockOn.toUpperCase();
 const isLightOn = localStorage.getItem('ba-lightSet') ? localStorage.getItem('ba-lightSet') : 'off';
 const lightOn = isLightOn == 'true' ? 'on' : 'off';
 document.getElementById('lightOn').classList.add(lightOn);
-document.getElementById('lightOn').textContent = lightOn.toUpperCase();
+document.getElementById('lightOn').textContent = lightOn.toUpperCase;

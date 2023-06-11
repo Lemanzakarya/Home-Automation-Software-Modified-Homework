@@ -1,7 +1,7 @@
-const weeklyData = [65, 59, 80, 81, 56, 55, 70];
-const monthlyData = [200, 180, 220, 210, 190, 195, 205, 12 ,198 , 288 , 56 , 204];
-const weeklyData2 = [10, 29, 60, 81, 56, 55, 70];
-const monthlyData2 = [200, 180, 220, 210, 190, 195, 205, 12 ,198 , 288 , 56 , 204];
+const weeklyData = [78, 29, 60, 99, 46, 99, 70];
+const monthlyData = [230, 180, 280, 110, 190, 195, 45, 12 ,98 , 24 , 111 , 204];
+const weeklyData2 = [10, 29, 60, 31, 46, 73, 144];
+const monthlyData2 = [123, 100, 300, 350, 280, 195, 195, 209 ,100 , 101 , 102, 140];
 
 
 const weeklyBtn = document.getElementById('weekly-chart-btn');
@@ -16,7 +16,12 @@ function updateChart() {
   let chartLabels = (activeChartType === 'weekly') ? ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'] : ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
   lineChart.data.labels = chartLabels;
+
+  if(graphState == 'electricity')
   lineChart.data.datasets[0].data = chartData;
+  else
+  lineChart.data.datasets[0].data = monthlyData2;
+
   lineChart.update();
 
   // Electric Expense değerini güncelle
@@ -79,8 +84,7 @@ lineChart = new Chart(lineChartCanvas, {
 
 
 // Electricity Usage This Week için çember pasta grafik oluşturma
-const usageValue = 75; // Kullanım yüzdesi
-
+const usageValue = 25; // Kullanım yüzdesi
 const usageChartCanvas = document.getElementById('usage-chart');
 const usageChartCtx = usageChartCanvas.getContext('2d');
 
@@ -123,6 +127,8 @@ usageChartCtx.fillText(text, textX, textY);
 
 
 
+
+
 var waterBtn = document.getElementById("water-btn");
 let graphState = 'electricity';
 var statisticsContainer = document.getElementById("statistics-container");
@@ -146,7 +152,7 @@ function graphToElectricity() {
       datasets: [
         {
           label: 'Electricity Consumption',
-          data: weeklyData,
+          data: weeklyData2,
           borderColor: 'rgba(75, 192, 192, 1)',
           backgroundColor: 'rgba(75, 192, 192, 0.2)',
           borderWidth: 4,
