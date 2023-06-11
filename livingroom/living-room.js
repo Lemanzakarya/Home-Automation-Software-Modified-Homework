@@ -62,7 +62,7 @@ const TVNumber = document.getElementById("tv-number");
 const TVVolume = document.getElementById("tv-volume");
 const TVSaveButton = document.getElementById("tv-save-button");
 const TVSendButton = document.getElementById("tv-send-button");
-
+const deleteVacum = document.getElementById("vacuum-delete");
 
 TVSendButton.disabled = true;
 TVSaveButton.onclick = function() {
@@ -331,6 +331,10 @@ doorSendButton.onclick = function() {
 }
 
 deleteBtnLight.addEventListener('click', function() {
+  this.closest('.box').remove();
+});
+
+deleteVacum.addEventListener('click', function() {
   this.closest('.box').remove();
 });
 

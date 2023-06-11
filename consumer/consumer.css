@@ -30,10 +30,10 @@ nav {
 
 .consumer-logo {
   position: relative;
-  top: 2.5%;
+  top: 2.2%;
   left: 3%;
-  width: 220px;
-  height: 60px;
+  width: 210px;
+  height: 56px;
   max-width: 100%;
 }
 
@@ -98,8 +98,8 @@ nav .menubtn {
 h1 {
   color: white;
   text-emphasis: none;
-  margin-top: 1.2rem;
-  margin-left: 3.2rem;
+  margin-top: 2rem;
+  margin-left: 3.5rem;
   font-size: 32px;
   letter-spacing: 1.4px;
   text-shadow: 0 4px 0 #0f0f0f7a;
@@ -117,7 +117,7 @@ h2 {
 
 
 .titleh{
-  bottom: 1rem;
+  bottom: 2rem;
   display: flex;
   position: relative;
   margin-left: 0rem;
@@ -137,6 +137,7 @@ h2 {
   text-shadow: 0 2px 2px #0f0f0f88;
   font-weight: 800;
   font-size: 28px;
+  padding-top: 3rem;
   color: #ffffff;
  margin-top: 2rem;
   margin-bottom: 0.5rem;
@@ -184,7 +185,7 @@ h2 {
 
 .profile-container {
   position: absolute;
-  top: 34px;
+  top: 22px;
   right: 15px;
   width: 45px;
   margin-right: 0.8rem;
@@ -290,11 +291,11 @@ canvas {
 .sidebar {
   background: linear-gradient(to right, #ffffffae, #eee9e98b);
   position: absolute;
-  top: 120px;
+  top: 100px;
   right: 25px;
   width: 350px;
   max-width: 350px;
-  height: 615px;
+  height: 610px;
   border-radius: 12px;
   padding: 15px;
   box-shadow: 0 2px 8px rgba(24, 1, 80, 0.348);
@@ -473,7 +474,7 @@ margin-bottom: 0.4rem;
   display:flex;
  filter: drop-shadow(10px 12px 6px rgba(48, 48, 48, 0.262));
 margin-bottom: 40px;
-  top: 60px;
+  top: 40px;
   margin-top: 10px;
   z-index: -10;
 }
@@ -566,7 +567,7 @@ cursor: pointer;
 
 .button-container {
   position: absolute;
-  top: 63%;
+  top: 65%;
   left: 49%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -629,7 +630,7 @@ border-radius: 6px;
   opacity: 1;
 }
 .rooms-container:hover .home-photo {
-  transform: scale(1.1) ;
+  transform: scale(1.06) ;
 }
 html, body {
   scroll-behavior: smooth;
@@ -654,13 +655,7 @@ html, body {
     margin-right: 190px;
   }
 
-  .consumer-logo {
-    width: auto;
-    max-width: 100%;
-    margin: 50px;
-    top: auto;
-  }
-
+  
   nav {
     flex-direction: column;
     align-items: center;

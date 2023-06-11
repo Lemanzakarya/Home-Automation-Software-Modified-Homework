@@ -1,4 +1,4 @@
-
+import getTodaysWeather from '../lib/weatherApi.js'
 
 const icons = document.querySelectorAll('.icon');
 const feelingHeading = document.getElementById('feeling-heading');
@@ -88,12 +88,12 @@ const waterUsageChart = new Chart(document.getElementById('water-usage-chart'), 
 const dashboard = document.getElementById('rooms-section');
 const statistics = document.getElementById('usage-container');
 
-dashboard.addEventListener('click' , () => {
-    window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: 'smooth'
-      });
-});
+// dashboard.addEventListener('click' , () => {
+//     window.scrollTo({
+//         top: document.body.scrollHeight,
+//         behavior: 'smooth'
+//       });
+// });
 
 statistics.addEventListener('click' , () => {
     window.scrollTo({
@@ -118,3 +118,5 @@ function reveal() {
 
 window.addEventListener('scroll',reveal);
 
+const weather = await getTodaysWeather();
+console.log(weather);

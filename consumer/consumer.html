@@ -24,7 +24,7 @@
       <ul>
         <li><a href="#dashboard">Dashboard</a></li>
         <li><a href="#statistics">Statistics</a></li>
-        <li><a href="#widgets">Widgets</a></li>
+        <li><a href="#widgets">Devices</a></li>
         <button class="button logout" onclick="window.location.href = '../login/HomeAutomation.php'">Logout</button>
 
 
@@ -66,7 +66,7 @@
 
          <div class="rooms-container">
           <h2 class="titleh">Home</h2>
-         <img id="home-image" src="home4.png" alt="home" class="home-photo" width="520" height="420">
+         <img id="home-image" src="home4.png" alt="home" class="home-photo" width="510" height="390">
           <div class="button-container">
             <button onclick= "location.href='../livingroom/living-room-c.html'"class="button living-room">Living Room</button>
             <button onclick= "location.href='../bathroom/bathroom-c.html'" class="button bathroom">Bathroom</button>
@@ -92,23 +92,29 @@
         </section>
 
         <section id="widgets">
-      <div class="widget-section">
-            <h2 class="title">Widgets</h2>
-            <div class="widget-container">
-              <div class="room-card">
-                 <h3>Smart TV</h3>
-                <img src="smartv.png" alt="Bedroom" height="80" width="100">
-              </div>
-              <div class="room-card">
-                <h3>Smart Speaker</h3>
-                <img src="speaker.png" alt="Bathroom">
-              </div>
-              <div class="room-card">
-                <h3>Router</h3>
-                <img src="router.png" alt="Bathroom">
-              </div>
-             
-        </section>
+  <div class="widget-section">
+    <h2 class="title">Devices</h2>
+    <div class="widget-container">
+      <div class="room-card">
+        <h3>Smart TV</h3>
+        <img src="smartv.png" alt="Bedroom" height="80" width="100">
+      </div>
+      <div class="room-card">
+        <h3>Smart Speaker</h3>
+        <img src="speaker.png" alt="Bathroom">
+      </div>
+      <div class="room-card">
+        <h3>Smart Lock</h3>
+        <img src="lock.png" alt="Bathroom">
+      </div>
+      <div class="room-card">
+        <h3>Vacuum Cleaner</h3>
+        <img src="vacuum.png" alt="Bathroom">
+      </div>
+    
+    </div>
+  </div>
+</section>
 
           <div class="sidebar">
             <div class="weather-container">
@@ -179,7 +185,7 @@
 
 
 
-    <script src="consumer.js"></script>
+    <script type="module" src="consumer.js"></script>
     <script src="../producer/main.js"></script>
 </body>
 

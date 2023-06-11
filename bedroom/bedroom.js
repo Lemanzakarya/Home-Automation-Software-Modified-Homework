@@ -69,9 +69,9 @@ const speakerSlider = document.getElementById("speaker-slider");
 
 
 
-speakerSlider.checked = localStorage.getItem("smartOn") == "true" ? true : false;
+speakerSlider.checked = localStorage.getItem("be-smartOn") == "true" ? true : false;
 speakerSlider.addEventListener("change", () => {
-  localStorage.setItem("smartOn", speakerSlider.checked);
+  localStorage.setItem("be-smartOn", speakerSlider.checked);
   speakerSet.disabled = !speakerSlider.checked;
 })
 
