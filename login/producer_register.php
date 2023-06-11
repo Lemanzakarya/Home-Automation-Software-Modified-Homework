@@ -1,29 +1,36 @@
 <?php
 session_start();
+
 @include 'p-config.php';
+
+$errors = [];
 
 if(isset($_POST['submit'])){
     $name = mysqli_real_escape_string($conn, $_POST['name']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $pass = md5($_POST['password']);
-    $cpass = md5($_POST['cpassword']);
+    $password = $_POST['password'];
+    $confirm_password = $_POST['cpassword'];
 
-    $select = "SELECT * FROM usersp WHERE email = '$email' && password = '$pass' ";
-    $result = mysqli_query($conn, $select);
+    $select = "SELECT * FROM usersp WHERE email = ? LIMIT 1";
+    $stmt = $conn->prepare($select);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-    if(mysqli_num_rows($result) > 0){
-        $error[] = 'user already exist!';
-    }else{
-      if($pass != $cpass){
-          $error[] = 'passwords not matched!';
-      } else{
-        $insert = "INSERT INTO usersp (name, email, password) VALUES('$name', '$email', '$pass')";
-        mysqli_query($conn, $insert);
-        header('location: producer_login.php');
-      }
+    if($result->num_rows > 0){
+        $errors[] = 'User already exists!';
+    } else {
+        if($password != $confirm_password){
+            $errors[] = 'Passwords do not match!';
+        } else {
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+            $insert = "INSERT INTO usersp (name, email, password) VALUES ('$name', '$email', '$hashed_password')";
+            mysqli_query($conn, $insert);
+            header('location: producer_login.php');
+            exit();
+        }
     }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -34,9 +41,7 @@ if(isset($_POST['submit'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Producer Register Form</title>
 
-  
     <link rel="stylesheet" href="style1.css">
-
 </head>
 <body>
 <div class="logout-container">
@@ -48,20 +53,19 @@ if(isset($_POST['submit'])){
         <form action="" method="post">
             <h3>Sign Up</h3>
             <?php 
-            if(isset($error)){
-                foreach($error as $error){
+            if(!empty($errors)){
+                foreach($errors as $error){
                     echo '<span class="error-msg">'.$error.'</span>';
                 }
             }
-            
             ?>
             <input type="text" name="name" required placeholder="Enter your name">
             <input type="email" name="email" required placeholder="Enter your email">
             <input type="password" name="password" required placeholder="Enter your password">
             <input type="password" name="cpassword" required placeholder="Confirm your password">
             <input type="submit" name="submit" value="Sign Up" class="form-btn">
-            <p> already have an account? <a href="producer_login.php">login</a></p>
-   </form>
- </div>
+            <p>Already have an account? <a href="producer_login.php">Login</a></p>
+        </form>
+    </div>
 </body>
 </html>
