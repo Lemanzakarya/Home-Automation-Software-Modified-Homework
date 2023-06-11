@@ -1,103 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bedroom-consumer.css" ; />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preconnect"
-      href="https://fonts                                                                                                                                                                                                                                                                              .googleapis.com"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Belleza&family=Cookie&family=Kalam&family=Montserrat:wght@200;700&family=NTR&family=Quicksand&family=Satisfy&family=Swanky+and+Moo+Moo&family=Ubuntu:wght@300;400&family=VT323&display=swap"
-      rel="stylesheet"
-    />
-    <title>Bedroom</title>
-     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  </head>
-
-  <body>
-    <div class="container">
-      <a href="../consumer/consumer.html" class="goBack">
-        <img width="30px" height="30px" src="../back.png" />
-        <p>Back</p>
-      </a>
-      <header>
-        <h1>Bedroom</h1>
-      </header>
-      <img src="bedroom.jpg" alt="Livingroom" class="living-image" />
-      <section>
-        <div class="general-sensors-container">
-          <h2 class="general">General Sensors</h2>
-          <div class="producer">
-            <div id="tempRoot" class="box box-general-sensor">
-              <i class="fas fa-thermometer-half"></i>
-              <div>
-                <h3>Temperature</h3>
-                <div class="button-producer">
-               </div>
-              </div>
-            </div>
-            <div id ="humRoot" class="box box-general-sensor">
-              <i class="fas fa-tint"></i>
-              <div>
-                <h3>Humidity</h3>
-                <div class="button-producer">
-                 
-                </div>
-              </div>
-            </div>
-            <div id ="co2Root" class="box box-general-sensor">
-              <i class="fas fa-cloud"></i>
-              <div>
-                <h3>CO2</h3>
-               
-                </div>
-              </div>
-            </div>
-          </div>
-     
-        <div class="devices-container">
-          <h2 class="general">Devices</h2>
-          <div class="flex-wrap">
-            <span id="wifiRoot" class="box-device">
-            
-              <i class="fa-solid fa-wifi scale2 mb-auto mt-2"></i>
-            </span>
-
-            <span id="brightRoot" class="box-device">
-              <i class="fa-solid fa-lightbulb scale2 mb-auto mt-2"></i>
-            </span>
-
-            <span id="doorRoot" class="box-device">
-              <i class="fa-solid fa-lock scale2 mb-auto mt-2"></i>
-            </span>
-
-            
-            <span id="speaker-root" class="box-device">
-              <i class="fa-solid fa-circle-play scale2 mb-auto mt-2"></i>
-            </span>
-          </div>
-        </div>
-        <div class="concuption-container">
-          <h2 class="general-c">Consumption</h2>
-          <div id = "usage-container" class="usage-container">
-            <div class="usage">
-              <h2 >Electric Consumption</h2>
-              <canvas id="electric-usage-chart"></canvas>
-            </div>
-          </div>
-        </div>
-      </div>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect"
+  href="https://fonts                                                                                                                                                                                                                                                                              .googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Belleza&family=Cookie&family=Kalam&family=Montserrat:wght@200;700&family=NTR&family=Quicksand&family=Satisfy&family=Swanky+and+Moo+Moo&family=Ubuntu:wght@300;400&family=VT323&display=swap"
+  rel="stylesheet" />
+<title>Bedroom</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   </head>
+<body>
     
+    <header>
+        <h1>Bedroom</h1>
+
+        <a href="../consumer/consumer.html" class="goBack">
+          <img width="40px" height="40px" src="left.png">
+          <p>Back</p>
+        </a>
+
+      </header>
+    
+      <main>
+        <div class="container">
+
+          <section id = "environment-section" class="environment-section">
+            <h2 class="titleh">Environment</h2>
+            <div class="flex-row">
+              <div class="environment-card">
+                <img src="temperature.png" alt="Temperature Icon">
+                <h3>Temperature</h3>
+                <p id="valuesTemp">0</p>
+              </div>
+              <div class="environment-card">
+                <img src="co2.png" alt="CO2 Icon">
+                <h3>CO2</h3>
+                <p id="valuesCo2">0</p>
+              </div>
+              <div class="environment-card">
+                <img src="humidity.png" alt="Humidity Icon">
+                <h3>Humidity</h3>
+                <p id="valuesHum">0</p>
+              </div>
+            </div>
+          </section>
+          <section class="devices-section">
+            <h2 class="titleh">Devices</h2>
+            <div class="flex-wrap">
+              <div class="device-card">
+                <img src="router.png" alt="Device 1" width="140" height="160">
+                <h3>Router</h3>
+                <span id="routerOn" class="status-label ">On</span>
+                <p id="descWifi">Router description goes here...</p>
+              </div>
+              <div class="device-card">
+                <img class ="light-image"src="light.png" alt="Device 2">
+                <h3>Smart Light 3</h3>
+                <span id="lightOn" class="status-label ">Off</span>
+                <p id="descLight">Smart TV description goes here...</p>
+              </div>
+              <div class="device-card">
+                <img src="speaker.png" alt="Device 2" height="120">
+                <h3>Smart Speaker</h3>
+                <span id="smartOn" class="status-label">Off</span>
+                <p id="descSmart">Robotic Vacuum description goes here...</p>
+              </div>
+            </div>
+            <div class="flex-wrap bottom-row">
+              <div class="device-card">
+                <img class="lock-image" src="lock.png" alt="Device 4">
+                <h3>Smart Lock </h3>
+                <span id="lockOn" class="status-label ">On</span>
+                <p id="descLock">Smart Lock description goes here...</p>
+              </div>
+
+            </div>
+          </section>
+          
+          
+        
+          <div class="statistics-container">
+            <h2 class="title">Statistics</h2>
+            <div class="statistics-section">
+              <div class="chart-options">
+                <button id="weekly-chart-btn" class="chart-btn active">Weekly</button>
+                <button id="monthly-chart-btn" class="chart-btn">Monthly</button>
+              </div>
+              <div class="chart-container">
+                <canvas id="line-chart"></canvas>
+              </div>
+              <div class="card-container">
+                <div class="card">
+                  <div class="card-header">Electricity Usage</div>
+                  <div class="card-main">
+                 <canvas id="usage-chart"></canvas>
+                 <p id ="kwh">1200 kW</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">Electric Cost</div>
+                  <div class="card-main">
+                    <div class="image-container">
+                      <img id="dollar" src="dollar.png" alt="dollar Icon" width="130" height="130">
+                    </div>
+                    <p id="cost">Total : 1000 $</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+            
+         
+          
+       
+    
+      
+      </main>
+
+
     <script src="bedroom-c.js"></script>
-  </body>
+</body>
 </html>
