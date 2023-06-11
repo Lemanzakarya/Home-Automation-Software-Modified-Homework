@@ -32,7 +32,7 @@ body {
   width: 60%;
   height: 70vh;
   position: relative;
-  left: 38%;
+  left: 35.8%;
   display: grid;
   grid-template-areas: "General Consumption"
     "Devices Devices";
@@ -74,18 +74,6 @@ body {
   width: 500px;
   height: 580px;
   object-fit: cover;
-}
-@media (max-width: 768px) {
-  /* Styles for screens up to 768px wide (e.g., mobile devices) */
-  .living-image {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 5px;
-  }
 }
 
 h1 {
@@ -909,12 +897,13 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   }
 
   header h1 {
-    margin-top: 6rem;
+    margin-top: 4.5rem;
   }
 
   .container section {
     height: auto;
     left: 5%;
+    margin-top: -5%;
   }
 
   .devices-container .producer {
