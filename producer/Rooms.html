@@ -1,0 +1,62 @@
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="main.css" ; />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect"
+    href="https://fonts                                                                                                                                                                                                                                                                              .googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+    href="https://fonts.googleapis.com/css2?family=Belleza&family=Cookie&family=Kalam&family=Montserrat:wght@200;700&family=NTR&family=Quicksand&family=Satisfy&family=Swanky+and+Moo+Moo&family=Ubuntu:wght@300;400&family=VT323&display=swap"
+    rel="stylesheet" />
+<title>Producer</title>
+</head>
+
+<body>
+    <a href="../producer/main.html" class="goBack">
+        <img width="30px" height="30px" src="../back.png" />
+        <p>Back</p>
+    </a>
+    <header>
+        <h1>Rooms</h1>
+    </header>
+    <!-- Rooms -->
+    <div class="addition">
+        <button id="addButton" onclick="openPopup()"> + Add Room</button>
+    </div>
+    <div class="p-rooms">
+        <div class="p-room" id="living-room">
+            <button onclick="location.href='../livingroom/living-room.html'">Living Room</button>
+        </div>
+
+        <div class="p-room" id="kitchen">
+            <button onclick="location.href='../kitchen/kitchen.html'">Kitchen</button>
+        </div>
+
+        <div class="p-room" id="bedroom">
+            <button onclick="location.href='../bedroom/bedroom.html'">Bedroom</button>
+        </div>
+
+        <div class="p-room" id="bathroom">
+            <button onclick="location.href='../bathroom/bathroom.html'">Bathroom</button>
+        </div>
+    </div>
+    <div id="popupContainer">
+        <div id="popup">
+          <h2>Add Room</h2>
+          <form id="roomForm">
+            <label for="roomName">Room Name:</label>
+            <input type="text" id="roomName" required>
+            <button type="submit" class="Add">Add</button>
+            <button onclick="closePopup()" class="Cancel">Cancel</button>
+          </form>
+        </div>
+      </div>
+      <button id="delete" class="btn-delete">Delete</button>
+      
+    <script src="main.js"></script>
+</body>
+
+</html>
