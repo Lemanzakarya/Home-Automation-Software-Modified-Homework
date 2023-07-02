@@ -68,4 +68,18 @@ function getAllBtnLocalStoreg() {
     return btnStatus
 }
 
-
+function openPopup() {
+    document.getElementById("popupContainer").style.display = "flex";
+  }
+  
+  function closePopup() {
+    document.getElementById("popupContainer").style.display = "none";
+  }
+  
+  document.getElementById("roomForm").addEventListener("submit", function (e) {
+    e.preventDefault(); 
+    const roomName = document.getElementById("roomName").value;
+    console.log("Room Name:", roomName);
+    closePopup(); 
+  });
+  

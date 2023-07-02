@@ -11,17 +11,37 @@ if(isset($_POST['submit'])){
     $password = isset($_POST['password']) ? $_POST['password'] : '';
     $confirmPassword = isset($_POST['cpassword']) ? $_POST['cpassword'] : '';
 
-    $select = "SELECT * FROM users WHERE email = ?";
-    $stmt = $conn->prepare($select);
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $result = $stmt->get_result();
+    if(empty($name)){
+        $errors[] = 'Name is required!';
+    } elseif(!preg_match("/^[a-zA-Z]+$/", $name)){
+        $errors[] = 'Name should only contain letters!';
+    }
 
-    if($result->num_rows > 0){
-        $errors[] = 'User already exists!';
-    } else {
-        if($password !== $confirmPassword){
-            $errors[] = 'Passwords do not match!';
+    if(empty($email)){
+        $errors[] = 'Email is required!';
+    } elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+        $errors[] = 'Invalid email format!';
+    }
+
+    if(empty($password)){
+        $errors[] = 'Password is required!';
+    } elseif(strlen($password) < 6){
+        $errors[] = 'Password should be at least 6 characters long!';
+    }
+    
+    if($password !== $confirmPassword){
+        $errors[] = 'Passwords do not match!';
+    }
+
+    if(empty($errors)){
+        $select = "SELECT * FROM users WHERE email = ?";
+        $stmt = $conn->prepare($select);
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if($result->num_rows > 0){
+            $errors[] = 'User already exists!';
         } else {
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
             $insert = "INSERT INTO users(name, email, password) VALUES(?, ?, ?)";

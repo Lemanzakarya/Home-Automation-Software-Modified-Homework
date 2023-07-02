@@ -53,7 +53,7 @@ body {
 
 .rooms {
   position: absolute;
-  top: 54%;
+  top: 50%;
   left: 1.1%;
   transform: translateY(-50%);
 }
@@ -76,6 +76,7 @@ body {
   cursor: pointer;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
+  border-bottom-right-radius: 50px;
   border-top-right-radius: 50px;
   border-bottom-left-radius: 0;
   width: 380px;
@@ -83,21 +84,175 @@ body {
   font-weight: bold;
 }
 
-.room#bathroom button {
-  border-bottom-right-radius: 50px;
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.room#kitchen button,
-.room#bedroom button {
-  border-radius: 0;
-}
 
 .room button:hover {
   background-color: rgba(41, 0, 66, 0.8);
 }
+
+/* Rooms css */
+
+.p-rooms {
+  position: relative;
+  margin-top: 50px;
+  margin-left: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.p-rooms button {
+  width: 300px;
+  height: 30vh;
+  background-color: rgba(255, 255, 255, 0.539);
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.466);
+  border:none;
+  padding: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.3s ease-in-out;
+  color: rgb(255, 255, 255); 
+  font-weight: bold; 
+  font-size: 35px; 
+  font-family: Arial, sans-serif;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-room button:hover {
+  background-color: rgba(41, 0, 66, 0.8);
+}
+
+.addition {
+  text-align: right;
+  margin-right: 50px;
+  margin-top: -10px;
+}
+
+#addButton {
+  width: 170px;
+  height: 50px;
+  background-color: #ffffffe5;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.466);
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
+
+#addButton:hover {
+  background-color: #f0f0f0; 
+}
+
+
+
+
+
+
+#popupContainer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 60px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.466);
+}
+
+#popup h2 {
+  margin-bottom: 30px;
+  font-size: 35px;
+}
+
+#roomForm label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#roomForm input {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+#popup button {
+  margin-right: 10px; 
+  margin-bottom: 10px; 
+}
+#roomForm button {
+  width: 100px; 
+  height: 40px;
+  background-color: #ffffffe5;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+#roomForm button:hover {
+  background-color: #f0f0f0;
+}
+
+#popup button:last-child {
+  margin-top: 10px;
+}
+
+#roomForm button.Cancel {
+  background-color: red;
+  color: white;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#roomForm button.Add {
+  background-color: green;
+  color: white;
+  display: inline-block;
+}
+
+.btn-delete {
+  position: fixed;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: navy;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .logout-container {
   position: fixed;
@@ -124,7 +279,43 @@ body {
   background-color: rgba(41, 0, 66, 0.8);
 }
 
+.goBack {
+  background-color: rgba(255, 255, 255, 0.885);
+  display: flex;
+  top: 15px;
+  left: 20px;
+  flex-direction: row;
 
+  color: black;
+  height: 40px;
+  position: absolute;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.goBack>p {
+  font-size: 14px;
+  margin: auto;
+  margin-right: 1.2rem;
+}
+
+.goBack>img {
+  margin: auto;
+  padding: 5px;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  text-emphasis: none;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 30px;
+  justify-content: center;
+  letter-spacing: 1.4px;
+
+}
 
 /* Circular buttons */
 .right-column {
@@ -231,7 +422,7 @@ body {
     position: inherit;
   }
 
-  .room#bathroom button {
+  .room#Devices button {
     border-radius: 50px;
   }
   
