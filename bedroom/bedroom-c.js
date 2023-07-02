@@ -124,10 +124,13 @@ document.getElementById('kwh').textContent = `${usageValue}%`;
 const humidity = localStorage.getItem('be-humidity') ? localStorage.getItem('be-humidity') : 0;
 const co2 = localStorage.getItem('be-co2') ? localStorage.getItem('be-co2') : 0;
 const temperature = localStorage.getItem('be-temperature') ? localStorage.getItem('be-temperature') : 0;
+const electric = localStorage.getItem('be-electric') ? localStorage.getItem('be-electric') : 0;
 
-document.getElementById('valuesCo2').textContent = co2;
-document.getElementById('valuesTemp').textContent = temperature;
-document.getElementById('valuesHum').textContent = humidity;
+document.getElementById('valuesCo2').textContent = co2 + " ppm ";
+document.getElementById('valuesTemp').textContent = temperature + " C°";
+document.getElementById('valuesHum').textContent = '% ' + humidity ;
+document.getElementById('kwh').textContent = electric + ' kwh';
+
 
 const isRouterOn = localStorage.getItem('be-wifiCheck') ? localStorage.getItem('be-wifiCheck') : 'off';
 const routerOn = isRouterOn == 'true' ? 'on' : 'off';

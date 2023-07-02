@@ -20,72 +20,92 @@ icons.forEach(icon => {
   });
 });
 
-const electricUsageThisWeek = [1067, 1445, 2230, 2599, 3000, 2885, 2700];
-const electricUsageThisMonth = [5000, 6250, 6300, 8350, 6400, 3450, 6500];
-const waterUsageThisWeek = [1005, 558, 1012, 1500, 2110, 1077, 1099];
-const waterUsageThisMonth = [4009, 5200, 6540, 6730, 6110, 6140, 5160];
 
-// Create electric usage chart
-const electricUsageChart = new Chart(document.getElementById('electric-usage-chart'), {
-  type: 'line',
-  data: {
-    labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7'],
-    datasets: [
-      {
-        label: 'This Week',
-        data: electricUsageThisWeek,
-        borderColor: 'blue',
-        backgroundColor: 'rgba(0, 0, 255, 0.1)',
-      },
-      {
-        label: 'This Month',
-        data: electricUsageThisMonth,
-        borderColor: 'red',
-        backgroundColor: 'rgba(255, 0, 0, 0.1)',
-      },
-    ],
-  },
+// Electric consumption data
+var electricData = {
+  labels: ["Living Room", "Bathroom", "Bedroom", "Kitchen"],
+  datasets: [{
+    data: [34, 25, 26, 15],
+    backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0"]
+  }]
+};
+
+// Water consumption data
+var waterData = {
+  labels: ["Kitchen", "Bathroom"],
+  datasets: [{
+    data: [64, 36],
+    backgroundColor: ["#FF6384", "#36A2EB"]
+  }]
+};
+
+
+var electricChart = new Chart(document.getElementById("electric-usage-chart"), {
+  type: 'doughnut',
+  data: electricData,
   options: {
-    scales: {
-      y: {
-        beginAtZero: true,
-        display: true,
+    plugins: {
+      legend: {
+        display: false
       },
-    },
+      tooltips: {
+        callbacks: {
+          label: function(tooltipItem, data) {
+            var label = data.labels[tooltipItem.index];
+            var value = data.datasets[0].data[tooltipItem.index];
+            return label + ": " + value + "%";
+          }
+        }
+      },
+      datalabels: {
+        color: '#fff',
+        font: {
+          size: 16,
+          weight: 'bold'
+        },
+        formatter: function (value, context) {
+          return value + '%';
+        }
+      }
+    }
   },
+  plugins: [ChartDataLabels]
 });
 
-// Create water usage chart
-const waterUsageChart = new Chart(document.getElementById('water-usage-chart'), {
-  type: 'line',
-  data: {
-    labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7'],
-    datasets: [
-      {
-        label: 'This Week',
-        data: waterUsageThisWeek,
-        borderColor: 'green',
-        backgroundColor: 'rgba(0, 255, 0, 0.1)',
-      },
-      {
-        label: 'This Month',
-        data: waterUsageThisMonth,
-        borderColor: 'orange',
-        backgroundColor: 'rgba(255, 165, 0, 0.1)',
-      },
-    ],
-  },
+// Water consumption chart
+var waterChart = new Chart(document.getElementById("water-usage-chart"), {
+  type: 'doughnut',
+  data: waterData,
   options: {
-    scales: {
-      y: {
-        beginAtZero: true,
-        display: true,
+    plugins: {
+      legend: {
+        display: false
       },
-    },
+      tooltips: {
+        callbacks: {
+          label: function(tooltipItem, data) {
+            var label = data.labels[tooltipItem.index];
+            var value = data.datasets[0].data[tooltipItem.index];
+            return label + ": " + value + "%";
+          }
+        }
+      },
+      datalabels: {
+        color: '#fff',
+        font: {
+          size: 16,
+          weight: 'bold'
+        },
+        formatter: function (value, context) {
+          return value + '%';
+        }
+      }
+    }
   },
+  plugins: [ChartDataLabels]
 });
 
-const dashboard = document.getElementById('rooms-section');
+
 const statistics = document.getElementById('usage-container');
 
 // dashboard.addEventListener('click' , () => {

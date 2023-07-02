@@ -12,7 +12,9 @@
   href="https://fonts.googleapis.com/css2?family=Belleza&family=Cookie&family=Kalam&family=Montserrat:wght@200;700&family=NTR&family=Quicksand&family=Satisfy&family=Swanky+and+Moo+Moo&family=Ubuntu:wght@300;400&family=VT323&display=swap"
   rel="stylesheet" />
 <title>Consumer</title>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0/dist/chartjs-plugin-datalabels.min.js"></script>
+
 </head>
 
 <body>
@@ -79,14 +81,17 @@
 
       <section id="statistics">
   <h2 class="title">Statistics</h2>
-          <div id = "usage-container" class="usage-container">
+ <h3 class="month">This Month</h3>
+   <div id = "usage-container" class="usage-container">
             <div class="usage">
               <h2 >Electric Consumption</h2>
               <canvas id="electric-usage-chart"></canvas>
+              <div id="electric-chart-legend"></div>
             </div>
             <div class="usage">
               <h2>Water Consumption</h2>
               <canvas id="water-usage-chart"></canvas>
+              <div id="water-chart-legend"></div>
             </div>
           </div>
         </section>

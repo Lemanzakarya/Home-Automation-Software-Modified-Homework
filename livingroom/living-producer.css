@@ -826,26 +826,15 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 
-#electric-popup .popup-content {
-  width: 330px;
-  height: 270px;
-  margin-top: 15px;
-
-}
-
-#electric-popup .input-container {
-  margin-top: 1rem;
-}
-
 #electric-send-button {
-  margin-bottom: 1.5rem;
-  width: 6rem;
+  background-color: rgba(83, 0, 91, 0.815);
+  border-radius: 3px;
+  width: 5rem;
   border: none;
-  background-color: #4c66c3;
   color: #fff;
-  padding: 12px 12px;
-  border-radius: 5px;
-  font-size: 16px;
+  padding: 8px 12px;
+  margin-left: 10px;
+  font-size: 12px;
   font-weight: bold;
   cursor: pointer;
 }
@@ -855,9 +844,6 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 .electricity {
   margin-bottom: 1rem;
 }
-
-
-
 
 
 

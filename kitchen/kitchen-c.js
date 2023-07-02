@@ -125,13 +125,19 @@ var waterBtn = document.getElementById("water-btn");
 let graphState = 'electricity';
 var statisticsContainer = document.getElementById("statistics-container");
 waterBtn.addEventListener("click", function() {
-  if(graphState == 'electricity')
-  graphToWater();
-  else
+  if(graphState == 'electricity') {
+    graphToWater();
+    document.getElementById('elusage').textContent = 'Water Usage';
+    document.getElementById('elcost').textContent = 'Water Cost';
+  }
+  else {
   graphToElectricity();
-  
+  document.getElementById('elusage').textContent = 'Electric Usage';
+  document.getElementById('elcost').textContent = 'Electric Cost';
+} 
 
 });
+
 
 function graphToElectricity() {
   graphState = 'electricity';
@@ -223,10 +229,13 @@ function graphToWater() {
 const humidity = localStorage.getItem('k-humidity') ? localStorage.getItem('k-humidity') : 0;
 const co2 = localStorage.getItem('k-co2') ? localStorage.getItem('k-co2') : 0;
 const temperature = localStorage.getItem('k-temperature') ? localStorage.getItem('k-temperature') : 0;
+const electric = localStorage.getItem('k-electric') ? localStorage.getItem('k-electric') : 0;
 
-document.getElementById('valuesCo2').textContent = co2;
-document.getElementById('valuesTemp').textContent = temperature;
-document.getElementById('valuesHum').textContent = humidity;
+document.getElementById('valuesCo2').textContent = co2 + " ppm ";
+document.getElementById('valuesTemp').textContent = temperature + " C°";
+document.getElementById('valuesHum').textContent = '% ' + humidity ;
+document.getElementById('kwh').textContent = electric + ' kwh';
+
 
 const wifiTime = localStorage.getItem('k-wifiTime') ? localStorage.getItem('k-wifiTime') : 'Always';
 const doorTime = localStorage.getItem('k-doorTime') ? localStorage.getItem('k-doorTime') : 'Always';

@@ -1,24 +1,85 @@
-const weeklyData = [65, 59, 80, 81, 56, 55, 70];
-const monthlyData = [200, 180, 220, 210, 190, 195, 205, 12 ,198 , 288 , 56 , 204];
 
+let activeChartType = 'weekly'; // Initialize the activeChartType globally
+
+// Declare the weeklyData and monthlyData variables outside the function
+let weeklyData, monthlyData;
 const weeklyBtn = document.getElementById('weekly-chart-btn');
 const monthlyBtn = document.getElementById('monthly-chart-btn');
 const lineChartCanvas = document.getElementById('line-chart');
-
-let activeChartType = 'weekly';
 let lineChart;
 
+// Verileri localStorage'dan al ve grafiğe entegre et
+function retrieveDataAndCreateChart() {
+  const jsonData = localStorage.getItem("electricData");
+  if (jsonData) {
+    const data = JSON.parse(jsonData);
+    weeklyData = data.weeklyData;
+    monthlyData = data.monthlyData;
+    if (lineChart) {
+      lineChart.destroy();
+    }
+
+    const chartLabels = (activeChartType === 'weekly')
+      ? ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+      : ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+    lineChart = new Chart(lineChartCanvas, {
+      type: 'line',
+      data: {
+        labels: chartLabels,
+        datasets: [
+          {
+            label: 'Electric Consumption',
+            data: (activeChartType === 'weekly') ? weeklyData : monthlyData,
+            borderColor: 'rgba(75, 192, 192, 1)',
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderWidth: 4,
+            fill: true
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              font: {
+                weight: 'bold'
+              }
+            }
+          },
+          x: {
+            ticks: {
+              font: {
+                weight: 'bold'
+              }
+            }
+          }
+        }
+      }
+    });
+
+    // Diğer grafikler için monthlyData kullanabilirsin
+
+  } else {
+    alert("No data found.");
+  }
+}
+
+
+// Call retrieveDataAndCreateChart initially to display the chart with the initial activeChartType
+retrieveDataAndCreateChart();
+
+// Update the chart when the active button changes
 function updateChart() {
-  let chartData = (activeChartType === 'weekly') ? weeklyData : monthlyData;
-  let chartLabels = (activeChartType === 'weekly') ? ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'] : ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
+  lineChart.data.datasets[0].data = (activeChartType === 'weekly') ? weeklyData : monthlyData;
+  const chartLabels = (activeChartType === 'weekly')
+  ? ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+  : ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   lineChart.data.labels = chartLabels;
-  lineChart.data.datasets[0].data = chartData;
   lineChart.update();
-
-  // Electric Expense değerini güncelle
-  const electricExpenseValue = document.getElementById('electric-expense-value');
-  electricExpenseValue.textContent = chartData.reduce((a, b) => a + b, 0);
 }
 
 weeklyBtn.addEventListener('click', () => {
@@ -35,48 +96,70 @@ monthlyBtn.addEventListener('click', () => {
   updateChart();
 });
 
-lineChart = new Chart(lineChartCanvas, {
-  type: 'line',
-  data: {
-    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'], // Haftalık etiketler
-    datasets: [
-      {
-        label: 'Electric Consumption',
-        data: weeklyData,
-        borderColor: 'rgba(75, 192, 192, 1)',
-        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-        borderWidth: 4,
-        fill: true
-      }
-    ]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    scales: {
-      y: {
-        beginAtZero: true,
-        ticks: {
-          font: {
-            weight: 'bold' // Yazıların kalınlığı
-          }
-        }
-      },
-      x: {
-        ticks: {
-          font: {
-            weight: 'bold'
-          }
-        }
-      }
-    }
-  }
+// Call retrieveDataAndCreateChart initially to display the chart with the initial activeChartType
+retrieveDataAndCreateChart();
+
+weeklyBtn.addEventListener('click', () => {
+  activeChartType = 'weekly';
+  weeklyBtn.classList.add('active');
+  monthlyBtn.classList.remove('active');
+  updateChart();
+});
+
+monthlyBtn.addEventListener('click', () => {
+  activeChartType = 'monthly';
+  monthlyBtn.classList.add('active');
+  weeklyBtn.classList.remove('active');
+  updateChart();
 });
 
 
+// Metin değerlerini güncelle
 
-// Electricity Usage This Week için çember pasta grafik oluşturma
-const usageValue = 34; // Kullanım yüzdesi
+
+const humidity = localStorage.getItem('ba-humidity') ? localStorage.getItem('ba-humidity') : 0;
+const co2 = localStorage.getItem('ba-co2') ? localStorage.getItem('ba-co2') : 0;
+const temperature = localStorage.getItem('ba-temperature') ? localStorage.getItem('ba-temperature') : 0;
+const electric = localStorage.getItem('ba-electric') ? localStorage.getItem('ba-electric') : 0;
+document.getElementById('valuesCo2').textContent = co2 + " ppm ";
+document.getElementById('valuesTemp').textContent = temperature + " C°";
+document.getElementById('valuesHum').textContent = '% ' + humidity ;
+document.getElementById('kwh').textContent = electric + ' kwh';
+
+const smart1 = localStorage.getItem('ba-tv1') ? localStorage.getItem('ba-tv1') : 0;
+const smart2 = localStorage.getItem('ba-tv2') ? localStorage.getItem('ba-tv2') : 0;
+
+const wifiTime = localStorage.getItem('ba-wifiTime') ? localStorage.getItem('ba-wifiTime') : 'Always';
+const doorTime = localStorage.getItem('ba-doorTime') ? localStorage.getItem('ba-doorTime') : 'Always';
+const brightness = localStorage.getItem('ba-bright') ? localStorage.getItem('ba-bright') : 0;
+
+document.getElementById('descSmart1').textContent = 'Volume: ' + smart1;
+document.getElementById('descSmart2').textContent = 'Channel Number: ' + smart2;
+document.getElementById('descWifi').textContent = 'Wifi Open Hours: ' + wifiTime;
+document.getElementById('descLock').textContent = 'Door Open Hours: ' + doorTime;
+document.getElementById('descLight').textContent = 'Brightness: ' + brightness;
+
+const isSmartOn = localStorage.getItem('ba-tvOn') ? localStorage.getItem('ba-tvOn') : 'off';
+const smartOn = isSmartOn == 'true' ? 'on' : 'off';
+document.getElementById('smartOn').classList.add(smartOn);
+document.getElementById('smartOn').textContent = smartOn.toUpperCase();
+
+const isRouterOn = localStorage.getItem('ba-wifiCheck') ? localStorage.getItem('ba-wifiCheck') : 'off';
+const routerOn = isRouterOn == 'true' ? 'on' : 'off';
+document.getElementById('routerOn').classList.add(routerOn);
+document.getElementById('routerOn').textContent = routerOn.toUpperCase();
+
+const isLockOn = localStorage.getItem('ba-doorCheck') ? localStorage.getItem('ba-doorCheck') : 'off';
+const lockOn = isLockOn == 'true' ? 'on' : 'off';
+document.getElementById('lockOn').classList.add(lockOn);
+document.getElementById('lockOn').textContent = lockOn.toUpperCase();
+
+const isLightOn = localStorage.getItem('ba-lightSet') ? localStorage.getItem('ba-lightSet') : 'off';
+const lightOn = isLightOn == 'true' ? 'on' : 'off';
+document.getElementById('lightOn').classList.add(lightOn);
+document.getElementById('lightOn').textContent = lightOn.toUpperCase();
+
+const usageValue = electric;
 
 const usageChartCanvas = document.getElementById('usage-chart');
 const usageChartCtx = usageChartCanvas.getContext('2d');
@@ -116,47 +199,3 @@ usageChartCtx.shadowBlur = 4; // Shadow blur radius
 
 usageChartCtx.textBaseline = 'middle';
 usageChartCtx.fillText(text, textX, textY);
-
-// Metin değerlerini güncelle
-document.getElementById('kwh').textContent = `${usageValue}%`;
-
-const humidity = localStorage.getItem('ba-humidity') ? localStorage.getItem('ba-humidity') : 0;
-const co2 = localStorage.getItem('ba-co2') ? localStorage.getItem('ba-co2') : 0;
-const temperature = localStorage.getItem('ba-temperature') ? localStorage.getItem('ba-temperature') : 0;
-
-document.getElementById('valuesCo2').textContent = co2;
-document.getElementById('valuesTemp').textContent = temperature;
-document.getElementById('valuesHum').textContent = humidity;
-
-const smart1 = localStorage.getItem('ba-tv1') ? localStorage.getItem('ba-tv1') : 0;
-const smart2 = localStorage.getItem('ba-tv2') ? localStorage.getItem('ba-tv2') : 0;
-
-const wifiTime = localStorage.getItem('ba-wifiTime') ? localStorage.getItem('ba-wifiTime') : 'Always';
-const doorTime = localStorage.getItem('ba-doorTime') ? localStorage.getItem('ba-doorTime') : 'Always';
-const brightness = localStorage.getItem('ba-bright') ? localStorage.getItem('ba-bright') : 0;
-
-document.getElementById('descSmart1').textContent = 'Volume: ' + smart1;
-document.getElementById('descSmart2').textContent = 'Channel Number: ' + smart2;
-document.getElementById('descWifi').textContent = 'Wifi Open Hours: ' + wifiTime;
-document.getElementById('descLock').textContent = 'Door Open Hours: ' + doorTime;
-document.getElementById('descLight').textContent = 'Brightness: ' + brightness;
-
-const isSmartOn = localStorage.getItem('ba-tvOn') ? localStorage.getItem('ba-tvOn') : 'off';
-const smartOn = isSmartOn == 'true' ? 'on' : 'off';
-document.getElementById('smartOn').classList.add(smartOn);
-document.getElementById('smartOn').textContent = smartOn.toUpperCase();
-
-const isRouterOn = localStorage.getItem('ba-wifiCheck') ? localStorage.getItem('ba-wifiCheck') : 'off';
-const routerOn = isRouterOn == 'true' ? 'on' : 'off';
-document.getElementById('routerOn').classList.add(routerOn);
-document.getElementById('routerOn').textContent = routerOn.toUpperCase();
-
-const isLockOn = localStorage.getItem('ba-doorCheck') ? localStorage.getItem('ba-doorCheck') : 'off';
-const lockOn = isLockOn == 'true' ? 'on' : 'off';
-document.getElementById('lockOn').classList.add(lockOn);
-document.getElementById('lockOn').textContent = lockOn.toUpperCase();
-
-const isLightOn = localStorage.getItem('ba-lightSet') ? localStorage.getItem('ba-lightSet') : 'off';
-const lightOn = isLightOn == 'true' ? 'on' : 'off';
-document.getElementById('lightOn').classList.add(lightOn);
-document.getElementById('lightOn').textContent = lightOn.toUpperCase();

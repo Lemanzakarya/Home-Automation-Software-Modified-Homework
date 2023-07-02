@@ -51,7 +51,7 @@ const electricPopup = document.getElementById("electric-popup");
 const electricClose = document.getElementById("close-electric-popup-button");
 const electricSetButton = document.getElementById("set-electric-button");
 const electricInput = document.getElementById("electric-input");
-const electricSendButton = document.getElementById("electric-send-button");
+let electricSendButton = document.getElementById("electric-send-button");
 
 const deleteTV = document.querySelector('#tv-delete');
 const TVPopup = document.getElementById("tv-popup");
@@ -63,6 +63,7 @@ const TVVolume = document.getElementById("tv-volume");
 const TVSaveButton = document.getElementById("tv-save-button");
 const TVSendButton = document.getElementById("tv-send-button");
 const deleteVacum = document.getElementById("vacuum-delete");
+
 
 TVSendButton.disabled = true;
 TVSaveButton.onclick = function() {
@@ -97,28 +98,35 @@ TVSendButton.addEventListener("click", () => {
 
 
 
-electricSetButton.addEventListener("click", function() {
-  electricPopup.style.display = "block";
- 
-});
 
-electricClose.addEventListener("click", function() {
-  electricPopup.style.display = "none";
-});
+const weeklyData = [];
+const monthlyData = [];
 
-electricSendButton.addEventListener("click", function() {
-  
-  const electricAmount = electricInput.value;
-  if(electricAmount > 0 || isNaN(electricAmount)) {
-  localStorage.setItem("ba-electric",electricAmount);
-  alert(`User input  ${electricAmount}`);
-  electricPopup.style.display = "none"; }
-  else {
-    alert("Please enter valid number !");
+// Rastgele sayıları oluştur ve gönder
+function generateAndSendData() {
+  for (let i = 0; i < 7; i++) {
+    const randomNumber = Math.floor(Math.random() * 300) + 1; // 1 ile 100 arasında rastgele bir sayı oluşturuluyor
+    weeklyData.push(randomNumber);
   }
-});
+
+  for (let i = 0; i < 12; i++) {
+    const randomNumber = Math.floor(Math.random() * 3000) + 1; // 1 ile 100 arasında rastgele bir sayı oluşturuluyor
+    monthlyData.push(randomNumber);
+  }
+
+  // Verileri JSON formatında depolama ve gönderme
+  const dataToSend = {
+    weeklyData: weeklyData,
+    monthlyData: monthlyData
+  };
+  const jsonData = JSON.stringify(dataToSend);
+  localStorage.setItem("electricData", jsonData);
+  alert("Data sent to consumer.");
 
 
+ }
+
+ electricSendButton.addEventListener("click", generateAndSendData);
 
 
 let intervalId;
