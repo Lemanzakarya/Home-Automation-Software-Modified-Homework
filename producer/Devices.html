@@ -24,21 +24,23 @@
       </header>
       <div class="devices">
         <button id="addDevice" onclick="showDevicePopup()">+ Add Device</button>
-      
+    
         <div id="devicePopup" style="display: none;">
           <label for="deviceName">Device Name:</label>
           <textarea id="deviceName"></textarea><br><br>
-      
+    
           <label for="roomName">Room:</label>
           <textarea id="roomName"></textarea><br><br>
-      
+     
+          <button class="btns">
           <button id="submit" onclick="addDevice()">Add</button>
           <button id="cancel" onclick="cancelDevice()">Cancel</button>
+        </button>
         </div>
       </div>
   
     
-
+      <script src="main.js"></script>
 </body>
 
 </html>

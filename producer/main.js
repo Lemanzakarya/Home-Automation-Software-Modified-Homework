@@ -99,23 +99,29 @@ function openPopup() {
   }
   
   function showDevicePopup() {
-    document.getElementById("devicePopup").style.display = "block";
-  }
- 
-  
-  function cancelDevice() {
-    document.getElementById("devicePopup").style.display = "none";
+    var devicePopup = document.getElementById("devicePopup");
+    devicePopup.style.display = "block";
   }
   
   function addDevice() {
-    const deviceName = document.getElementById("deviceName").value;
-    const roomName = document.getElementById("roomName").value;
+    var deviceName = document.getElementById("deviceName").value;
+    var roomName = document.getElementById("roomName").value;
   
-    // Perform the desired operation here (e.g., adding the device or any other action)
+    // Yeni cihazı eklemek için burada yapılması gereken işlemler
   
-    console.log("Device Name: ", deviceName);
-    console.log("Room Name: ", roomName);
-  
-    document.getElementById("devicePopup").style.display = "none";
+    // Popup ekranını kapat
+    cancelDevice();
   }
+  
+  function cancelDevice() {
+    var devicePopup = document.getElementById("devicePopup");
+    devicePopup.style.display = "none";
+  
+    // Metin alanlarını temizle (isteğe bağlı)
+    document.getElementById("deviceName").value = "";
+    document.getElementById("roomName").value = "";
+  }
+  
+  var addDeviceButton = document.getElementById("addDevice");
+  addDeviceButton.addEventListener("click", showDevicePopup);
   
