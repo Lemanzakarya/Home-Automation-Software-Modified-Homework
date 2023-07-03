@@ -22,24 +22,23 @@
       <header>
         <h1>Devices</h1>
       </header>
-<!-- Devices -->
-<div class="devices">
-    <div class="room" id="living-room">
-      <button onclick="location.href='../livingroom/living-room.html'">Living Room</button>
-    </div>
-
-    <div class="room" id="kitchen">
-      <button onclick="location.href='../kitchen/kitchen.html'">Kitchen</button>
-    </div>
-
-    <div class="room" id="bedroom">
-      <button onclick="location.href='../bedroom/bedroom.html'">Bedroom</button>
-    </div>
-
-    <div class="room" id="bathroom">
-        <button onclick="location.href='../bathroom/bathroom.html'">Bathroom</button>
+      <div class="devices">
+        <button id="addDevice" onclick="showDevicePopup()">+ Add Device</button>
+      
+        <div id="devicePopup" style="display: none;">
+          <label for="deviceName">Device Name:</label>
+          <textarea id="deviceName"></textarea><br><br>
+      
+          <label for="roomName">Room:</label>
+          <textarea id="roomName"></textarea><br><br>
+      
+          <button id="submit" onclick="addDevice()">Add</button>
+          <button id="cancel" onclick="cancelDevice()">Cancel</button>
+        </div>
       </div>
-  </div>
+  
+    
+
 </body>
 
 </html>
