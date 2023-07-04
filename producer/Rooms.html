@@ -22,42 +22,60 @@
     <header>
         <h1>Rooms</h1>
     </header>
+    
     <div class="addition">
-        <button id="delete" class="btn-delete" onclick="deleteSelectedRoom()"> - Delete Room </button>
         <button id="addButton" onclick="openPopup()"> + Add Room</button>
       </div>
       <div class="p-rooms">
         <div class="p-room" id="living-room">
-          <button onclick="selectRoom('living-room')">Living Room</button>
+          <div class="room-buttons">
+            <button onclick="location.href='../livingroom/living-room.html'">Living Room</button>
+            <button class="delete-button" onclick="deleteRoom('living-room')">X</button>
         </div>
-      
+        </div>
         <div class="p-room" id="kitchen">
-          <button onclick="selectRoom('kitchen')">Kitchen</button>
+          <div class="room-buttons">
+          <button onclick="location.href='../kitchen/kitchen.html'">Kitchen</button>
+          <button class="delete-button" onclick="deleteRoom('kitchen')">X</button>
+        </div>
         </div>
       
         <div class="p-room" id="bedroom">
-          <button onclick="selectRoom('bedroom')">Bedroom</button>
+          <div class="room-buttons">
+          <button onclick="location.href='../bedroom/bedroom.html'">Bedroom</button>
+          <button class="delete-button" onclick="deleteRoom('bedroom')">X</button>
         </div>
-      
+        </div>
         <div class="p-room" id="bathroom">
-          <button onclick="selectRoom('bathroom')">Bathroom</button>
+          <div class="room-buttons">
+          <button onclick="location.href='../bathroom/bathroom.html'">Bathroom</button>
+          <button class="delete-button" onclick="deleteRoom('bathroom')">X</button>
         </div>
       </div>
+      </div>
       
-    </div>
-    <div id="popupContainer">
+      <div id="popupContainer">
         <div id="popup">
           <h2>Add Room</h2>
           <form id="roomForm">
-            <label for="roomName">Room Name:</label>
-            <input type="text" id="roomName" required>
+            <label for="roomName">Room:</label>
+            <select id="roomName" required>
+              <option value="">Select Room</option>
+              <option value="living-room">Livingroom</option>
+              <option value="kitchen">Kitchen</option>
+              <option value="bedroom">Bedroom</option>
+              <option value="bathroom">Bathroom</option>
+              <option value="office">Office</option>
+              <option value="childrenroom">Children's Room</option>
+              <option value="room1">Room1</option>
+              <option value="room2">Room2</option>
+            </select>
             <button type="submit" class="Add">Add</button>
             <button onclick="closePopup()" class="Cancel">Cancel</button>
           </form>
         </div>
       </div>
-     
-      
+    
     <script src="main.js"></script>
 </body>
 

@@ -24,21 +24,48 @@
       </header>
       <div class="devices">
         <button id="addDevice" onclick="showDevicePopup()">+ Add Device</button>
-    
+      
         <div id="devicePopup" style="display: none;">
           <label for="deviceName">Device Name:</label>
-          <textarea id="deviceName"></textarea><br><br>
-    
+          <select id="deviceNameSelect">
+            <option value="">Select Device</option>
+            <option value="device1">Light</option>
+            <option value="device2">Door Lock</option>
+            <option value="device3">Wifi</option>
+            <option value="device4">Vacuum Cleaner</option>
+            <option value="device5">Smart TV</option>
+            <option value="device6">Smart Speaker</option>
+            <option value="device7">Air Conditioner</option>
+            <option value="device8">Coffee Machine</option>
+            <option value="device9">Smart Blinds</option>
+            <option value="device10">Device1</option>
+            <option value="device11">Device2</option>
+          </select><br><br>
+      
           <label for="roomName">Room:</label>
-          <textarea id="roomName"></textarea><br><br>
-     
-          <button class="btns">
-          <button id="submit" onclick="addDevice()">Add</button>
-          <button id="cancel" onclick="cancelDevice()">Cancel</button>
-        </button>
+          <select id="roomNameSelect">
+            <option value="">Select Room</option>
+            <option value="living-room">Living Room</option>
+            <option value="kitchen">Kitchen</option>
+            <option value="bedroom">Bedroom</option>
+            <option value="bathroom">Bathroom</option>
+            <option value="office">Office</option>
+          </select><br><br>
+      
+          <div class="btns"> 
+            <button id="submit" onclick="addDevice()">Add</button>
+            <button id="cancel" onclick="cancelDevice()">Cancel</button>
+          </div>
         </div>
       </div>
-  
+      <div class="blocks">
+        <div class="device-box">
+          <div class="device-info">
+            <p>Light</p>
+            <p>Room: Living Room</p>
+          </div>
+        </div>    
+      </div>
     
       <script src="main.js"></script>
 </body>
